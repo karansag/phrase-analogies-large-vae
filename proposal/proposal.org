@@ -1,0 +1,9 @@
+#+title: Proposal
+#+author: Joshua Rivera, Karan Sagar, Evan Silverman
+
+* Motivation
+* Plan of Work
+* Tools / Requirements
+** Data Collection
+* Collaboration Statement
+* References
