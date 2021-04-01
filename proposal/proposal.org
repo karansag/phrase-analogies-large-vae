@@ -2,8 +2,49 @@
 #+author: Joshua Rivera, Karan Sagar, Evan Silverman
 
 * Motivation
+  Word embeddings (Mikolov 13, Pennington 14) and analogies of word embeddings (Mikolov 13b) have been well-studied. Everything from uses in downstream NLP applications (Goldberg 2017) to limitations (Linzen 2016) to semantic regularity (Chiang et al, 2020).
+
+While much work has been done to produce universal sentence embeddings (Kiros 2015, Conneau 17, Cer 18) there remains room to explore the semantic regularity of the latent space. Since the sentence space is much larger than the word space, evaluating regularities can be challenging due to the lack of a clear inverse function for pre-trained language models. Some approaches include probing (Conneau et al 18) and natural language generation (Kerscher ‘20, Wang 20).
+
+However, these all have limitations in measurement and exploration due to the lack of an easy decoding step. Until recently, VAEs (Kingma and Welling ‘13, Bowman ‘16), which have a built-in correspondence from the embedding space to the sentence space, have not shown comparable performance on GLUE tasks. However, OPTIMUS (Li ‘20) has shown good performance on the GLUE benchmarks. As a result, we believe exploration of semantic regularity via syntactic analogy -- $a:b::c:d$ for sentences $a, b, c, d$  -- using OPTIMUS could prove fruitful.
 * Plan of Work
+  We plan to use the pre-trained OPTIMUS model across a variety of analogy types. To be explicit, for an analogy $a:b::c:d$ where $a, b, c, d$ are sentences and corresponding embeddings S_a, S_b, S_c, S_d, we are solving for S_d given S_a, S_b, S_c based on the equation [insert equation]
+
+This includes lexical, semantic, and syntactic analogies (see Zhu ‘20 for source and further elaboration). Lexical analogies include word replacements, as in “Do you know the way to Greece”: “Do you know the way to Rome”::”I visited Rome”:”I visited Greece”. Syntactic analogies include “Egypt”:”Egyptian”::”The man from Egypt tapped his cheek”::”The Egyptian man tapped his cheek”. Finally, relationship analogies refer to identical relationships from an NLI dataset: “The turtle is tracking the fish”:”The turtle is following the fish”::”A person is dicing an onion”:”A person is cutting an onion to pieces”. Notice that entailment is the shared NLI relationship; the same will apply to negation. “Neutral” data will not be included.
+
+See the “data collection” section for more information on the datasets we plan to use.
+
+To measure performance on our evaluation set, we plan on using a few approaches. Between the “correct” answer to the analogy problem and the output from the sentence-space vector-arithmetic result, we will measure the following:
+- Levenshtein distance
+- BLEU score
+- Proportion of evaluation data that is identically generated.
+
+Note that the first two can apply to individual examples while the latter is across our entire evaluation data.
+
 * Tools / Requirements
-** Data Collection
+** Software
+   For this project, we will use the pre-trained OPTIMUS model (https://github.com/ChunyuanLI/Optimus).
+** Data
+   For data, we plan to use the Zhu ‘20 dataset methodology, which replaced works according to a specific template. If we can, we will also supplement with the data from that paper directly. For relationship analogies, we will use existing NLI datasets, including Multi-NLI (Williams 18) and SNLI (Bowman 15).
+* Backgrounds
+  VAEs are new to all members of the team. All have some backgrounds in mathematics and programming, while Joshua also has a background in linguistics.
 * Collaboration Statement
+  All team members participated in developing the core ideas. Joshua and Evan connected with Alex, Karan helped do the initial research and clarified concepts. All members participated in the writing of this document.
 * References
+- Xunjie Zhu, Gerard de Melo. 2020. Sentence Analogies: Linguistic Regularities in Sentence Embeddings. International Committee on Computational Linguistics 3389-3400
+- Mikolov, et. al. 2013 (a). Efficient Estimation of Word Representations in Vector Space (word2vec). arXiv manuscript 1301.3781
+- Jeffrey Pennington, Richard Socher, Christopher Manning. 2014. GloVe: Global Vectors for Word Representation. Association for Computational Linguistics 1532-1543
+- Tomas Mikolov, Wen-tau Yih, Geoffrey Zweig. 2013 (b). Linguistic Regularities in Continuous Space Word Representations. Association of Computational Linguistics 746-751
+- Chunyuan Li, Xiang Gao, Yuan Li, Baolin Peng, Xiujun Li, Yizhe Zhang, Jianfeng Gao. 2020.  Optimus: Organizing Sentences via Pre-trained Modeling of a Latent Space. arXiv manuscript 2004.04092
+- Tal Linzen. 2016. Issues in evaluating semantic spaces using word analogies. arXiv manuscript 1606.07736
+- Ryan Kiros, Yukun Zhu, Ruslan Salakhutdinov, Richard Zemel, Antonio Torralba, Raquel Urtasun, Sanja Fidler. 2015. Skip-Thought Vectors. arXiv manuscript 1506.06726
+- Hsiao-Yu Chiang, Jose Camacho-Collados, Zachary Pardos. 2020. Understanding the Source of Semantic Regularities in Word Embeddings. Association for Computational Linguistics 119-131
+- Alexis Conneau, Douwe Kiela, Holger Schwenk, Loic Barrault, Antoine Bordes. 2017. Supervised Learning of Universal Sentence Representations from Natural Language Inference Data. arXiv manuscript 1705.02364
+- Alexis Conneau, German Kruszewski, Guillaume Lample, Loïc Barrault, Marco Baroni. 2018. What you can cram into a single $&!#* vector: Probing sentence embeddings for linguistic properties. arXiv manuscript 1805.01070
+- Adina Williams, Nikita Nangia, Samuel Bowman. 2018. A Broad-Coverage Challenge Corpus for Sentence Understanding through Inference. Association for Computational Linguistics 1112-1122
+- Samuel R. Bowman, Gabor Angeli, Christopher Potts, Christopher D Manning. 2015. A large annotated corpus for learning natural language inference. arXiv manuscript 1508.05326
+- Diederik P Kingma, Max Welling. 2013. Auto-Encoding Variational Bayes. arXiv manuscript 1312.6114
+- Samuel R. Bowman, Luke Vilnis, Oriol Vinyals, Andrew M. Dai, Rafal Jozefowicz, Samy Benigio. 2016. Generating Sentences from a Continuous Space. arXiv manuscript 1511.06349
+- Daniel Cer, et. al. 2018. Universal Sentence Encoder. arXiv manuscript 1803.11175
+- Martin Kerscher, Steffen Eger. 2020. Vec2Sent: Probing Sentence Embeddings with Natural Language Generation. arXiv manuscript 2011.00592
+- Liyan Wang, Yves Lepage. 2020. Vector-to-Sequence Models for Sentence Analogies. International Conference on Advanced Computer Science and Information Systems
