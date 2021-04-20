@@ -25,6 +25,8 @@ This repo uses git submodules. Please `git submodule init` and `git submodule up
 * Change the value of `OUTPUT_DIR` in `src/analogy.py` to correspond to the directory of your model data. E.g., `OUTPUT_DIR = os.path.abspath("../../data/snli-b1/checkpoint-31250/")`
 * Call the function `run` in `src/experiment.py` with your input and output filenames. For information about the input format, see below.
 
+You can run individual analogies with `eval_analogy` in `analogy.py`
+
 ### Expected CSV format
 We expect input to have columns 'sent_a', 'sent_b', 'sent_c', and 'sent_d'. A header row is expected. Newlines separate rows and commas separate columns.
 
