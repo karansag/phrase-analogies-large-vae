@@ -48,7 +48,7 @@ from collections import defaultdict, namedtuple
 from modules import VAE
 from utils import TextDataset_Split, TextDataset_2Tokenizers, BucketingDataLoader
 import run_latent_generation as runl
-from .util import get_device
+from util import get_device
 
 LATENT_SIZE_LARGE = 768
 MODEL_CLASSES = {
@@ -60,7 +60,7 @@ CODER_TYPE_TO_NAME = {"gpt2": "gpt2", "bert": "bert-base-cased"}
 
 # Set this when running experiments
 # TODO: make a parameter?
-OUTPUT_DIR = os.path.abspath("../../data/snli-b1/checkpoint-31250/")
+OUTPUT_DIR = os.path.abspath("../pretrained_models/optimus_snli10/checkpoint-31250/")
 
 
 def get_encoder(encoder_type="bert", output_encoder_dir="/tmp"):
