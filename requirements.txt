@@ -14,10 +14,10 @@ cachetools==4.2.1
 certifi==2020.12.5
 cffi @ file:///tmp/build/80754af9/cffi_1613246939562/work
 chardet==3.0.2
-click==7.1.2
+click @ file:///home/linux1/recipes/ci/click_1610990599742/work
 colorama==0.4.4
 colorful==0.5.4
-conda==4.9.2
+conda==4.10.1
 conda-package-handling==1.6.0
 cryptography==2.7
 curtsies==0.3.5
@@ -46,7 +46,7 @@ ipython @ file:///tmp/build/80754af9/ipython_1614615642284/work
 ipython-genutils @ file:///tmp/build/80754af9/ipython_genutils_1606773439826/work
 jedi==0.18.0
 jmespath==0.10.0
-joblib==1.0.1
+joblib @ file:///tmp/build/80754af9/joblib_1613502643832/work
 json-rpc==1.13.0
 jsonschema==3.2.0
 kiwisolver @ file:///tmp/build/80754af9/kiwisolver_1612282414123/work
@@ -58,6 +58,7 @@ msgpack==1.0.2
 msgpack-numpy @ file:///tmp/build/80754af9/msgpack-numpy_1605111757211/work
 multidict==5.1.0
 murmurhash==0.28.0
+nltk @ file:///tmp/build/80754af9/nltk_1618327084230/work
 numpy @ file:///tmp/build/80754af9/numpy_and_numpy_base_1603479632437/work
 nvidia-ml-py3==7.352.0
 olefile==0.46
