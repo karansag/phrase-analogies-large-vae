@@ -1,6 +1,7 @@
 import csv
 
 import funcy as f
+import pandas as pd
 
 import analogy as a
 import score as s
@@ -26,7 +27,7 @@ def read_csv(filename):
     return inputs, outputs
 
 
-def run_experiment(inputs, n_samples=1, temperature=1):
+def run_experiment(input_frame, n_samples=1, temperature=1):
     """
     Runs experiment given inputs.
 
@@ -43,23 +44,29 @@ def run_experiment(inputs, n_samples=1, temperature=1):
         decoder_data["tokenizer"],
         beta=0,
     )
+    # partially apply function for evaluator
+    # series here represents a row (we call with axis=1)
+    def evaluator(series):
+        return a.eval_analogy(
+            vae,
+            encoder_data["tokenizer"],
+            decoder_data["tokenizer"],
+            series[0],
+            series[1],
+            series[2],
+            temperature=temperature,
+        )[0]
 
-    evaluator = f.partial(
-        a.eval_analogy, vae, encoder_data["tokenizer"], decoder_data["tokenizer"]
-    )
-    preds = [
-        map(
-            lambda inp: evaluator(inp[0], inp[1], inp[2], temperature=temperature),
-            inputs,
-        )
-        for _ in range(n_samples)
-    ]
-    return list(zip(*preds))
+    new_columns = ["pred_{}".format(i) for i in range(n_samples)]
+    output_frame = pd.DataFrame()
+    for col in new_columns:
+        output_frame[col] = input_frame.apply(evaluator, axis=1)
+    return output_frame
 
 
-def compute_statistics(outputs, preds, include_scores=("bleu", "exact", "nli")):
+def compute_scores(outputs, preds, include_scores=("bleu", "exact", "nli")):
     """
-    Compute statistics on the output
+    Compute scores on the data
     """
     results = {}
     fn_list = {"bleu": s.bleu_calc, "exact": s.exact_calc, "nli": s.nli_calc}
@@ -86,10 +93,38 @@ def write_output(output_filename, summary_filename, inputs, preds, outputs):
             csvfile, delimiter=" ", quotechar="|", quoting=csv.QUOTE_MINIMAL
         )
         for inp, pred, outp in zip(inputs, preds, outputs):
-            writer.writerow(inp + [get_pred_str(pred)] + [outp])
+            writer.writerow(inp + [get_pred_str(pred)] + [output])
 
 
-def run(input_filename, output_filename):
-    inputs, outputs = read_csv(input_filename)
-    preds = run_experiment(inputs)
-    write_output(output_filename, "", inputs, preds, outputs)
+def run(input_filename, output_filename, n_samples=1):
+    """
+    Main entry point for running experiments
+
+    Assumes that input has columns `a`, `b`, `c`, `d` for the analogy s.t. a:b::c:d
+    Uses `a` `b` `c` to make a predicted `d`.
+
+    Takes `input_filename` for the input and an `output_filename` where it can write the output
+    as CSVs
+
+    Will run each a/b/c triplet through prediction `n_samples` times, assigning each output to a new column.
+
+    Stores scores as column `score_{sample #}_{method #}`
+
+    """
+    input_frame = pd.read_csv(input_filename)
+    print("Read input from {}".format(input_filename))
+    # inputs, outputs = read_csv(input_filename)
+    new_col_frame = run_experiment(input_frame[["a", "b", "c"]], n_samples=n_samples)
+    output_frame = pd.concat([input_frame, new_col_frame], axis=1)
+    for i in range(n_samples):
+        results = compute_scores(
+            output_frame["d"],
+            output_frame["pred_{}".format(i)],
+            include_scores=("bleu", "exact"),
+        )
+        for scorer, result in results.items():
+            output_frame["score_{num}_{scorer}".format(num=i, scorer=scorer)] = result
+
+    output_frame.to_csv(output_filename)
+    print("Wrote output to {}".format(output_filename))
+    return output_frame
