@@ -1,7 +1,9 @@
 import csv
 
 import funcy as f
+
 import analogy as a
+import score as s
 
 
 def read_csv(filename):
@@ -55,11 +57,16 @@ def run_experiment(inputs, n_samples=1, temperature=1):
     return list(zip(*preds))
 
 
-def compute_statistics(preds, outputs):
+def compute_statistics(outputs, preds, include_scores=("bleu", "exact", "nli")):
     """
     Compute statistics on the output
     """
-    pass
+    results = {}
+    fn_list = {"bleu": s.bleu_calc, "exact": s.exact_calc, "nli": s.nli_calc}
+    for score_name in include_scores:
+        fn = fn_list[score_name]
+        results[score_name] = list(map(lambda args: fn(*args), zip(outputs, preds)))
+    return results
 
 
 def get_pred_str(prediction):
