@@ -1,8 +1,8 @@
 import csv, os, time
 import numpy as np
 import pandas as pd
-from tqdm import tqdm
-
+import pandasql as ps
+import time
 
 filename = os.path.realpath("../multinli_1.0_train.csv")
 
@@ -32,65 +32,24 @@ df2.rename(
 
 # Create dataset containing NLI pairs of the same relationships type (entailment, negation)
 same_relation_df = df2[df2.category != "neutral"]
-same_relation_result_df = pd.DataFrame(
-    columns=["a", "b", "c", "d", "category", "subcategory_1", "subcategory_2"]
-)
 
-for i, row in tqdm(same_relation_df.iterrows(), total=len(same_relation_df.index)):
-    time.sleep(0.01)
-    curr_category = row["category"]
-    curr_genre = row["subcategory"]
+query = """
+select distinct 
+    t1.a, t1.b, t2.a as c, t2.b as d, t1.category, t1.subcategory as subcategory_1, t2.subcategory as subcategory_2
+from
+    same_relation_df t1
+inner join same_relation_df t2
+    on t1.category == t2.category
+    and t1.subcategory == t2.subcategory
+    and t1.a != t2.a
+limit 10000000;
+"""
+print("running query")
 
-    new_rows = []
-    # select 5 other random rows with same category and genre (subcategory)
-    # select 5 other random rows with same category and different genre (subcategory)
-    same_cat_same_genre = same_relation_df[
-        np.logical_and(
-            same_relation_df.category == curr_category,
-            same_relation_df.subcategory == curr_genre,
-        )
-    ].sample(5)
-    same_cat_diff_genre = same_relation_df[
-        np.logical_and(
-            same_relation_df.category == curr_category,
-            same_relation_df.subcategory != curr_genre,
-        )
-    ].sample(5)
+t1 = time.perf_counter()
+same_relation_result_df = ps.sqldf(query)
+t2 = time.perf_counter()
+print(f"Finished running in {t2 - t1:0.4f} seconds")
 
-    for j, val in same_cat_same_genre.iterrows():
-        new_rows.append(
-            pd.Series(
-                [
-                    row["a"],
-                    row["b"],
-                    val["a"],
-                    val["b"],
-                    curr_category,
-                    curr_genre,
-                    val["subcategory"],
-                ],
-                index=same_relation_result_df.columns,
-            )
-        )
 
-    for j, val in same_cat_diff_genre.iterrows():
-        new_rows.append(
-            pd.Series(
-                [
-                    row["a"],
-                    row["b"],
-                    val["a"],
-                    val["b"],
-                    curr_category,
-                    curr_genre,
-                    val["subcategory"],
-                ],
-                index=same_relation_result_df.columns,
-            )
-        )
-
-    same_relation_result_df = same_relation_result_df.append(
-        new_rows, ignore_index=True
-    )
-
-same_relation_result_df.to_csv("mnli_relation_pairs.csv", index=False)
+same_relation_result_df.to_csv("../mnli_relation_pairs.csv", index=False)
