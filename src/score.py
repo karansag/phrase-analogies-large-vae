@@ -2,6 +2,8 @@ import re
 from nltk.translate import bleu_score as nltkbleu
 from typing import List, Optional
 
+import nli
+
 
 def bleu_calc(output, pred):
     output_l = output.split(" ")
@@ -13,8 +15,12 @@ def exact_calc(output, pred):
     return int(output == pred)
 
 
-def nli_calc(output, pred):
-    pass
+def nli_calc(sent_c, predicted_d):
+    """
+    sent_c is a list /tensor / series of c sentences, predicted_d a list/tensor/series of predicated d sentences.
+    Returns one of entailment/contradiction/neutral for each value in the series
+    """
+    return nli.eval_nli(sent_c, predicted_d)
 
 
 # Following adapted from

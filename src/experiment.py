@@ -72,10 +72,16 @@ def compute_scores(
     """
     results = {}
     fn_list = {"bleu": s.bleu_calc, "exact": s.exact_calc, "nli": s.nli_calc}
+
     for score_name in include_scores:
         fn = fn_list[score_name]
         if score_name == "nli":
-            nli_result_tensor = s.nli_calc(premises[2], preds)
+            s_a, s_b, s_c, gold = premises
+            nli_result_list = s.nli_calc(premises[2], preds)
+            results["nli_raw"] = nli_result_list
+            results["nli"] = [
+                1 if x == y else 0 for (x, y) in zip(nli_result_list, gold)
+            ]
         else:
             results[score_name] = list(map(lambda args: fn(*args), zip(outputs, preds)))
     return results
@@ -116,8 +122,8 @@ def run(input_filename, output_filename, n_samples=1):
     Stores scores as column `score_{sample #}_{method #}`
 
     """
-    input_frame = pd.read_csv(input_filename)
     print("Read input from {}".format(input_filename))
+    input_frame = pd.read_csv(input_filename)
     # inputs, outputs = read_csv(input_filename)
     new_col_frame = run_experiment(input_frame[["a", "b", "c"]], n_samples=n_samples)
     output_frame = pd.concat([input_frame, new_col_frame], axis=1)
@@ -127,7 +133,13 @@ def run(input_filename, output_filename, n_samples=1):
         results = compute_scores(
             output_frame["d"],
             output_frame["pred_{}".format(i)],
-            premises=(output_frame["a"], output_frame["b"], output_frame["c"]),
+            premises=(
+                output_frame["a"],
+                output_frame["b"],
+                output_frame["c"],
+                # The gold label category
+                output_frame["category"],
+            ),
             include_scores=("nli",),
         )
         for scorer, result in results.items():
