@@ -64,7 +64,9 @@ def run_experiment(input_frame, n_samples=1, temperature=1):
     return output_frame
 
 
-def compute_scores(outputs, preds, include_scores=("bleu", "exact", "nli")):
+def compute_scores(
+    outputs, preds, premises=tuple(), include_scores=("bleu", "exact", "nli")
+):
     """
     Compute scores on the data
     """
@@ -72,7 +74,10 @@ def compute_scores(outputs, preds, include_scores=("bleu", "exact", "nli")):
     fn_list = {"bleu": s.bleu_calc, "exact": s.exact_calc, "nli": s.nli_calc}
     for score_name in include_scores:
         fn = fn_list[score_name]
-        results[score_name] = list(map(lambda args: fn(*args), zip(outputs, preds)))
+        if score_name == "nli":
+            nli_result_tensor = s.nli_calc(premises[2], preds)
+        else:
+            results[score_name] = list(map(lambda args: fn(*args), zip(outputs, preds)))
     return results
 
 
@@ -116,11 +121,14 @@ def run(input_filename, output_filename, n_samples=1):
     # inputs, outputs = read_csv(input_filename)
     new_col_frame = run_experiment(input_frame[["a", "b", "c"]], n_samples=n_samples)
     output_frame = pd.concat([input_frame, new_col_frame], axis=1)
+    print("writing output to /tmp/tmp-output.csv")
+    output_frame.to_csv("/tmp/tmp-output.csv")
     for i in range(n_samples):
         results = compute_scores(
             output_frame["d"],
             output_frame["pred_{}".format(i)],
-            include_scores=("bleu", "exact"),
+            premises=(output_frame["a"], output_frame["b"], output_frame["c"]),
+            include_scores=("nli",),
         )
         for scorer, result in results.items():
             output_frame["score_{num}_{scorer}".format(num=i, scorer=scorer)] = result
