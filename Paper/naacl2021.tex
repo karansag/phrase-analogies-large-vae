@@ -1,0 +1,209 @@
+% This must be in the first 5 lines to tell arXiv to use pdfLaTeX, which is strongly recommended.
+\pdfoutput=1
+% In particular, the hyperref package requires pdfLaTeX in order to break URLs across lines.
+
+\documentclass[11pt]{article}
+
+% Remove the "review" option to generate the final version.
+\usepackage[]{naacl2021}
+
+% Standard package includes
+\usepackage{times}
+\usepackage{latexsym}
+
+% For proper rendering and hyphenation of words containing Latin characters (including in bib files)
+\usepackage[T1]{fontenc}
+% For Vietnamese characters
+% \usepackage[T5]{fontenc}
+% See https://www.latex-project.org/help/documentation/encguide.pdf for other character sets
+
+% This assumes your files are encoded as UTF8
+\usepackage[utf8]{inputenc}
+
+% This is not strictly necessary, and may be commented out,
+% but it will improve the layout of the manuscript,
+% and will typically save some space.
+\usepackage{microtype}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+
+% If the title and author information does not fit in the area allocated, uncomment the following
+%
+%\setlength\titlebox{<dim>}
+%
+% and set <dim> to something 5cm or larger.
+
+\title{Phrase Analogies in Large VAEs}
+
+% Author information can be set in various styles:
+% For several authors from the same institution:
+% \author{Author 1 \and ... \and Author n \\
+%         Address line \\ ... \\ Address line}
+% if the names do not fit well on one line use
+%         Author 1 \\ {\bf Author 2} \\ ... \\ {\bf Author n} \\
+% For authors from different institutions:
+% \author{Author 1 \\ Address line \\  ... \\ Address line
+%         \And  ... \And
+%         Author n \\ Address line \\ ... \\ Address line}
+% To start a seperate ``row'' of authors use \AND, as in
+% \author{Author 1 \\ Address line \\  ... \\ Address line
+%         \AND
+%         Author 2 \\ Address line \\ ... \\ Address line \And
+%         Author 3 \\ Address line \\ ... \\ Address line}
+
+\author{Joshua Rivera \\
+  New York University\\
+  \texttt{jcr567@nyu.edu} \\\And
+  Karan Sagar \\
+  New York University\\
+  \texttt{karan@karansag.org} \\\\\And
+  Evan Silverman \\
+  New York University\\
+  \texttt{es4753@nyu.edu } \\}
+
+\begin{document}
+\maketitle
+\begin{abstract}
+The geometry of sentence embedding is not a well studied area in NLP. While related to word embedding, there is additional complexity from syntactic and semantic variability that is not as easily comparable due to the infinite customizability of multi-word phrases.  With the release of OPTIMUS providing a large-scale pre-trained Variational Auto-Encoder(VAE), we believe, using multiple forms of phrase analogies, we can better study the shape of vector representations of multi-word phrases and improve our understanding on their transformations between related forms in their vector space.
+\end{abstract}
+
+\section{Introduction}
+
+% * Introduction
+% ** Our goal is
+
+
+% * Related Work
+% ** Exploring sentence embeddings
+% *** sota models
+% *** Probing
+% ** VAEs
+
+% * Methods and Data
+% ** Data
+% *** MNLI
+% *** Syntactic analogies
+% **** Categories
+% *** Relationship analogies
+% no neutral in NLI dataset
+% ** Scoring
+% *** Syntactic analogies
+% **** BLEU
+% **** Exact
+% **** SNS
+% *** Relationship analogies
+% **** XLM-R (large)-XNLI
+
+
+In this paper, we explore the latent space of OPTIMUS, a new large-scale variational auto-encoder (VAE). We do so by assessing its performance on analogies. These analogies come in two varieties: syntactic and relationship. Since one of the goals of OPTIMUS is to produce a more semantically meaningful latent space than traditional sentence embeddings \cite{li2020_Optimus}, we assess its performance on that metric. Our evaluation methods are varied: BLEU, exact-match, manual, and external model evaluation.  
+
+Sentence embeddings can be useful for capturing properties of text and are frequently used in downstream tasks \cite{conneau2018cram}. While work has been done to produce universal sentence embeddings \cite{kiros2015skipthought, conneau2018supervised, cer2018universal} there remains room to explore regularities of these embeddings. Evaluating these regularities can be challenging due to the lack of a direct inverse function from the embedding (latent) space to the sentence space. Some approaches to mitigate this include probing \cite{conneau2018cram} and natural language generation \cite{kerscher2020vec2sent, Wang2020vec2sent}. \citet{zhu-de-melo-2020-sentence} also explored sentence analogies using a constructed syntactic and relationship analogy dataset. We take this same approach in our dataset construction.
+
+Variational auto-encoders are auto-encoders that output a relatively low-dimensional latent space that can provide a high-level feature representation of the sentence. This can help, for example, guide sentence generation \cite{li2020_Optimus}. Because VAEs decode, intuitively, from regions in space, they provide an easy way to decode the latent space back into the sentence space. Until recently, VAEs \cite{kingma2014autoencoding, bowman-etal-2016-generating} have not shown comparable performance on performance metrics like GLUE. However, OPTIMUS \cite{li2020_Optimus}, the first large-scale VAE, has shown good performance here. As a result, we believe exploration of sentence geometry via phrasal syntactic and relationship analogies \(S_a:S_b::S_c:S_d\) for the phrases \(S_a, S_b, S_c, S_d\) may allow us to better understand how models can understand and interpret  transformation within a larger sentence. 
+
+Our paper is structured as follows:  Section 2 presents related work, while Section 3 presents data and methods. Section 4 presents preliminary experimental results, while Section 5 provides a collaboration statement. Later sections have references.  
+
+
+\section{Related Work}
+
+Previous work has explored sentence embeddings in some depth. Skip-thought \cite{kiros2015skipthought} trains an encoder-decoder architecture, while InferSent \cite{conneau2018supervised} uses NLI data to train a BiLSTM network. \citet{cer2018universal} trains a "Universal Sentence Encoder", while \citet{reimers2019sentencebert} trains a Siamese network on NLI data that significantly outperformed previous methods. 
+
+Work has been done to evaluate these models, particularly through probing and related methods. SentEval \cite{conneau2018supervised} provides a toolkit to assess sentence embeddings by using them as features in transfer tasks. \citet{conneau2018cram} introduces a comprehensive set of probing tasks to assess sentence embeddings. Vec2Sent \cite{kerscher2020vec2sent} uses an RNN optimized for natural language generation (NLG) to probe sentence embeddings. 
+
+% (Zhu '20) explored a hand-crafted 
+
+Variational auto-encoders (VAE)s were introduced by \cite{kingma2014autoencoding, rezende14} and expanded upon by \cite{bowman-etal-2016-generating}. \citet{bowman-etal-2016-generating} has a Gaussian prior on the latent space, which provides a lower-bound for the log-likelihood of the data. This allows arbitrary points that reasonably fall under the space determined by the prior to decode to valid sentences. Other properties include decoding of any homotopy, which, for the purposes here, is a linear interpolation between sentences. \citet{bowman-etal-2016-generating} also dealt with the so-called "KL-vanishing problem"; many hyperparameter choices converged the latent space toward the Gaussian prior. 
+
+However, \citet{bowman-etal-2016-generating} and other VAEs showed that performance was worse than corresponding LSTMs. OPTIMUS \cite{li2020_Optimus} was the first large-scale VAE. It uses a BERT-based encoder and GPT-2-based decoder to achieve better results than BERT on GLUE benchmarks. It also claims strong latent space manipulation and guided language generation capabilities. 
+
+We take the same approach here in our dataset construction as in \cite{zhu-de-melo-2020-sentence}. That is, we use lexical analogies to derive syntactic analogies and use existing relationship analogies from MNLI. However, unlike \cite{zhu-de-melo-2020-sentence} the language-generation capabilities of OPTIMUS allow us to assess our analogy directly rather than through a nearest-neighbors calculation. We believe this provides a potentially stronger result. \citet{kerscher2020vec2sent}  also uses NLG to assess sentence embeddings via analogy, but that trains a separate de-novo decoder for existing embedding methods and can have similar caveats to probing methods.
+
+\section{Methods and Data}
+
+\subsection{Data}
+
+\subsubsection{Data Format}
+
+For this paper we used two types of analogies, syntactical and relationship. To generate our data, we used a method similar to that which is mentioned in \cite{zhu-de-melo-2020-sentence}. 
+
+That is, for the syntax analogy datasets we used a modified version of the Google's lexical analogies dataset \cite{vec2sent} for the syntactic pairs and used SNLI \cite{snli:emnlp2015} and MNLI \cite{N18-1101} for the phrase templates as well as additional sentence analogies.  After processing the newly generated syntactic phrase analogy pairs, we put them in the format $S_a:S_b::S_c:S_d$, that is, a dataset with four columns $S_a,S_b,S_c,S_d$ where on every row $S_a, S_b$ and $S_c,S_d$ are distinct syntactic phrase analogy pairs with the same syntactic transformation. The syntactic analogies used were opposites, comparative, plural, and tense. This allows us to see how analogies are interpreted on multiple parts of speech including nouns, verbs, adjectives, and adverbs. 
+
+For example: \\$S_a$=:The woman is a competitive athlete. \\$S_b$=:The woman is a noncompetitive athlete. \\$S_c$=:A man is wearing comfortable shoes. \\$S_d$=:A man is wearing uncomfortable shoes.
+\\\\
+where we see $S_a:S_b::S_c:S_d$ since \\
+\\
+competitive:noncompetitive::comfortable:uncomfortable\\
+
+To see how OPTIMUS can handle non-lexically-based analogies as well as abstract analogies, we also used SNLI and MNLI, as is, by using its "$gold\_label$" tag to determine analogies based on entailment and contradiction that were then processed in the same format as the syntactical analogies.
+
+
+\subsubsection{Category Descriptions}
+Opposites: contains one word replaced with its antonym with a negation prefix such as "un-", "im-", etc.\\
+\\
+Comparative: determines the comparative form of an adjective and modifies the phrase such that the standard adjectival form can replace it.\\
+\\
+Plural: modifies some singular noun phrase within the sentence by changing the noun to its plural form and modifying any quantifiers.\\
+\\
+Tense: changes the present tense form of some verb to its corresponding past tense.\\
+\\
+Entailment: the first phrase implies the the second phrase, but they are not necessarily equivalent.\\
+\\
+Contradiction: similar to syntactical opposites in meaning, but can have drastically different structure from its paired phrase.  \\
+\\
+Some lexical pairs can work as analogies in theory, but in actual usage may not function in their analogical position. This affects categories such "opposites" mostly as some pairs may not act as true antonyms. For those specific cases, we avoided using it as a lexical pair to process phrase pairs. \\
+ 
+ For example: \begin{center}\\$S_a=$:The boy was possibly here. \\ $S_b=$:*The boy was impossibly here.\\\end{center}
+ 
+
+\subsection{Methods}
+
+\subsubsection{Scoring}
+In order to assess whether the decoded output from our analogy transformation matches the gold standard output, we use a variety of metrics. For syntactic data, we assess a BLEU score, an exact match, and a manually-scored sample of ~200 data points. For relationship data, we use the NLI label predicted by a SoTA pre-trained model fine-tuned on NLI data.
+
+\subsubsection{BLEU}
+Our BLEU scoring uses the NLTK library's \footnote{\href{https://github.com/nltk/nltk}{https://github.com/nltk/nltk}} translation BLEU function with the standard 4-gram.
+\subsubsection{Exact Match}
+
+The exact-match assesses a binary output between our $gold\_label$ and out prediction through case-insensitive string comparison.
+
+\subsubsection{Manual scoring}
+Because assessment of "correctness" in syntactic analogies can be challenging to do in an automated way, we take a representative sample of ~200 predicted values and score them manually. These are scored three ways: CORRECT, PARTIALLY CORRECT, INCORRECT. From this, we do qualitative analysis.
+
+\subsubsection{NLI Model Prediction}
+In assessing analogies based on NLI relationships, we merely want the relationship between sentence pairs to be preserved in the analogy transformation. However, our prediction may be semantically and syntactically different from the $gold\_label$, $S_d$, while still being correct. As a result, we use the predicted label of a near SotA \cite{conneau20unsupervised} model fine-tuned on NLI data to assess the correctness of our prediction. In particular, we chose an XLM-R fine-tuned on XNLI data \cite{conneau18xnli}. The model fine-tunes XLM-R on both the MNLI training data and all the XNLI validation and test data. This was chosen for its ease of access and focus on zero-shot classification. Note: for the final draft, we plan to use the current MNLI SotA model \cite{raffel20t2ttransformer} on NLI fine-tuned appropriately.
+
+\section{Preliminary Results}
+
+Early results show multiple issues. First, many solutions created by OPTIMUS to the analogies are completely wrong. Some change the phrase into an unexpected one that seems to have no relation, while others make no changes at all. We have some ideas to potentially solve the issue, including changing some of OPTIMUS's temperature parameters. 
+
+There were many sentences that did generate correctly. A significant number did solve the analogy completely correctly. Many also solved it correctly semantically but not syntactically. For example, using "not" instead of the prefix "un-" before "aware" in the "opposites" dataset.
+
+Overall, the results are too early to be conclusive, but they are reasonably promising. 
+
+\section{Collaboration Statement}
+
+All team members participated in developing core ideas. Initially, Joshua and Evan connected with Alex Warstadt for guidance, Karan helped do initial research and clarified concepts. 
+
+All team members worked together on all parts of the project. Joshua focused primarily on working with the datasets while Karan and Evan focused on modifying and running OPTIMUS.
+\\\\ 
+Everyone participated in the writing of this paper.
+
+
+
+\section{Code}
+
+The code for this paper can be viewed on our repository on GitHub. \footnote{\href{https://github.com/karansag/phrase-analogies-large-vae}{https://github.com/karansag/phrase-analogies-large-vae}}
+
+
+\nocite{li2020_Optimus, N18-1101, snli:emnlp2015, zhu-de-melo-2020-sentence, reimers2019sentencebert, vec2sent, kiros2015skipthought, conneau2018supervised, cer2018universal, conneau2018cram, kerscher2020vec2sent, Wang2020vec2sent, kingma2014autoencoding, bowman-etal-2016-generating, rezende14, raffel20t2ttransformer, conneau20unsupervised, conneau18xnli}
+
+
+% Entries for the entire Anthology, followed by custom entries
+\bibliography{anthology,custom}
+\bibliographystyle{acl_natbib}
+
+% \appendix
+% \section{Input Examples}
+
+
+\end{document}
