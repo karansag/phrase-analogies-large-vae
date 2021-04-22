@@ -1,4 +1,4 @@
-# lingua52-project
+# Phrase Analogies in Large VAEs 
 Project for MLLU class
 
 ## Setup
