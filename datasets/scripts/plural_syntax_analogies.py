@@ -186,7 +186,6 @@ def_quant_list = ("",
 singular_phrase = ["a"]
 plural_phrase = ["b"]
 
-z = 0
 with open(os.path.dirname(__file__) + '/snli_1.0_train.csv', newline='') as inputfile:
     for row in csv.reader(inputfile):
         word1 = []
@@ -220,7 +219,7 @@ with open(os.path.dirname(__file__) + '/snli_1.0_train.csv', newline='') as inpu
                 j = x
 
                 while j < len(cell1):
-                    # tmp = wn.synsets(temp1[singword])[0].pos()
+                    # pos = wn.synsets(temp1[singword])[0].pos()
                     if temp1[j] in third_person:
                         temp1[j] = normal_person[third_person.index(cell1[j])]
                         break
