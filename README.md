@@ -26,9 +26,9 @@ This repo uses git submodules. Please `git submodule init` and `git submodule up
 * Call the function `run` in `src/experiment.py` with your input and output filenames. For information about the input format, see below.
 
 ```
-import experement
+import experiment
 
-result = experement.run('input.csv','output.csv')
+result = experiment.run('input.csv','output.csv')
 ```
 
 
