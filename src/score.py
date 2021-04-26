@@ -12,7 +12,7 @@ def bleu_calc(output, pred):
 
 
 def exact_calc(output, pred):
-    return int(output == pred)
+    return int(output.lower() == pred.lower())
 
 
 def nli_calc(sent_c, predicted_d):
@@ -46,7 +46,7 @@ def normalize_answer(s):
 
 def bleu_compute(guess: str, answers: List[str], k: int = 4) -> float:
     """
-        Compute approximate BLEU score between guess and a set of answers.
+    Compute approximate BLEU score between guess and a set of answers.
     """
     # Warning: BLEU calculation *should* include proper tokenization and
     # punctuation etc. We're using the normalize_answer for everything though,
