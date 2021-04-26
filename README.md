@@ -23,25 +23,21 @@ This repo uses git submodules. Please `git submodule init` and `git submodule up
 ## Running experiments
 
 * Change the value of `OUTPUT_DIR` in `src/analogy.py` to correspond to the directory of your model data. E.g., `OUTPUT_DIR = os.path.abspath("../../data/snli-b1/checkpoint-31250/")`
-* Call the function `run` in `src/experiment.py` with your input and output filenames. For information about the input format, see below.
+* Call the function `run_csv` in `src/run.py` with your input and output filenames. For information about the input format, see below.
 
 ```
-import experiment
+import run
 
-result = experiment.run('input.csv','output.csv')
+result = run.run_csv('input.csv','output.csv')
 ```
 
 
-You can run individual analogies with `eval_analogy` in `analogy.py`
+You can run individual analogies with `run_single` in `src/run.py`
 
 ```
-import analogy 
+import run 
 
-r = analogy.get_encoder()
-s = analogy.get_decoder()
-v = analogy.get_vae(r['model'], s['model'], r['tokenizer'], s['tokenizer'])
-
-result = analogy.eval_analogy(v, r['tokenizer'], s['tokenizer'], 'sent_a', 'sent_b', 'sent_c', temperature=0.01, degree_to_target=1)    
+result = run.run_single('sent_a', 'sent_b', 'sent_c')    
 ```
 
 ### Dataset format (CSV)
