@@ -65,7 +65,7 @@ def run_experiment(input_frame, n_samples=1, temperature=1):
     for col in new_columns:
         output_frame[col] = input_frame.map_partitions(
             lambda df: df.apply(evaluator, axis=1)
-        ).compute(scheduler="processes")
+        ).compute()
     return output_frame
 
 
