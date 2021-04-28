@@ -131,9 +131,11 @@ def run(input_filename, output_filename, n_samples=1):
     input_frame = pd.read_csv(input_filename)
     # inputs, outputs = read_csv(input_filename)
     """
-    npartitions should be the number of cpus you have (the higher this is, the faster your computation will be)
+    npartitions should be the number of logical cores you have (the higher this is, the faster your computation will be)
 
     On Ubuntu, you can get the number of cores with `grep -m 1 'cpu cores' /proc/cpuinfo.`
+
+    On mac, you can do this with `sysctl -n hw.ncpu`
     """
     new_col_frame = run_experiment(
         dd.from_pandas(input_frame[["a", "b", "c"]], npartitions=8),
