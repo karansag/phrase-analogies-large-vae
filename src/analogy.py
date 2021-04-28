@@ -60,7 +60,7 @@ CODER_TYPE_TO_NAME = {"gpt2": "gpt2", "bert": "bert-base-cased"}
 
 # Set this when running experiments
 # TODO: make a parameter?
-OUTPUT_DIR = os.path.abspath("../../data/snli-b1/checkpoint-31250/")
+OUTPUT_DIR = os.path.abspath("../pretrained_models/optimus_snli10/checkpoint-31250/")
 
 
 def get_encoder(encoder_type="bert", output_encoder_dir="/tmp"):
