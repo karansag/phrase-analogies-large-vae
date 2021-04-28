@@ -2,6 +2,8 @@ import csv
 
 import funcy as f
 import pandas as pd
+import dask.dataframe as dd
+from dask.multiprocessing import get
 
 import analogy as a
 import score as s
@@ -34,6 +36,7 @@ def run_experiment(input_frame, n_samples=1, temperature=1):
     Takes `n_samples` samples from the VAE
     Returns a list of size `n_samples` of results for each input
     """
+
     encoder_data = a.get_encoder()
     decoder_data = a.get_decoder()
 
@@ -60,7 +63,9 @@ def run_experiment(input_frame, n_samples=1, temperature=1):
     new_columns = ["pred_{}".format(i) for i in range(n_samples)]
     output_frame = pd.DataFrame()
     for col in new_columns:
-        output_frame[col] = input_frame.apply(evaluator, axis=1)
+        output_frame[col] = input_frame.map_partitions(
+            lambda df: df.apply(evaluator, axis=1)
+        ).compute(scheduler="processes")
     return output_frame
 
 
@@ -125,7 +130,15 @@ def run(input_filename, output_filename, n_samples=1):
     print("Read input from {}".format(input_filename))
     input_frame = pd.read_csv(input_filename)
     # inputs, outputs = read_csv(input_filename)
-    new_col_frame = run_experiment(input_frame[["a", "b", "c"]], n_samples=n_samples)
+    """
+    npartitions should be the number of cpus you have (the higher this is, the faster your computation will be)
+
+    On Ubuntu, you can get the number of cores with `grep -m 1 'cpu cores' /proc/cpuinfo.`
+    """
+    new_col_frame = run_experiment(
+        dd.from_pandas(input_frame[["a", "b", "c"]], npartitions=6),
+        n_samples=n_samples,
+    )
     output_frame = pd.concat([input_frame, new_col_frame], axis=1)
     print("writing output to /tmp/tmp-output.csv")
     output_frame.to_csv("/tmp/tmp-output.csv")
@@ -138,9 +151,12 @@ def run(input_filename, output_filename, n_samples=1):
                 output_frame["b"],
                 output_frame["c"],
                 # The gold label category
-                output_frame["category"],
+                output_frame["category"] if "category" in output_frame else "neutral",
             ),
-            include_scores=("nli",),
+            include_scores=(
+                "bleu",
+                "exact",
+            ),
         )
         for scorer, result in results.items():
             output_frame["score_{num}_{scorer}".format(num=i, scorer=scorer)] = result
