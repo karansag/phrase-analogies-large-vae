@@ -136,7 +136,7 @@ def run(input_filename, output_filename, n_samples=1):
     On Ubuntu, you can get the number of cores with `grep -m 1 'cpu cores' /proc/cpuinfo.`
     """
     new_col_frame = run_experiment(
-        dd.from_pandas(input_frame[["a", "b", "c"]], npartitions=6),
+        dd.from_pandas(input_frame[["a", "b", "c"]], npartitions=8),
         n_samples=n_samples,
     )
     output_frame = pd.concat([input_frame, new_col_frame], axis=1)
