@@ -3,7 +3,6 @@ import csv
 import funcy as f
 import pandas as pd
 import dask.dataframe as dd
-from dask.multiprocessing import get
 
 import analogy as a
 import score as s
