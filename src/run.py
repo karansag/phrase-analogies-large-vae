@@ -151,6 +151,7 @@ def main():
             output_file,
             n_samples=num_samples,
             scores=scores,
+            temperature=temp,
         )
     else:
         a, b, c = sys.argv[1:]
