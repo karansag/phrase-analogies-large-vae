@@ -155,7 +155,7 @@ def main():
         )
     else:
         a, b, c = sys.argv[1:]
-        return run_single(a, b, c, temperature=0.1)
+        return run_single(a, b, c, temperature=temp)
 
 
 if __name__ == "__main__":
