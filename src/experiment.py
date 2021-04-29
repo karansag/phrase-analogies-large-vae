@@ -111,7 +111,13 @@ def write_output(output_filename, summary_filename, inputs, preds, outputs):
             writer.writerow(inp + [get_pred_str(pred)] + [output])
 
 
-def run(input_filename, output_filename, n_samples=1):
+def run(
+    input_filename,
+    output_filename,
+    n_samples=1,
+    scores=("bleu", "exact"),
+    temperature=1,
+):
     """
     Main entry point for running experiments
 
@@ -139,6 +145,7 @@ def run(input_filename, output_filename, n_samples=1):
     new_col_frame = run_experiment(
         dd.from_pandas(input_frame[["a", "b", "c"]], npartitions=8),
         n_samples=n_samples,
+        temperature=temperature,
     )
     output_frame = pd.concat([input_frame, new_col_frame], axis=1)
     print("writing output to /tmp/tmp-output.csv")
@@ -154,10 +161,7 @@ def run(input_filename, output_filename, n_samples=1):
                 # The gold label category
                 output_frame["category"] if "category" in output_frame else "neutral",
             ),
-            include_scores=(
-                "bleu",
-                "exact",
-            ),
+            include_scores=scores,
         )
         for scorer, result in results.items():
             output_frame["score_{num}_{scorer}".format(num=i, scorer=scorer)] = result

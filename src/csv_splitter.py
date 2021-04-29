@@ -1,4 +1,5 @@
 import os
+import pandas as pd
 
 # source: https://gist.github.com/jrivero/1085501#file-csv_splitter-py
 def split(
@@ -23,8 +24,8 @@ def split(
 
     Example usage:
 
-        >> from toolbox import csv_splitter;
-        >> csv_splitter.split(open('/home/ben/input.csv', 'r'));
+        >> from csv_splitter import csv_splitter
+        >> csv_splitter.split(open('/home/ben/input.csv', 'r'))
 
     """
     import csv
@@ -50,3 +51,32 @@ def split(
             if keep_headers:
                 current_out_writer.writerow(headers)
         current_out_writer.writerow(row)
+
+
+def random_sample(
+    filename,
+    output_filename="",
+    row_limit=10000,
+):
+    """
+    Samples rows from a larger csv and creates a randomized csv with some number of rows
+
+    Arguments:
+        `filename`: The name of the file to read
+        `row_limit`: The number of rows you want in each output file. 10,000 by default.
+        `output_filename`: Where you want to output your sampled data
+
+    Example usage:
+
+        >> from csv_splitter import random_sample
+        >> random_sample("../datasets/processed_comparative_pairs.csv", row_limit=5000)
+
+    """
+    input_csv = pd.read_csv(filename)
+    output_csv = (
+        output_filename
+        if len(output_filename) > 0
+        else os.path.realpath(sys.argv[1])[:-4] + "_split.csv"
+    )
+    sampled_df = input_csv.sample(n=row_limit)
+    sampled_df.to_csv(output_csv, index=False)
