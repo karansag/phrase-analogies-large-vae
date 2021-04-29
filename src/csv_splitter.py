@@ -76,7 +76,7 @@ def random_sample(
     output_csv = (
         output_filename
         if len(output_filename) > 0
-        else os.path.realpath(sys.argv[1])[:-4] + "_split.csv"
+        else os.path.realpath(filename)[:-4] + "_split.csv"
     )
     sampled_df = input_csv.sample(n=row_limit)
     sampled_df.to_csv(output_csv, index=False)
