@@ -2,6 +2,7 @@
 import os, sys, io, datetime, platform
 import analogy as an
 import experiment as e
+import pickle as p
 
 
 def run_csv(
@@ -25,17 +26,27 @@ encoder = None
 decoder = None
 vae = None
 
-
+#TODO if needed, add a function that overrides/deletes pickle files when requested
+if os.path.exists('encoder.pkl') and os.path.exists('decoder.pkl'):
+	with open('encoder.pkl', 'rb') as encoder_in:
+		encoder = p.load(encoder_in)
+	with open('decoder.pkl', 'rb') as decoder_in:
+		decoder = p.load(decoder_in)
+	vae = an.get_vae(
+        encoder["model"], decoder["model"], encoder["tokenizer"], decoder["tokenizer"])
+	
 def set_vae():
     global encoder
     global decoder
     global vae
     encoder = an.get_encoder()
     decoder = an.get_decoder()
-    vae = an.get_vae(
-        encoder["model"], decoder["model"], encoder["tokenizer"], decoder["tokenizer"]
-    )
-
+    vae = an.get_vae(encoder["model"], decoder["model"], encoder["tokenizer"], decoder["tokenizer"])
+    with open('encoder.pkl', 'wb') as encoder_out:
+    	p.dump(encoder, encoder_out, p.HIGHEST_PROTOCOL)
+    with open('decoder.pkl', 'wb') as decoder_out:
+    	p.dump(decoder, decoder_out, p.HIGHEST_PROTOCOL)
+    
 
 def run_single(a, b, c, temperature=0.01):
     if encoder == None or decoder == None:
@@ -56,10 +67,8 @@ def run_single(a, b, c, temperature=0.01):
 
 HELP_TEXT = """
 Hi! Welcome to the cli utility to run OPTIMUS to evaluate analogies. The arguments are:
-
 To evaluate a csv file
 python3 run.py [--help|-h] [--temperature|-t <float>] [--scores|-s <comma-separated list>] [-n <num samples>] [-o <output_csv>] <input_csv>
-
     input_csv     The csv containing the analogies you want to evaluate.
                   Should have columns a,b,c,d at the very least.
     output_csv    OPTIONAL. Where you want to output your results.
@@ -70,14 +79,11 @@ python3 run.py [--help|-h] [--temperature|-t <float>] [--scores|-s <comma-separa
                   Default value: (blue, exact)
     -n            OPTIONAL. Number of samples to evaluate from the dataset
                   More samples == longer runtime
-
 To evaluate a single analogy
 python3 run.py [--help|-h] [--temperature|-t <float>] <a> <b> <c>
-
     a,b,c         Three sentences which correspond to the analogy form
                   a:b::c:d where d is the sentence you are evaluating for
                   Be sure to wrap each sentence like, '"<my sentence>"'
-
 Global parameters
     --help,-h         OPTIONAL. Show this message.
     --temperature,-t  OPTIONAL. Temperature at which to evaluate the analogies
