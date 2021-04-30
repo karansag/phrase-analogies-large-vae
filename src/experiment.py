@@ -1,8 +1,10 @@
 import csv
 
+import os
 import funcy as f
 import pandas as pd
 import dask.dataframe as dd
+import pickle as p
 
 import analogy as a
 import score as s
@@ -35,9 +37,23 @@ def run_experiment(input_frame, n_samples=1, temperature=1):
     Takes `n_samples` samples from the VAE
     Returns a list of size `n_samples` of results for each input
     """
-
-    encoder_data = a.get_encoder()
-    decoder_data = a.get_decoder()
+    
+    encoder_data=None
+    decoder_data=None
+    
+    
+    if os.path.exists('encoder.pkl') and os.path.exists('decoder.pkl'):
+    	with open('encoder.pkl', 'rb') as encoder_in:
+    		encoder_data = p.load(encoder_in)
+    	with open('decoder.pkl', 'rb') as decoder_in:
+    		decoder_data = p.load(decoder_in)    
+    else:
+    	encoder_data = a.get_encoder()
+    	decoder_data = a.get_decoder()
+    	with open('encoder.pkl', 'wb') as encoder_out:
+    		p.dump(encoder_data, encoder_out, p.HIGHEST_PROTOCOL)
+    	with open('decoder.pkl', 'wb') as decoder_out:
+    	 	p.dump(decoder_data, decoder_out, p.HIGHEST_PROTOCOL)
 
     vae = a.get_vae(
         encoder_data["model"],
