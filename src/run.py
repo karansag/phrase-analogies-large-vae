@@ -26,7 +26,7 @@ encoder = None
 decoder = None
 vae = None
 
-#TODO if needed, add a function that overrides/deletes pickle files when requested
+
 if os.path.exists('encoder.pkl') and os.path.exists('decoder.pkl'):
 	with open('encoder.pkl', 'rb') as encoder_in:
 		encoder = p.load(encoder_in)
@@ -87,7 +87,8 @@ python3 run.py [--help|-h] [--temperature|-t <float>] <a> <b> <c>
 Global parameters
     --help,-h         OPTIONAL. Show this message.
     --temperature,-t  OPTIONAL. Temperature at which to evaluate the analogies
-                      Default value: 1	
+                      Default value: 1
+    --reset, -r       OPTIONAL. Removes the saved encoder and decoder                	
 """
 
 # method that is run when the file is run
@@ -135,6 +136,15 @@ def main():
         output_file = sys.argv[idx]
         print("Saving to file: {}".format(output_file))
         del sys.argv[idx - 1 : idx + 1]
+        
+    if "--reset" in sys.argv or "-r" in sys.argv:
+    	if os.path.exists('encoder.pkl') or os.path.exists('decoder.pkl'):
+    		os.remove('encoder.pkl')
+    		os.remove('decoder.pkl')
+    		return print("Encoder and Decoder have been reset")
+    	else:
+    		return print("No Encoder or Decoder currently exists")
+    	
 
     if len(sys.argv) <= 1:
         raise Exception("No input data was provided")
