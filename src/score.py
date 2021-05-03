@@ -8,7 +8,7 @@ import nli
 def bleu_calc(output, pred):
     output_l = output.split(" ")
     output_p = output.split(" ")
-    return bleu_compute(pred, [output], k=2)
+    return bleu_compute(pred, [output], k=4)
 
 
 def exact_calc(output, pred):
