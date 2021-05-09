@@ -132,3 +132,8 @@ dmypy.json
 pretrained_models
 .vscode
 .mllu
+
+*credentials.csv
+
+encoder.pkl
+decoder.pkl

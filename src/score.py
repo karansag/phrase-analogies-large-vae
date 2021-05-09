@@ -6,11 +6,21 @@ import nli
 
 
 def bleu_calc(output, pred):
-    n_tokens = min(len(pred.split(" ")), len(output.split(" ")))
-    return bleu_compute(pred, [output], k=4 if n_tokens > 4 else 2)
+    try:
+        assert isinstance(output, str) and isinstance(pred, str)
+    except AssertionError:
+        print("Error: Trying to compare {} and {}".format(output, pred))
+        return 0
+    min_length = min(len(pred.split(" ")), len(output.split(" ")), 4)
+    return bleu_compute(pred, [output], k=min_length)
 
 
 def exact_calc(output, pred):
+    try:
+        assert isinstance(output, str) and isinstance(pred, str)
+    except AssertionError:
+        print("Error: Trying to compare {} and {}".format(output, pred))
+        return 0
     return int(output.lower() == pred.lower())
 
 
