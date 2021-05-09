@@ -37,23 +37,22 @@ def run_experiment(input_frame, n_samples=1, temperature=1):
     Takes `n_samples` samples from the VAE
     Returns a list of size `n_samples` of results for each input
     """
-    
-    encoder_data=None
-    decoder_data=None
-    
-    
-    if os.path.exists('encoder.pkl') and os.path.exists('decoder.pkl'):
-    	with open('encoder.pkl', 'rb') as encoder_in:
-    		encoder_data = p.load(encoder_in)
-    	with open('decoder.pkl', 'rb') as decoder_in:
-    		decoder_data = p.load(decoder_in)    
+
+    encoder_data = None
+    decoder_data = None
+
+    if os.path.exists("encoder.pkl") and os.path.exists("decoder.pkl"):
+        with open("encoder.pkl", "rb") as encoder_in:
+            encoder_data = p.load(encoder_in)
+        with open("decoder.pkl", "rb") as decoder_in:
+            decoder_data = p.load(decoder_in)
     else:
-    	encoder_data = a.get_encoder()
-    	decoder_data = a.get_decoder()
-    	with open('encoder.pkl', 'wb') as encoder_out:
-    		p.dump(encoder_data, encoder_out, p.HIGHEST_PROTOCOL)
-    	with open('decoder.pkl', 'wb') as decoder_out:
-    	 	p.dump(decoder_data, decoder_out, p.HIGHEST_PROTOCOL)
+        encoder_data = a.get_encoder()
+        decoder_data = a.get_decoder()
+        with open("encoder.pkl", "wb") as encoder_out:
+            p.dump(encoder_data, encoder_out, p.HIGHEST_PROTOCOL)
+        with open("decoder.pkl", "wb") as decoder_out:
+            p.dump(decoder_data, decoder_out, p.HIGHEST_PROTOCOL)
 
     vae = a.get_vae(
         encoder_data["model"],
@@ -125,6 +124,39 @@ def write_output(output_filename, summary_filename, inputs, preds, outputs):
         )
         for inp, pred, outp in zip(inputs, preds, outputs):
             writer.writerow(inp + [get_pred_str(pred)] + [output])
+
+
+def rescore_csv(input_filename, output_filename, scores=("bleu", "exact")):
+    print("Read input from {}".format(input_filename))
+    input_frame = pd.read_csv(input_filename)
+
+    print(input_frame.columns)
+    # figure out num_samples from df
+    pred_cols = [col for col in input_frame.columns if col.startswith("pred_")]
+    n_samples = len(pred_cols)
+
+    output_frame = input_frame.filter(["a", "b", "c", "d"] + pred_cols, axis=1)
+    print(output_frame.columns)
+    for i in range(n_samples):
+        new_results = compute_scores(
+            output_frame["d"],
+            output_frame["pred_{}".format(i)],
+            premises=(
+                output_frame["a"],
+                output_frame["b"],
+                output_frame["c"],
+                # The gold label category
+                # TODO:  need to make this work or else nli won't work
+                output_frame["category"] if "category" in output_frame else "neutral",
+            ),
+            include_scores=scores,
+        )
+        for scorer, result in new_results.items():
+            output_frame["score_{num}_{scorer}".format(num=i, scorer=scorer)] = result
+
+    output_frame.to_csv(output_filename)
+    print("Wrote output to {}".format(output_filename))
+    return output_frame
 
 
 def run(
