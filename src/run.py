@@ -5,21 +5,8 @@ import experiment as e
 import pickle as p
 
 
-def run_csv(
-    input_filename,
-    output_filename,
-    n_samples=1,
-    scores=("bleu", "exact"),
-    temperature=1,
-):
-
-    return e.run(
-        input_filename,
-        output_filename,
-        n_samples=n_samples,
-        scores=scores,
-        temperature=temperature,
-    )
+def run_csv(*args, **kwargs):
+    return e.run(*args, **kwargs)
 
 
 encoder = None

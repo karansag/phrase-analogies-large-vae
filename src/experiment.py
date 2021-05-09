@@ -5,9 +5,11 @@ import funcy as f
 import pandas as pd
 import dask.dataframe as dd
 import pickle as p
+import uuid
 
 import analogy as a
 import score as s
+import buckets as b
 
 
 def read_csv(filename):
@@ -152,7 +154,7 @@ def rescore_csv(input_filename, output_filename, scores=("bleu", "exact")):
 
 def run(
     input_filename,
-    output_filename,
+    output_filepath,
     n_samples=1,
     scores=("bleu", "exact"),
     temperature=1,
@@ -171,25 +173,44 @@ def run(
 
     Stores scores as column `score_{sample #}_{method #}`
 
-    """
-    print("Read input from {}".format(input_filename))
-    input_frame = pd.read_csv(input_filename)
-    # inputs, outputs = read_csv(input_filename)
-    """
     npartitions should be the number of logical cores you have (the higher this is, the faster your computation will be)
 
     On Ubuntu, you can get the number of cores with `grep -m 1 'cpu cores' /proc/cpuinfo`
 
     On mac, you can do this with `sysctl -n hw.ncpu`
+
     """
+    experiment_id = uuid.uuid4().hex
+    print("Running experiment {}".format(experiment_id))
+    # Download (if necessary)
+    input_filename_downloaded = (
+        get_file(input_filename) if b.is_remote_file(input_filename) else input_filename
+    )
+
+    # Read input
+    print("Read input from {}".format(input_filename_downloaded))
+    input_frame = pd.read_csv(input_filename_downloaded)
+
+    # Run optimus evaluation
     new_col_frame = run_experiment(
         dd.from_pandas(input_frame[["a", "b", "c"]], npartitions=npartitions),
         n_samples=n_samples,
         temperature=temperature,
     )
     output_frame = pd.concat([input_frame, new_col_frame], axis=1)
-    print("writing output to /tmp/tmp-output.csv")
-    output_frame.to_csv("/tmp/tmp-output.csv")
+
+    # Upload optimus evaluation
+    optimus_evaluated_filename = "optimus-evaluated-{}.csv".format(experiment_id)
+    optimus_evaluated_path = "/tmp/{}".format(optimus_evaluated_filename)
+    print("Writing output to {}".format(optimus_evaluated_path))
+    output_frame.to_csv(optimus_evaluated_path)
+    optimus_evaluated_remote_filename = b.to_remote_optimus_evaluated_filename(
+        optimus_evaluated_filename
+    )
+    print("Uploading file to optimus: {}".format(optimus_evaluated_remote_filename))
+    b.put_file(optimus_evaluated_path, optimus_evaluated_remote_filename)
+
+    # Score data
     for i in range(n_samples):
         results = compute_scores(
             output_frame["d"],
@@ -206,6 +227,10 @@ def run(
         for scorer, result in results.items():
             output_frame["score_{num}_{scorer}".format(num=i, scorer=scorer)] = result
 
-    output_frame.to_csv(output_filename)
-    print("Wrote output to {}".format(output_filename))
+    output_dirname, output_filename = os.path.split(output_filepath)
+    output_remote_filename = b.to_remote_scored_filename(output_filename)
+    output_frame.to_csv(output_filepath)
+    print("Wrote output to {}".format(output_filepath))
+    print("Uploading file {} to {}".format(output_filepath, output_remote_filename))
+    b.put_file(output_filepath, output_remote_filename)
     return output_frame
