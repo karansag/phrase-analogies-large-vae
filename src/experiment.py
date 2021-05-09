@@ -130,13 +130,18 @@ def rescore_csv(input_filename, output_filename, scores=("bleu", "exact")):
     print("Read input from {}".format(input_filename))
     input_frame = pd.read_csv(input_filename)
 
-    print(input_frame.columns)
     # figure out num_samples from df
     pred_cols = [col for col in input_frame.columns if col.startswith("pred_")]
     n_samples = len(pred_cols)
 
-    output_frame = input_frame.filter(["a", "b", "c", "d"] + pred_cols, axis=1)
-    print(output_frame.columns)
+    output_frame = input_frame.filter(
+        [
+            col
+            for col in input_frame.columns
+            if not col.startswith("score_") and not col.startswith("Unnamed")
+        ],
+        axis=1,
+    )
     for i in range(n_samples):
         new_results = compute_scores(
             output_frame["d"],
@@ -146,7 +151,6 @@ def rescore_csv(input_filename, output_filename, scores=("bleu", "exact")):
                 output_frame["b"],
                 output_frame["c"],
                 # The gold label category
-                # TODO:  need to make this work or else nli won't work
                 output_frame["category"] if "category" in output_frame else "neutral",
             ),
             include_scores=scores,
