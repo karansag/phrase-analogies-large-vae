@@ -6,9 +6,8 @@ import nli
 
 
 def bleu_calc(output, pred):
-    output_l = output.split(" ")
-    output_p = output.split(" ")
-    return bleu_compute(pred, [output], k=4)
+    n_tokens = min(len(pred.split(" ")), len(output.split(" ")))
+    return bleu_compute(pred, [output], k=4 if n_tokens > 4 else 2)
 
 
 def exact_calc(output, pred):
