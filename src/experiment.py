@@ -115,13 +115,21 @@ def write_output(output_filename, summary_filename, inputs, preds, outputs):
             writer.writerow(inp + [get_pred_str(pred)] + [output])
 
 
-def rescore_csv(input_filename, output_filename, scores=("bleu", "exact")):
-    print("Read input from {}".format(input_filename))
-    input_frame = pd.read_csv(input_filename)
+def write_tmp_file(frame):
+    output_filename = "/tmp/{}.csv".format(uuid.uuid4().hex[:10])
+    frame.to_csv(output_filename)
+    return output_filename
 
-    # figure out num_samples from df
-    pred_cols = [col for col in input_frame.columns if col.startswith("pred_")]
-    n_samples = len(pred_cols)
+
+def rescore_csv(
+    input_filename_raw, output_filename, scores=("bleu", "exact"), n_samples=1
+):
+    input_filename = (
+        b.get_file(input_filename_raw)
+        if b.is_remote_file(input_filename_raw)
+        else input_filename_raw
+    )
+    input_frame = pd.read_csv(input_filename)
 
     output_frame = input_frame.filter(
         [
@@ -147,8 +155,12 @@ def rescore_csv(input_filename, output_filename, scores=("bleu", "exact")):
         for scorer, result in new_results.items():
             output_frame["score_{num}_{scorer}".format(num=i, scorer=scorer)] = result
 
-    output_frame.to_csv(output_filename)
-    print("Wrote output to {}".format(output_filename))
+    if b.is_remote_file(output_filename):
+        tmp_filename = write_tmp_file(output_frame)
+        b.put_file(tmp_filename, output_filename)
+    else:
+        output_frame.to_csv(output_filename)
+        print("Wrote output to {}".format(output_filename))
     return output_frame
 
 
@@ -184,7 +196,9 @@ def run(
     print("Running experiment {}".format(experiment_id))
     # Download (if necessary)
     input_filename_downloaded = (
-        get_file(input_filename) if b.is_remote_file(input_filename) else input_filename
+        b.get_file(input_filename)
+        if b.is_remote_file(input_filename)
+        else input_filename
     )
 
     # Read input
@@ -210,27 +224,4 @@ def run(
     print("Uploading file to optimus: {}".format(optimus_evaluated_remote_filename))
     b.put_file(optimus_evaluated_path, optimus_evaluated_remote_filename)
 
-    # Score data
-    for i in range(n_samples):
-        results = compute_scores(
-            output_frame["d"],
-            output_frame["pred_{}".format(i)],
-            premises=(
-                output_frame["a"],
-                output_frame["b"],
-                output_frame["c"],
-                # The gold label category
-                output_frame["category"] if "category" in output_frame else "neutral",
-            ),
-            include_scores=scores,
-        )
-        for scorer, result in results.items():
-            output_frame["score_{num}_{scorer}".format(num=i, scorer=scorer)] = result
-
-    output_dirname, output_filename = os.path.split(output_filepath)
-    output_remote_filename = b.to_remote_scored_filename(output_filename)
-    output_frame.to_csv(output_filepath)
-    print("Wrote output to {}".format(output_filepath))
-    print("Uploading file {} to {}".format(output_filepath, output_remote_filename))
-    b.put_file(output_filepath, output_remote_filename)
-    return output_frame
+    return rescore_csv(optimus_evaluated_path, output_filepath, n_samples=n_samples)
