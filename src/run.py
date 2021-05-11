@@ -14,26 +14,30 @@ decoder = None
 vae = None
 
 
-if os.path.exists('encoder.pkl') and os.path.exists('decoder.pkl'):
-	with open('encoder.pkl', 'rb') as encoder_in:
-		encoder = p.load(encoder_in)
-	with open('decoder.pkl', 'rb') as decoder_in:
-		decoder = p.load(decoder_in)
-	vae = an.get_vae(
-        encoder["model"], decoder["model"], encoder["tokenizer"], decoder["tokenizer"])
-	
+if os.path.exists("encoder.pkl") and os.path.exists("decoder.pkl"):
+    with open("encoder.pkl", "rb") as encoder_in:
+        encoder = p.load(encoder_in)
+    with open("decoder.pkl", "rb") as decoder_in:
+        decoder = p.load(decoder_in)
+    vae = an.get_vae(
+        encoder["model"], decoder["model"], encoder["tokenizer"], decoder["tokenizer"]
+    )
+
+
 def set_vae():
     global encoder
     global decoder
     global vae
     encoder = an.get_encoder()
     decoder = an.get_decoder()
-    vae = an.get_vae(encoder["model"], decoder["model"], encoder["tokenizer"], decoder["tokenizer"])
-    with open('encoder.pkl', 'wb') as encoder_out:
-    	p.dump(encoder, encoder_out, p.HIGHEST_PROTOCOL)
-    with open('decoder.pkl', 'wb') as decoder_out:
-    	p.dump(decoder, decoder_out, p.HIGHEST_PROTOCOL)
-    
+    vae = an.get_vae(
+        encoder["model"], decoder["model"], encoder["tokenizer"], decoder["tokenizer"]
+    )
+    with open("encoder.pkl", "wb") as encoder_out:
+        p.dump(encoder, encoder_out, p.HIGHEST_PROTOCOL)
+    with open("decoder.pkl", "wb") as decoder_out:
+        p.dump(decoder, decoder_out, p.HIGHEST_PROTOCOL)
+
 
 def run_single(a, b, c, temperature=0.01):
     if encoder == None or decoder == None:
@@ -63,7 +67,7 @@ python3 run.py [--help|-h] [--temperature|-t <float>] [--scores|-s <comma-separa
     --scores,-s   OPTIONAL. Comma-separated list of scores you want to evaluate for
                   Possible values are: nli, bleu, exact
                   Example usage: -s bleu,exact
-                  Default value: (blue, exact)
+                  Default value: (bleu, exact)
     -n            OPTIONAL. Number of samples to evaluate from the dataset
                   More samples == longer runtime
 To evaluate a single analogy
@@ -75,7 +79,7 @@ Global parameters
     --help,-h         OPTIONAL. Show this message.
     --temperature,-t  OPTIONAL. Temperature at which to evaluate the analogies
                       Default value: 1
-    --reset, -r       OPTIONAL. Removes the saved encoder and decoder                	
+    --reset, -r       OPTIONAL. Removes the saved encoder and decoder
 """
 
 # method that is run when the file is run
@@ -123,15 +127,14 @@ def main():
         output_file = sys.argv[idx]
         print("Saving to file: {}".format(output_file))
         del sys.argv[idx - 1 : idx + 1]
-        
+
     if "--reset" in sys.argv or "-r" in sys.argv:
-    	if os.path.exists('encoder.pkl') or os.path.exists('decoder.pkl'):
-    		os.remove('encoder.pkl')
-    		os.remove('decoder.pkl')
-    		return print("Encoder and Decoder have been reset")
-    	else:
-    		return print("No Encoder or Decoder currently exists")
-    	
+        if os.path.exists("encoder.pkl") or os.path.exists("decoder.pkl"):
+            os.remove("encoder.pkl")
+            os.remove("decoder.pkl")
+            return print("Encoder and Decoder have been reset")
+        else:
+            return print("No Encoder or Decoder currently exists")
 
     if len(sys.argv) <= 1:
         raise Exception("No input data was provided")
