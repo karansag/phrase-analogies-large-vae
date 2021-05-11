@@ -5,6 +5,7 @@ import funcy as f
 import pandas as pd
 import dask.dataframe as dd
 import pickle as p
+import shutil
 import uuid
 
 import analogy as a
@@ -202,19 +203,20 @@ def optimus_evaluate(
     output_frame = pd.concat([input_frame, new_col_frame], axis=1)
 
     # Upload optimus evaluation
-    output_filename = "{}-{}.csv".format(output_file_prefix, experiment_id)
     local_filepath = write_tmp_file(output_frame)
     print("Writing output to {}".format(local_filepath))
-    remote_filepath = b.to_remote_filename(
-        "optimus_evaluated/{}".format(output_filename)
-    )
-    print("Uploading file to optimus: {}".format(remote_filepath))
-    b.put_file(local_filepath, remote_filepath)
-    return (output_frame, remote_filepath)
+    if b.is_remote_file(output_filepath):
+        print("Uploading file to optimus: {}".format(output_filepath))
+        b.put_file(local_filepath, output_filepath)
+    else:
+        print("Moving output to {}".format(output_filepath))
+        shutil.move(local_filepath, output_filepath)
+    return (output_frame, output_filepath)
 
 
 def run(
     input_filename,
+    eval_filepath,
     output_filepath,
     n_samples=1,
     scores=("bleu", "exact"),
@@ -241,9 +243,9 @@ def run(
     On mac, you can do this with `sysctl -n hw.ncpu`
 
     """
-    (output_frame, output_path) = optimus_evaluate(
+    (eval_frame, eval_path) = optimus_evaluate(
         input_filename,
-        output_filepath,
+        eval_filepath,
         n_samples=n_samples,
         temperature=temperature,
         npartitions=npartitions,
