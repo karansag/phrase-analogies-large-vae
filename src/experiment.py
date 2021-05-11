@@ -32,7 +32,7 @@ def read_csv(filename):
     return inputs, outputs
 
 
-def run_experiment(input_frame, n_samples=1, temperature=1):
+def run_experiment(input_frame, n_samples=1, temperature=1, npartitions=1):
     """
     Runs experiment given inputs.
 
@@ -65,10 +65,14 @@ def run_experiment(input_frame, n_samples=1, temperature=1):
 
     new_columns = ["pred_{}".format(i) for i in range(n_samples)]
     output_frame = pd.DataFrame()
+    parallelize = npartitions > 1
     for col in new_columns:
-        output_frame[col] = input_frame.map_partitions(
-            lambda df: df.apply(evaluator, axis=1)
-        ).compute()
+        if parallelize:
+            output_frame[col] = input_frame.map_partitions(
+                lambda df: df.apply(evaluator, axis=1)
+            ).compute()
+        else:
+            output_frame[col] = input_frame.apply(evaluator, axis=1)
     return output_frame
 
 
@@ -164,13 +168,58 @@ def rescore_csv(
     return output_frame
 
 
+def optimus_evaluate(
+    input_filename,
+    output_filepath,
+    n_samples=1,
+    temperature=1.0,
+    npartitions=1,
+    output_file_prefix="",
+):
+    """Evaluate analogies using OPTIMUS over the input"""
+    experiment_id = uuid.uuid4().hex[:10]
+    print("Running experiment {}".format(experiment_id))
+    # Download (if necessary)
+    input_filename_downloaded = (
+        b.get_file(input_filename)
+        if b.is_remote_file(input_filename)
+        else input_filename
+    )
+
+    # Read input
+    print("Read input from {}".format(input_filename_downloaded))
+    input_frame = pd.read_csv(input_filename_downloaded)
+
+    # Run optimus evaluation
+    new_col_frame = run_experiment(
+        dd.from_pandas(input_frame[["a", "b", "c"]], npartitions=npartitions)
+        if npartitions > 1
+        else input_frame[["a", "b", "c"]],
+        n_samples=n_samples,
+        temperature=temperature,
+        npartitions=npartitions,
+    )
+    output_frame = pd.concat([input_frame, new_col_frame], axis=1)
+
+    # Upload optimus evaluation
+    output_filename = "{}-{}.csv".format(output_file_prefix, experiment_id)
+    local_filepath = write_tmp_file(output_frame)
+    print("Writing output to {}".format(local_filepath))
+    remote_filepath = b.to_remote_filename(
+        "optimus_evaluated/{}".format(output_filename)
+    )
+    print("Uploading file to optimus: {}".format(remote_filepath))
+    b.put_file(local_filepath, remote_filepath)
+    return (output_frame, remote_filepath)
+
+
 def run(
     input_filename,
     output_filepath,
     n_samples=1,
     scores=("bleu", "exact"),
     temperature=1,
-    npartitions=8,
+    npartitions=1,
 ):
     """
     Main entry point for running experiments
@@ -192,36 +241,12 @@ def run(
     On mac, you can do this with `sysctl -n hw.ncpu`
 
     """
-    experiment_id = uuid.uuid4().hex
-    print("Running experiment {}".format(experiment_id))
-    # Download (if necessary)
-    input_filename_downloaded = (
-        b.get_file(input_filename)
-        if b.is_remote_file(input_filename)
-        else input_filename
-    )
-
-    # Read input
-    print("Read input from {}".format(input_filename_downloaded))
-    input_frame = pd.read_csv(input_filename_downloaded)
-
-    # Run optimus evaluation
-    new_col_frame = run_experiment(
-        dd.from_pandas(input_frame[["a", "b", "c"]], npartitions=npartitions),
+    (output_frame, output_path) = optimus_evaluate(
+        input_filename,
+        output_filepath,
         n_samples=n_samples,
         temperature=temperature,
+        npartitions=npartitions,
     )
-    output_frame = pd.concat([input_frame, new_col_frame], axis=1)
-
-    # Upload optimus evaluation
-    optimus_evaluated_filename = "optimus-evaluated-{}.csv".format(experiment_id)
-    optimus_evaluated_path = "/tmp/{}".format(optimus_evaluated_filename)
-    print("Writing output to {}".format(optimus_evaluated_path))
-    output_frame.to_csv(optimus_evaluated_path)
-    optimus_evaluated_remote_filename = b.to_remote_optimus_evaluated_filename(
-        optimus_evaluated_filename
-    )
-    print("Uploading file to optimus: {}".format(optimus_evaluated_remote_filename))
-    b.put_file(optimus_evaluated_path, optimus_evaluated_remote_filename)
 
     return rescore_csv(optimus_evaluated_path, output_filepath, n_samples=n_samples)
