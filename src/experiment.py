@@ -11,6 +11,7 @@ import uuid
 import analogy as a
 import score as s
 import buckets as b
+import util
 
 
 def read_csv(filename):
@@ -120,13 +121,7 @@ def write_output(output_filename, summary_filename, inputs, preds, outputs):
             writer.writerow(inp + [get_pred_str(pred)] + [output])
 
 
-def write_tmp_file(frame):
-    output_filename = "/tmp/{}.csv".format(uuid.uuid4().hex[:10])
-    frame.to_csv(output_filename)
-    return output_filename
-
-
-def rescore_csv(
+def score_csv(
     input_filename_raw, output_filename, scores=("bleu", "exact"), n_samples=1
 ):
     input_filename = (
@@ -161,7 +156,7 @@ def rescore_csv(
             output_frame["score_{num}_{scorer}".format(num=i, scorer=scorer)] = result
 
     if b.is_remote_file(output_filename):
-        tmp_filename = write_tmp_file(output_frame)
+        tmp_filename = util.write_tmp_file(output_frame)
         b.put_file(tmp_filename, output_filename)
     else:
         output_frame.to_csv(output_filename)
@@ -170,12 +165,7 @@ def rescore_csv(
 
 
 def optimus_evaluate(
-    input_filename,
-    output_filepath,
-    n_samples=1,
-    temperature=1.0,
-    npartitions=1,
-    output_file_prefix="",
+    input_filename, output_filepath, n_samples=1, temperature=1.0, npartitions=1
 ):
     """Evaluate analogies using OPTIMUS over the input"""
     experiment_id = uuid.uuid4().hex[:10]
@@ -203,7 +193,7 @@ def optimus_evaluate(
     output_frame = pd.concat([input_frame, new_col_frame], axis=1)
 
     # Upload optimus evaluation
-    local_filepath = write_tmp_file(output_frame)
+    local_filepath = util.write_tmp_file(output_frame)
     print("Writing output to {}".format(local_filepath))
     if b.is_remote_file(output_filepath):
         print("Uploading file to optimus: {}".format(output_filepath))
@@ -251,4 +241,4 @@ def run(
         npartitions=npartitions,
     )
 
-    return rescore_csv(optimus_evaluated_path, output_filepath, n_samples=n_samples)
+    return score_csv(eval_path, output_filepath, n_samples=n_samples, scores=scores)
