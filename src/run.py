@@ -148,6 +148,12 @@ def main():
             return print("Encoder and Decoder have been reset")
         else:
             return print("No Encoder or Decoder currently exists")
+        idx = [
+            x
+            for x in range(len(sys.argv))
+            if sys.argv[x] == "-r" or sys.argv[x] == "--reset"
+        ][0] + 1
+        del sys.argv[idx - 1 : idx + 1]
 
     if len(sys.argv) <= 1:
         raise Exception("No input data was provided")
