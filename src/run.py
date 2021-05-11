@@ -59,9 +59,11 @@ def run_single(a, b, c, temperature=0.01):
 HELP_TEXT = """
 Hi! Welcome to the cli utility to run OPTIMUS to evaluate analogies. The arguments are:
 To evaluate a csv file
-python3 run.py [--help|-h] [--temperature|-t <float>] [--scores|-s <comma-separated list>] [-n <num samples>] [-o <output_csv>] <input_csv>
+python3 run.py [--help|-h] [--temperature|-t <float>] [--scores|-s <comma-separated list>] [-n <num samples>] [-e <eval_csv>] [-o <output_csv>] <input_csv>
     input_csv     The csv containing the analogies you want to evaluate.
                   Should have columns a,b,c,d at the very least.
+    eval_csv      OPTIONAL. The intermediate (unscored) results path.
+                  Default value: <input_csv_name>_evl.csv
     output_csv    OPTIONAL. Where you want to output your results.
                   Default value: <input_csv_name>_res.csv
     --scores,-s   OPTIONAL. Comma-separated list of scores you want to evaluate for
@@ -70,6 +72,9 @@ python3 run.py [--help|-h] [--temperature|-t <float>] [--scores|-s <comma-separa
                   Default value: (bleu, exact)
     -n            OPTIONAL. Number of samples to evaluate from the dataset
                   More samples == longer runtime
+
+    Note that, if you have s3 credentials set up for boto3 and a bucket called 'optimus-experiments',
+    the CSV arguments accept s3 paths of the form 's3://<s3 file path>'
 To evaluate a single analogy
 python3 run.py [--help|-h] [--temperature|-t <float>] <a> <b> <c>
     a,b,c         Three sentences which correspond to the analogy form
@@ -120,6 +125,14 @@ def main():
         print("Evaluating with num_samples: {}".format(num_samples))
         del sys.argv[idx - 1 : idx + 1]
 
+    eval_file = ""
+    if "-e" in sys.argv:
+        is_csv = True
+        idx = [x for x in range(len(sys.argv)) if sys.argv[x] == "-e"][0] + 1
+        output_file = sys.argv[idx]
+        print("Saving intermediate results to file: {}".format(output_file))
+        del sys.argv[idx - 1 : idx + 1]
+
     output_file = ""
     if "-o" in sys.argv:
         is_csv = True
@@ -154,10 +167,12 @@ def main():
 
         return run_csv(
             file_path,
+            eval_file,
             output_file,
             n_samples=num_samples,
             scores=scores,
             temperature=temp,
+            npartitions=npartitions,
         )
     else:
         a, b, c = sys.argv[1:]
