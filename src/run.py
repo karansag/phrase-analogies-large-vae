@@ -3,6 +3,7 @@ import os, sys, io, datetime, platform
 import analogy as an
 import experiment as e
 import pickle as p
+import buckets
 
 
 def run_csv(*args, **kwargs):
@@ -59,7 +60,7 @@ def run_single(a, b, c, temperature=0.01):
 HELP_TEXT = """
 Hi! Welcome to the cli utility to run OPTIMUS to evaluate analogies. The arguments are:
 To evaluate a csv file
-python3 run.py [--help|-h] [--temperature|-t <float>] [--scores|-s <comma-separated list>] [-n <num samples>] [-e <eval_csv>] [-o <output_csv>] <input_csv>
+python3 run.py [--help|-h] [--partitions|-p <int>] [--temperature|-t <float>] [--scores|-s <comma-separated list>] [-n <num samples>] [-e <eval_csv>] [-o <output_csv>] <input_csv>
     input_csv     The csv containing the analogies you want to evaluate.
                   Should have columns a,b,c,d at the very least.
     eval_csv      OPTIONAL. The intermediate (unscored) results path.
@@ -93,6 +94,17 @@ def main():
         return print(HELP_TEXT)
 
     is_csv = False
+
+    npartitions = 8
+    if "--partitions" in sys.argv or "-p" in sys.argv:
+        idx = [
+            x
+            for x in range(len(sys.argv))
+            if sys.argv[x] == "--partitions" or sys.argv[x] == "-p"
+        ][0] + 1
+        npartitions = int(sys.argv[idx])
+        print("Running on {} partitions.".format(npartitions))
+        del sys.argv[idx - 1 : idx + 1]
 
     temp = 1
     if "--temperature" in sys.argv or "-t" in sys.argv:
@@ -165,15 +177,27 @@ def main():
         raise Exception("Expected sentences to calculate analogy but recieved none")
 
     if is_csv:
-        file_path = os.path.realpath(sys.argv[1])
+        file_path = (
+            sys.argv[1]
+            if buckets.is_remote_file(sys.argv[1])
+            else os.path.realpath(sys.argv[1])
+        )
+
+        eval_path = (
+            eval_file
+            if buckets.is_remote_file(eval_file) or len(eval_file) > 0
+            else file_path[:-4] + "_eval.csv"
+        )
 
         output_file = (
-            output_file if len(output_file) > 0 else file_path[:-4] + "_results.csv"
+            output_file
+            if buckets.is_remote_file(output_file) or len(output_file) > 0
+            else file_path[:-4] + "_results.csv"
         )
 
         return run_csv(
             file_path,
-            eval_file,
+            eval_path,
             output_file,
             n_samples=num_samples,
             scores=scores,
