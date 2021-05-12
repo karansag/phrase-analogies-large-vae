@@ -92,6 +92,7 @@ def remove_duplicates(phrase):
 
 standardPhrase = ["a"]
 comparativePhrase = ["b"]
+labels = ["category"]
 with open("../snli_1.0_train.csv", newline="") as inputfile:
     for row in csv.reader(inputfile):
         word1 = ""
@@ -103,8 +104,9 @@ with open("../snli_1.0_train.csv", newline="") as inputfile:
         thanPhrase1 = None
         thanPhrase2 = None
 
-        cell1 = row[1].split()
-        cell2 = row[2].split()
+        cell1 = row[4].split()
+        cell2 = row[7].split()
+        label = row[2]
 
         i = 0
 
@@ -122,14 +124,15 @@ with open("../snli_1.0_train.csv", newline="") as inputfile:
             i += 1
 
         if bool(valid_phrase1):
-            if row[1] in standardPhrase:
+            if row[4] in standardPhrase:
                 pass
             else:
-                standardPhrase.append(row[1])
+                standardPhrase.append(row[4])
                 if thanPhrase1:
                     cell1 = cell1[: cell1.index("than")]
                 cell1[cell1.index(word1)] = adjective[comparative.index(word1)]
                 comparativePhrase.append(" ".join(cell1))
+                labels.append(label)
 
         i = 0
 
@@ -147,18 +150,20 @@ with open("../snli_1.0_train.csv", newline="") as inputfile:
             i += 1
 
         if bool(valid_phrase2):
-            if row[2] in standardPhrase:
+            if row[7] in standardPhrase:
                 pass
             else:
-                standardPhrase.append(row[2])
+                standardPhrase.append(row[7])
                 if thanPhrase2:
                     cell2 = cell2[: cell2.index("than")]
                 cell2[cell2.index(word2)] = adjective[comparative.index(word2)]
                 comparativePhrase.append(" ".join(cell2))
+                labels.append(label)
 
 df = pd.DataFrame()
 df["Original"] = standardPhrase
 df["Modified"] = comparativePhrase
+df["Labels"] = labels
 df.to_csv("../comparative_syntax_analogies.csv", sep=",", header=None, index=None)
 
 print(".csv created with comparative syntactical analogies")

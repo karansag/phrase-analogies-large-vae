@@ -4,17 +4,27 @@ import pandas as pd
 import pandasql as ps
 import time
 
-filename = os.path.realpath("../comparative_sent_pairs.csv")
+filename = os.path.realpath("../comparative_syntax_analogies.csv")
 
 df = pd.read_csv(filename)
 
 query = """
-select distinct 
-    t1.a, t1.b, t2.a as c, t2.b as d
+select *
+from (select distinct 
+    t1.a, t1.b, t2.a as c, t2.b as d, t2.category, "comparative|to-comp" as subcategory
 from
     df t1
 inner join df t2
-    on t1.a != t2.a;
+    on t1.a != t2.a)
+union
+select *
+from (select distinct
+    t1.b as a, t1.a as b, t2.b as c, t2.b as d, t2.category, "comparative|from-comp" as subcategory
+from
+    df t1
+inner join df t2
+    on t1.b != t2.b)
+
 """
 print("running query")
 

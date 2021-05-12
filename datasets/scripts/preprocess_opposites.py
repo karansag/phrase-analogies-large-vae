@@ -6,15 +6,11 @@ import time
 
 filename = os.path.realpath("../opposites_sent_pairs.csv")
 
-f = pd.read_csv(filename)
-
-df = f.copy()
-
-df.rename(columns={"Original": "a", "Opposite": "b"}, inplace=True)
+df = pd.read_csv(filename)
 
 query = """
 select distinct 
-    t1.a, t1.b, t2.a as c, t2.b as d
+    t1.a, t1.b, t2.a as c, t2.b as d, t2.category, "opposite|from-" || t2.f as subcategory
 from
     df t1
 inner join df t2
