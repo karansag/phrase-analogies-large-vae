@@ -79,21 +79,29 @@ def run_experiment(input_frame, n_samples=1, temperature=1, npartitions=1):
 
 
 def compute_scores(
-    outputs, preds, premises=tuple(), include_scores=("bleu", "exact", "nli")
+    outputs,
+    preds,
+    premises=tuple(),
+    include_scores=("bleu", "exact", "nli", "nli_no_neutral"),
 ):
     """
     Compute scores on the data
     """
     results = {}
-    fn_list = {"bleu": s.bleu_calc, "exact": s.exact_calc, "nli": s.nli_calc}
+    fn_list = {
+        "bleu": s.bleu_calc,
+        "exact": s.exact_calc,
+        "nli": s.nli_calc,
+        "nli_no_neutral": s.nli_no_neutral_calc,
+    }
 
     for score_name in include_scores:
         fn = fn_list[score_name]
-        if score_name == "nli":
+        if score_name in ["nli", "nli_no_neutral"]:
             s_a, s_b, s_c, gold = premises
-            nli_result_list = s.nli_calc(premises[2], preds)
-            results["nli_raw"] = nli_result_list
-            results["nli"] = [
+            nli_result_list = fn_list[score_name](premises[2], preds)
+            results["{}_result".format(score_name)] = nli_result_list
+            results["{}_score".format(score_name)] = [
                 1 if x == y else 0 for (x, y) in zip(nli_result_list, gold)
             ]
         else:

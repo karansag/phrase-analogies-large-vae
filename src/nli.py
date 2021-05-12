@@ -17,10 +17,14 @@ def get_nli_tokenizer():
     return AutoTokenizer.from_pretrained("joeddav/xlm-roberta-large-xnli")
 
 
-def eval_nli(a_values, b_values):
+def eval_nli(a_values, b_values, without_neutral=False):
     """Evaluate the NLI relationship (entailment, negative, neutral) between these pairs"""
-    index_to_label = {0: "contradiction", 1: "neutral", 2: "entailment"}
     device = get_device()
+    index_to_label = (
+        {0: "contradiction", 1: "entailment"}
+        if without_neutral
+        else {0: "contradiction", 1: "neutral", 2: "entailment"}
+    )
     nli_model = get_nli_model()
     tokenizer = get_nli_tokenizer()
     preds = []
@@ -29,7 +33,10 @@ def eval_nli(a_values, b_values):
             a, b, return_tensors="pt", truncation_strategy="only_first"
         )
         logits = nli_model(x.to(device)).logits
-        logit_argmax = torch.argmax(logits[:], dim=1)[0]
+        if without_neutral:
+            logit_argmax = torch.argmax(logits[:, [0, 2]], dim=1)[0]
+        else:
+            logit_argmax = torch.argmax(logits[:], dim=1)[0]
         preds.append(index_to_label[logit_argmax.item()])
 
     return preds

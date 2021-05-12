@@ -32,6 +32,14 @@ def nli_calc(sent_c, predicted_d):
     return nli.eval_nli(sent_c, predicted_d)
 
 
+def nli_no_neutral_calc(sent_c, predicted_d):
+    """
+    sent_c is a list /tensor / series of c sentences, predicted_d a list/tensor/series of predicated d sentences.
+    Returns one of entailment/contradiction (excluding neutral) for each value in the series
+    """
+    return nli.eval_nli(sent_c, predicted_d, without_neutral=True)
+
+
 # Following adapted from
 # https://github.com/facebookresearch/ParlAI/blob/2426d74b93184689be5067bdbf99f1ba96748f7b/parlai/core/metrics.py
 
