@@ -60,7 +60,14 @@ CODER_TYPE_TO_NAME = {"gpt2": "gpt2", "bert": "bert-base-cased"}
 
 # Set this when running experiments
 # TODO: make a parameter?
-OUTPUT_DIR = os.path.abspath("../../data/snli-b1/checkpoint-31250/")
+# OUTPUT_DIR = os.path.abspath("../../data/snli-b1/checkpoint-31250/")
+# Set the output dir here. E.g.,
+# export OUTPUT_DIR="/scratch/MYUSER/project-repo/pretrained_models/snli-b1/checkpoint-31250/"
+OUTPUT_DIR = os.environ.get("OPTIMUS_CHECKPOINT_DIR")
+if not OUTPUT_DIR:
+    raise Exception(
+        "OPTIMUS_CHECKPOINT_DIR environment varialbe is required for running analogies. Please see example in src here."
+    )
 
 
 def get_encoder(encoder_type="bert", output_encoder_dir="/tmp"):
