@@ -21,14 +21,17 @@ def eval_nli(a_values, b_values, without_neutral=False):
     """Evaluate the NLI relationship (entailment, negative, neutral) between these pairs"""
     device = get_device()
     index_to_label = (
-        {0: "contradiction", 1: "entailment"}
+        {-1: "no_prediction", 0: "contradiction", 1: "entailment"}
         if without_neutral
-        else {0: "contradiction", 1: "neutral", 2: "entailment"}
+        else {-1: "no_prediction", 0: "contradiction", 1: "neutral", 2: "entailment"}
     )
     nli_model = get_nli_model()
     tokenizer = get_nli_tokenizer()
     preds = []
     for a, b in zip(a_values, b_values):
+        if not b:
+            preds.append(index_to_label[-1])
+
         x = tokenizer.encode(
             a, b, return_tensors="pt", truncation_strategy="only_first"
         )

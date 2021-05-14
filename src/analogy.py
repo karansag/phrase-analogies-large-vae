@@ -64,13 +64,13 @@ CODER_TYPE_TO_NAME = {"gpt2": "gpt2", "bert": "bert-base-cased"}
 # Set the output dir here. E.g.,
 # export OUTPUT_DIR="/scratch/MYUSER/project-repo/pretrained_models/snli-b1/checkpoint-31250/"
 OUTPUT_DIR = os.environ.get("OPTIMUS_CHECKPOINT_DIR")
-if not OUTPUT_DIR:
-    raise Exception(
-        "OPTIMUS_CHECKPOINT_DIR environment varialbe is required for running analogies. Please see example in src here."
-    )
 
 
 def get_encoder(encoder_type="bert", output_encoder_dir="/tmp"):
+    if not OUTPUT_DIR:
+        raise Exception(
+            "OPTIMUS_CHECKPOINT_DIR environment varialbe is required for running analogies. Please see example in src here."
+        )
     checkpoint_encoder_dir = os.path.join(OUTPUT_DIR, "checkpoint-encoder-31250")
     encoder_config_class, encoder_model_class, encoder_tokenizer_class = MODEL_CLASSES[
         encoder_type
@@ -86,6 +86,10 @@ def get_encoder(encoder_type="bert", output_encoder_dir="/tmp"):
 
 
 def get_decoder(decoder_type="gpt2", output_decoder_dir="/tmp"):
+    if not OUTPUT_DIR:
+        raise Exception(
+            "OPTIMUS_CHECKPOINT_DIR environment varialbe is required for running analogies. Please see example in src here."
+        )
     checkpoint_decoder_dir = os.path.join(OUTPUT_DIR, "checkpoint-decoder-31250")
     decoder_config_class, decoder_model_class, decoder_tokenizer_class = MODEL_CLASSES[
         decoder_type
@@ -113,6 +117,10 @@ def get_decoder(decoder_type="gpt2", output_decoder_dir="/tmp"):
 
 
 def get_vae(model_encoder, model_decoder, tokenizer_encoder, tokenizer_decoder, beta=1):
+    if not OUTPUT_DIR:
+        raise Exception(
+            "OPTIMUS_CHECKPOINT_DIR environment varialbe is required for running analogies. Please see example in src here."
+        )
     ArgsObj = namedtuple("Args", ["latent_size", "device", "fb_mode", "beta"])
     args = ArgsObj(
         latent_size=LATENT_SIZE_LARGE, device=get_device(), fb_mode=0, beta=beta
