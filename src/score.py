@@ -5,13 +5,28 @@ from typing import List, Optional
 import nli
 
 
+re_punc = re.compile(r'[!"#$%&()*+,-./:;<=>?@\[\]\\^`{|}~_\']')
+
+
+def normalize_answer(s):
+    """
+    Lower text and remove punctuation, articles and extra whitespace.
+    """
+
+    s = s.lower()
+    s = re_punc.sub(" ", s)
+    # TODO: this could almost certainly be faster with a regex \s+ -> ' '
+    s = " ".join(s.split())
+    return s
+
+
 def exact_calc(output, pred):
     try:
         assert isinstance(output, str) and isinstance(pred, str)
     except AssertionError:
         print("Error: Trying to compare {} and {}".format(output, pred))
         return 0
-    return int(output.lower() == pred.lower())
+    return int(normalize_answer(output).lower() == normalize_answer(pred).lower())
 
 
 def nli_calc(sent_c, predicted_d):
@@ -32,21 +47,6 @@ def nli_no_neutral_calc(sent_c, predicted_d):
 
 # Following adapted from
 # https://github.com/facebookresearch/ParlAI/blob/2426d74b93184689be5067bdbf99f1ba96748f7b/parlai/core/metrics.py
-
-
-re_punc = re.compile(r'[!"#$%&()*+,-./:;<=>?@\[\]\\^`{|}~_\']')
-
-
-def normalize_answer(s):
-    """
-    Lower text and remove punctuation, articles and extra whitespace.
-    """
-
-    s = s.lower()
-    s = re_punc.sub(" ", s)
-    # TODO: this could almost certainly be faster with a regex \s+ -> ' '
-    s = " ".join(s.split())
-    return s
 
 
 def bleu_calc(output, pred):
