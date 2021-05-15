@@ -5,16 +5,6 @@ from typing import List, Optional
 import nli
 
 
-def bleu_calc(output, pred):
-    try:
-        assert isinstance(output, str) and isinstance(pred, str)
-    except AssertionError:
-        print("Error: Trying to compare {} and {}".format(output, pred))
-        return 0
-    min_length = min(len(pred.split(" ")), len(output.split(" ")), 4)
-    return bleu_compute(pred, [output], k=min_length)
-
-
 def exact_calc(output, pred):
     try:
         assert isinstance(output, str) and isinstance(pred, str)
@@ -44,7 +34,6 @@ def nli_no_neutral_calc(sent_c, predicted_d):
 # https://github.com/facebookresearch/ParlAI/blob/2426d74b93184689be5067bdbf99f1ba96748f7b/parlai/core/metrics.py
 
 
-re_art = re.compile(r"\b(a|an|the)\b")
 re_punc = re.compile(r'[!"#$%&()*+,-./:;<=>?@\[\]\\^`{|}~_\']')
 
 
@@ -55,10 +44,23 @@ def normalize_answer(s):
 
     s = s.lower()
     s = re_punc.sub(" ", s)
-    s = re_art.sub(" ", s)
     # TODO: this could almost certainly be faster with a regex \s+ -> ' '
     s = " ".join(s.split())
     return s
+
+
+def bleu_calc(output, pred):
+    try:
+        assert isinstance(output, str) and isinstance(pred, str)
+    except AssertionError:
+        print("Error: Trying to compare {} and {}".format(output, pred))
+        return
+    min_length = min(
+        len(normalize_answer(pred).split(" ")),
+        len(normalize_answer(output).split(" ")),
+        4,
+    )
+    return bleu_compute(pred, [output], k=min_length)
 
 
 def bleu_compute(guess: str, answers: List[str], k: int = 4) -> float:
