@@ -147,6 +147,9 @@ def score_csv(
         ],
         axis=1,
     )
+    output_frame = output_frame[
+        output_frame.apply(lambda x: isinstance(x["pred_0"], str), axis=1)
+    ]
     for i in range(n_samples):
         new_results = compute_scores(
             output_frame["d"],
