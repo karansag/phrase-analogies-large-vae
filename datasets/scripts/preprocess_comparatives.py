@@ -19,7 +19,7 @@ inner join df t2
 union
 select *
 from (select distinct
-    t1.b as a, t1.a as b, t2.b as c, t2.b as d, t2.category, "comparative|from-comp" as subcategory
+    t1.b as a, t1.a as b, t2.b as c, t2.a as d, t2.category, "comparative|from-comp" as subcategory
 from
     df t1
 inner join df t2
