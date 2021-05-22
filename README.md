@@ -23,24 +23,42 @@ This repo uses git submodules. Please `git submodule init` and `git submodule up
 ## Running experiments
 
 * Change the value of `OUTPUT_DIR` in `src/analogy.py` to correspond to the directory of your model data. E.g., `OUTPUT_DIR = os.path.abspath("../../data/snli-b1/checkpoint-31250/")`
-* Call the function `run_csv` in `src/run.py` with your input and output filenames. For information about the input format, see below.
+* Run run.py in the terminal with required arguments 
+
+CSV files can run with path to the CSV as the only required argument. 
 
 ```
-import run
-
-result = run.run_csv('input.csv','output.csv')
+python3 run.py \...\example.csv
 ```
 
-
-You can run individual analogies with `run_single` in `src/run.py`
+Individual analogies can run with three phrases in quotation marks as the required arguments.
 
 ```
-import run 
+python3 run.py "a" "b" "c"
+```
 
-result = run.run_single('sent_a', 'sent_b', 'sent_c')    
+The temperature of language generation can be madified with the argument -t x where x is some numerical value. (Default is set to 1)
+
+```
+python3 run.py -t 0.1 \...\example.csv
+```
+
+Additional optional arguments can be found with -h or --help
+
+```
+python3 run.py [-h|--help]
 ```
 
 ### Dataset format (CSV)
+The expected input file should be a .csv file with columns `sent_a`, `sent_b`, `sent_c`, and `sent_d`. Newlines separate rows and commas separate columns. A header row is expected.
+
+There must be one analogy per row in the form `sent_a:sent_b::sent_c:sent_d` (`sent_a` is to `sent_b` as `sent_c` is to `sent_d`)
+
+The output file contains the model predicted solution `sent_d` for each analogy. Each prediction can then be compared to the original `sent_d` to determine the model's understanding of the pairs and/or its ability to find a correct transformation from the analogy.
+
+The datasets used for this project, and the code that generated them, can be found in the dataset folder.
+
+
 The expected input file should be a .csv file with columns `sent_a`, `sent_b`, `sent_c`, and `sent_d`. Newlines separate rows and commas separate columns. A header row is expected.
 
 There must be one analogy per row in the form `sent_a:sent_b::sent_c:sent_d` (`sent_a` is to `sent_b` as `sent_c` is to `sent_d`)
