@@ -1,6 +1,8 @@
 # Phrase Analogies in Large VAEs 
 Research project on sentence embeddings in VAEs 
 
+Full paper can be found in "paper" folder.
+
 ## Setup
 
 The following steps are necessary to setup the repository on your own device
