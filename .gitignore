@@ -137,3 +137,11 @@ pretrained_models
 
 encoder.pkl
 decoder.pkl
+
+# Random old datasets from Alex
+datasets/alexs_data/blimp
+datasets/alexs_data/fava
+datasets/alexs_data/language_paper
+datasets/alexs_data/msgs
+
+.idea
