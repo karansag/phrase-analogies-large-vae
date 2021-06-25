@@ -1,0 +1,178 @@
+{"a":"Christopher fed the children the casserole.","grammatical":1,"b":"Christopher fed the casserole to the children."}
+{"a":"Michael fed the children the meal.","grammatical":1,"b":"Michael fed the meal to the children."}
+{"a":"Jessica served the guests the casserole.","grammatical":1,"b":"Jessica served the casserole to the guests."}
+{"a":"Jessica served the family the meal.","grammatical":1,"b":"Jessica served the meal to the family."}
+{"a":"John gave his wife a gift.","grammatical":1,"b":"John gave a gift to his wife."}
+{"a":"John gave the little boy a surprise.","grammatical":1,"b":"John gave a surprise to the little boy."}
+{"a":"John gave the family a puppy.","grammatical":1,"b":"John gave a puppy to the family."}
+{"a":"John gave his wife a book.","grammatical":1,"b":"John gave a book to his wife."}
+{"a":"John gave his wife a plate of food.","grammatical":1,"b":"John gave a plate of food to his wife."}
+{"a":"John left the little boy a gift.","grammatical":1,"b":"John left a gift to the little boy."}
+{"a":"John left his wife a surprise.","grammatical":1,"b":"John left a surprise to his wife."}
+{"a":"John left the little boy a puppy.","grammatical":1,"b":"John left a puppy to the little boy."}
+{"a":"John left the family a book.","grammatical":1,"b":"John left a book to the family."}
+{"a":"John left the little boy a plate of food.","grammatical":1,"b":"John left a plate of food to the little boy."}
+{"a":"John brought his wife a gift.","grammatical":1,"b":"John brought a gift to his wife."}
+{"a":"John brought his wife a surprise.","grammatical":1,"b":"John brought a surprise to his wife."}
+{"a":"John brought the family a puppy.","grammatical":1,"b":"John brought a puppy to the family."}
+{"a":"John brought the little boy a book.","grammatical":1,"b":"John brought a book to the little boy."}
+{"a":"John brought the little boy a plate of food.","grammatical":1,"b":"John brought a plate of food to the little boy."}
+{"a":"Jason passed the person across the table the salt.","grammatical":1,"b":"Jason passed the salt to the person across the table."}
+{"a":"Elizabeth passed the person across the table a letter.","grammatical":1,"b":"Elizabeth passed a letter to the person across the table."}
+{"a":"Michael sent the person across the table the salt.","grammatical":1,"b":"Michael sent the salt to the person across the table."}
+{"a":"Christopher sent the lawyer a letter.","grammatical":1,"b":"Christopher sent a letter to the lawyer."}
+{"a":"Nicole sold the mother a book.","grammatical":1,"b":"Nicole sold a book to the mother."}
+{"a":"Elizabeth sold the sales clerk a computer.","grammatical":1,"b":"Elizabeth sold a computer to the sales clerk."}
+{"a":"Michael sold the mother a car.","grammatical":1,"b":"Michael sold a car to the mother."}
+{"a":"Jessica traded the mother a book.","grammatical":1,"b":"Jessica traded a book to the mother."}
+{"a":"Jason traded the mother a computer.","grammatical":1,"b":"Jason traded a computer to the mother."}
+{"a":"Christopher traded the mother a car.","grammatical":1,"b":"Christopher traded a car to the mother."}
+{"a":"Elizabeth peddled the customer a book.","grammatical":1,"b":"Elizabeth peddled a book to the customer."}
+{"a":"Jason peddled the sales clerk a computer.","grammatical":1,"b":"Jason peddled a computer to the sales clerk."}
+{"a":"Elizabeth peddled the customer a car.","grammatical":1,"b":"Elizabeth peddled a car to the customer."}
+{"a":"Elizabeth offered the mother a book.","grammatical":1,"b":"Elizabeth offered a book to the mother."}
+{"a":"Jason offered the mother a computer.","grammatical":1,"b":"Jason offered a computer to the mother."}
+{"a":"Christopher offered the customer a car.","grammatical":1,"b":"Christopher offered a car to the customer."}
+{"a":"Michael rented the tenant a car.","grammatical":1,"b":"Michael rented a car to the tenant."}
+{"a":"Michael rented the defendant an apartment.","grammatical":1,"b":"Michael rented an apartment to the defendant."}
+{"a":"Jessica leased the tenant a car.","grammatical":1,"b":"Jessica leased a car to the tenant."}
+{"a":"Michael leased the tenant an apartment.","grammatical":1,"b":"Michael leased an apartment to the tenant."}
+{"a":"Nicole loaned the defendant a car.","grammatical":1,"b":"Nicole loaned a car to the defendant."}
+{"a":"Nicole loaned the tenant an apartment.","grammatical":1,"b":"Nicole loaned an apartment to the tenant."}
+{"a":"Christopher assigned the employee a project.","grammatical":1,"b":"Christopher assigned a project to the employee."}
+{"a":"Nicole assigned the student a gold star.","grammatical":1,"b":"Nicole assigned a gold star to the student."}
+{"a":"Michael assigned the employee a task.","grammatical":1,"b":"Michael assigned a task to the employee."}
+{"a":"Christopher awarded the employee a project.","grammatical":1,"b":"Christopher awarded a project to the employee."}
+{"a":"Jessica awarded the employee a gold star.","grammatical":1,"b":"Jessica awarded a gold star to the employee."}
+{"a":"Nicole awarded the student a task.","grammatical":1,"b":"Nicole awarded a task to the student."}
+{"a":"Elizabeth allotted the family lawyer a plot of land.","grammatical":1,"b":"Elizabeth allotted a plot of land to the family lawyer."}
+{"a":"Jason allotted the children the property.","grammatical":1,"b":"Jason allotted the property to the children."}
+{"a":"Nicole allotted the client the art collection.","grammatical":1,"b":"Nicole allotted the art collection to the client."}
+{"a":"Michael allotted the children the mansion.","grammatical":1,"b":"Michael allotted the mansion to the children."}
+{"a":"Jason bequeathed the family lawyer a plot of land.","grammatical":1,"b":"Jason bequeathed a plot of land to the family lawyer."}
+{"a":"Elizabeth bequeathed the client the property.","grammatical":1,"b":"Elizabeth bequeathed the property to the client."}
+{"a":"Christopher bequeathed the client the art collection.","grammatical":1,"b":"Christopher bequeathed the art collection to the client."}
+{"a":"Jessica bequeathed the family lawyer the mansion.","grammatical":1,"b":"Jessica bequeathed the mansion to the family lawyer."}
+{"a":"Jason ceded the client a plot of land.","grammatical":1,"b":"Jason ceded a plot of land to the client."}
+{"a":"Nicole ceded the client the property.","grammatical":1,"b":"Nicole ceded the property to the client."}
+{"a":"Jason ceded the client the art collection.","grammatical":1,"b":"Jason ceded the art collection to the client."}
+{"a":"Jason ceded the client the mansion.","grammatical":1,"b":"Jason ceded the mansion to the client."}
+{"a":"Nicole granted the children a plot of land.","grammatical":1,"b":"Nicole granted a plot of land to the children."}
+{"a":"Nicole granted the family lawyer the property.","grammatical":1,"b":"Nicole granted the property to the family lawyer."}
+{"a":"Jason granted the children the art collection.","grammatical":1,"b":"Jason granted the art collection to the children."}
+{"a":"Christopher granted the family lawyer the mansion.","grammatical":1,"b":"Christopher granted the mansion to the family lawyer."}
+{"a":"Jessica left the client a plot of land.","grammatical":1,"b":"Jessica left a plot of land to the client."}
+{"a":"Elizabeth left the family lawyer the property.","grammatical":1,"b":"Elizabeth left the property to the family lawyer."}
+{"a":"Christopher left the children the art collection.","grammatical":1,"b":"Christopher left the art collection to the children."}
+{"a":"Elizabeth left the family lawyer the mansion.","grammatical":1,"b":"Elizabeth left the mansion to the family lawyer."}
+{"a":"Jason promised the client a plot of land.","grammatical":1,"b":"Jason promised a plot of land to the client."}
+{"a":"Jessica promised the children the property.","grammatical":1,"b":"Jessica promised the property to the children."}
+{"a":"Jessica promised the client the art collection.","grammatical":1,"b":"Jessica promised the art collection to the client."}
+{"a":"Jessica promised the client the mansion.","grammatical":1,"b":"Jessica promised the mansion to the client."}
+{"a":"Michael willed the children a plot of land.","grammatical":1,"b":"Michael willed a plot of land to the children."}
+{"a":"Jessica willed the family lawyer the property.","grammatical":1,"b":"Jessica willed the property to the family lawyer."}
+{"a":"Michael willed the children the art collection.","grammatical":1,"b":"Michael willed the art collection to the children."}
+{"a":"Michael willed the children the mansion.","grammatical":1,"b":"Michael willed the mansion to the children."}
+{"a":"Elizabeth allocated the client a plot of land.","grammatical":1,"b":"Elizabeth allocated a plot of land to the client."}
+{"a":"Jason allocated the family lawyer the property.","grammatical":1,"b":"Jason allocated the property to the family lawyer."}
+{"a":"Jason allocated the family lawyer the art collection.","grammatical":1,"b":"Jason allocated the art collection to the family lawyer."}
+{"a":"Christopher allocated the client the mansion.","grammatical":1,"b":"Christopher allocated the mansion to the client."}
+{"a":"Michael forwarded the recipient a letter.","grammatical":1,"b":"Michael forwarded a letter to the recipient."}
+{"a":"Christopher forwarded the recipient a package.","grammatical":1,"b":"Christopher forwarded a package to the recipient."}
+{"a":"Jason forwarded the client an email.","grammatical":1,"b":"Jason forwarded an email to the client."}
+{"a":"Nicole mailed the recipient a letter.","grammatical":1,"b":"Nicole mailed a letter to the recipient."}
+{"a":"Nicole mailed the client a package.","grammatical":1,"b":"Nicole mailed a package to the client."}
+{"a":"Jason mailed the recipient an email.","grammatical":1,"b":"Jason mailed an email to the recipient."}
+{"a":"Michael shipped the client a letter.","grammatical":1,"b":"Michael shipped a letter to the client."}
+{"a":"Nicole shipped the client a package.","grammatical":1,"b":"Nicole shipped a package to the client."}
+{"a":"Jessica posted the recipient a letter.","grammatical":1,"b":"Jessica posted a letter to the recipient."}
+{"a":"Nicole posted the client a package.","grammatical":1,"b":"Nicole posted a package to the client."}
+{"a":"Jessica carried the new tenants a package.","grammatical":1,"b":"Jessica carried a package to the new tenants."}
+{"a":"Jason carried the family the sofa.","grammatical":1,"b":"Jason carried the sofa to the family."}
+{"a":"Christopher carried the new tenants the bags.","grammatical":1,"b":"Christopher carried the bags to the new tenants."}
+{"a":"Nicole schlepped the new tenants a package.","grammatical":1,"b":"Nicole schlepped a package to the new tenants."}
+{"a":"Jason schlepped the family the sofa.","grammatical":1,"b":"Jason schlepped the sofa to the family."}
+{"a":"Jessica schlepped the new tenants the bags.","grammatical":1,"b":"Jessica schlepped the bags to the new tenants."}
+{"a":"Jessica lugged the new tenants a package.","grammatical":1,"b":"Jessica lugged a package to the new tenants."}
+{"a":"Nicole lugged the family the sofa.","grammatical":1,"b":"Nicole lugged the sofa to the family."}
+{"a":"Jessica lugged the family the bags.","grammatical":1,"b":"Jessica lugged the bags to the family."}
+{"a":"Nicole dragged the family a package.","grammatical":1,"b":"Nicole dragged a package to the family."}
+{"a":"Nicole dragged the family the sofa.","grammatical":1,"b":"Nicole dragged the sofa to the family."}
+{"a":"Michael dragged the family the bags.","grammatical":1,"b":"Michael dragged the bags to the family."}
+{"a":"Christopher hauled the new tenants a package.","grammatical":1,"b":"Christopher hauled a package to the new tenants."}
+{"a":"Michael hauled the family the sofa.","grammatical":1,"b":"Michael hauled the sofa to the family."}
+{"a":"Michael hauled the family the bags.","grammatical":1,"b":"Michael hauled the bags to the family."}
+{"a":"Jessica chucked the other team the ball.","grammatical":1,"b":"Jessica chucked the ball to the other team."}
+{"a":"Jessica chucked the goalie the stick.","grammatical":1,"b":"Jessica chucked the stick to the goalie."}
+{"a":"Elizabeth chucked the goalie the frisbee.","grammatical":1,"b":"Elizabeth chucked the frisbee to the goalie."}
+{"a":"Jason flung the goalie the ball.","grammatical":1,"b":"Jason flung the ball to the goalie."}
+{"a":"Christopher flung the most valuable player the stick.","grammatical":1,"b":"Christopher flung the stick to the most valuable player."}
+{"a":"Jessica flung the other team the frisbee.","grammatical":1,"b":"Jessica flung the frisbee to the other team."}
+{"a":"Elizabeth tossed the other team the ball.","grammatical":1,"b":"Elizabeth tossed the ball to the other team."}
+{"a":"Elizabeth tossed the other team the stick.","grammatical":1,"b":"Elizabeth tossed the stick to the other team."}
+{"a":"Christopher tossed the other team the frisbee.","grammatical":1,"b":"Christopher tossed the frisbee to the other team."}
+{"a":"Elizabeth threw the other team the ball.","grammatical":1,"b":"Elizabeth threw the ball to the other team."}
+{"a":"Christopher threw the most valuable player the stick.","grammatical":1,"b":"Christopher threw the stick to the most valuable player."}
+{"a":"Jessica threw the goalie the frisbee.","grammatical":1,"b":"Jessica threw the frisbee to the goalie."}
+{"a":"Christopher tossed the most valuable player the ball.","grammatical":1,"b":"Christopher tossed the ball to the most valuable player."}
+{"a":"Jason tossed the goalie the stick.","grammatical":1,"b":"Jason tossed the stick to the goalie."}
+{"a":"Nicole tossed the other team the frisbee.","grammatical":1,"b":"Nicole tossed the frisbee to the other team."}
+{"a":"Jessica kicked the other team the ball.","grammatical":1,"b":"Jessica kicked the ball to the other team."}
+{"a":"Elizabeth kicked the most valuable player the stick.","grammatical":1,"b":"Elizabeth kicked the stick to the most valuable player."}
+{"a":"Jessica kicked the other team the frisbee.","grammatical":1,"b":"Jessica kicked the frisbee to the other team."}
+{"a":"Elizabeth read the class a story.","grammatical":1,"b":"Elizabeth read a story to the class."}
+{"a":"Christopher read the class a book.","grammatical":1,"b":"Christopher read a book to the class."}
+{"a":"Christopher told the little girl a secret.","grammatical":1,"b":"Christopher told a secret to the little girl."}
+{"a":"Jessica told the ambassador a story.","grammatical":1,"b":"Jessica told a story to the ambassador."}
+{"a":"Elizabeth taught the class a new technique.","grammatical":1,"b":"Elizabeth taught a new technique to the class."}
+{"a":"Michael taught the student a lesson.","grammatical":1,"b":"Michael taught a lesson to the student."}
+{"a":"Jessica showed the audience a photo.","grammatical":1,"b":"Jessica showed a photo to the audience."}
+{"a":"Jessica showed the attendees a new technique.","grammatical":1,"b":"Jessica showed a new technique to the attendees."}
+{"a":"Elizabeth addressed the recipient a letter.","grammatical":1,"b":"Elizabeth addressed a letter to the recipient."}
+{"a":"Christopher addressed the recipient a speech.","grammatical":1,"b":"Christopher addressed a speech to the recipient."}
+{"a":"Nicole recited the recipient a letter.","grammatical":1,"b":"Nicole recited a letter to the recipient."}
+{"a":"Jason recited the audience a speech.","grammatical":1,"b":"Jason recited a speech to the audience."}
+{"a":"Christopher explained the team the issue.","grammatical":1,"b":"Christopher explained the issue to the team."}
+{"a":"Jessica explained the mechanic the solution.","grammatical":1,"b":"Jessica explained the solution to the mechanic."}
+{"a":"Jessica illustrated the team the issue.","grammatical":1,"b":"Jessica illustrated the issue to the team."}
+{"a":"Jessica illustrated the client the solution.","grammatical":1,"b":"Jessica illustrated the solution to the client."}
+{"a":"Christopher demonstrated the mechanic the issue.","grammatical":1,"b":"Christopher demonstrated the issue to the mechanic."}
+{"a":"Jessica demonstrated the client the solution.","grammatical":1,"b":"Jessica demonstrated the solution to the client."}
+{"a":"Christopher donated the university a statue.","grammatical":1,"b":"Christopher donated a statue to the university."}
+{"a":"Christopher donated the museum a hundred dollars.","grammatical":1,"b":"Christopher donated a hundred dollars to the museum."}
+{"a":"Nicole contributed the museum a statue.","grammatical":1,"b":"Nicole contributed a statue to the museum."}
+{"a":"Christopher contributed the university a hundred dollars.","grammatical":1,"b":"Christopher contributed a hundred dollars to the university."}
+{"a":"Jessica delivered the recipient the message.","grammatical":1,"b":"Jessica delivered the message to the recipient."}
+{"a":"Christopher delivered the recipient the letter.","grammatical":1,"b":"Christopher delivered the letter to the recipient."}
+{"a":"Jason conveyed the recipient the message.","grammatical":1,"b":"Jason conveyed the message to the recipient."}
+{"a":"Elizabeth conveyed the recipient the letter.","grammatical":1,"b":"Elizabeth conveyed the letter to the recipient."}
+{"a":"Jason restored its place the painting.","grammatical":1,"b":"Jason restored the painting to its place."}
+{"a":"Elizabeth restored its place the car.","grammatical":1,"b":"Elizabeth restored the car to its place."}
+{"a":"Michael returned its place the painting.","grammatical":1,"b":"Michael returned the painting to its place."}
+{"a":"Nicole returned its place the car.","grammatical":1,"b":"Nicole returned the car to its place."}
+{"a":"Jessica announced the shareholders the committee 's decision.","grammatical":1,"b":"Jessica announced the committee 's decision to the shareholders."}
+{"a":"Michael announced the investors the result.","grammatical":1,"b":"Michael announced the result to the investors."}
+{"a":"Christopher declared the investors the committee 's decision.","grammatical":1,"b":"Christopher declared the committee 's decision to the investors."}
+{"a":"Elizabeth declared the shareholders the result.","grammatical":1,"b":"Elizabeth declared the result to the shareholders."}
+{"a":"Jason revealed the shareholders the committee 's decision.","grammatical":1,"b":"Jason revealed the committee 's decision to the shareholders."}
+{"a":"Michael revealed the shareholders the result.","grammatical":1,"b":"Michael revealed the result to the shareholders."}
+{"a":"Nicole reported the shareholders the committee 's decision.","grammatical":1,"b":"Nicole reported the committee 's decision to the shareholders."}
+{"a":"Christopher reported the investors the result.","grammatical":1,"b":"Christopher reported the result to the investors."}
+{"a":"Jason admitted the authorities the crime.","grammatical":1,"b":"Jason admitted the crime to the authorities."}
+{"a":"Michael admitted the authorities the error.","grammatical":1,"b":"Michael admitted the error to the authorities."}
+{"a":"Nicole confessed the authorities the crime.","grammatical":1,"b":"Nicole confessed the crime to the authorities."}
+{"a":"Christopher confessed the authorities the error.","grammatical":1,"b":"Christopher confessed the error to the authorities."}
+{"a":"Jason mentioned John a solution.","grammatical":1,"b":"Jason mentioned a solution to John."}
+{"a":"Elizabeth mentioned Susan an idea.","grammatical":1,"b":"Elizabeth mentioned an idea to Susan."}
+{"a":"Jessica suggested Susan a solution.","grammatical":1,"b":"Jessica suggested a solution to Susan."}
+{"a":"Christopher suggested Susan an idea.","grammatical":1,"b":"Christopher suggested an idea to Susan."}
+{"a":"Elizabeth proposed Rebecca a solution.","grammatical":1,"b":"Elizabeth proposed a solution to Rebecca."}
+{"a":"Nicole proposed John an idea.","grammatical":1,"b":"Nicole proposed an idea to John."}
+{"a":"Jason distributed the children the medications.","grammatical":1,"b":"Jason distributed the medications to the children."}
+{"a":"Christopher distributed the children the tests.","grammatical":1,"b":"Christopher distributed the tests to the children."}
+{"a":"Christopher administered the children the medications.","grammatical":1,"b":"Christopher administered the medications to the children."}
+{"a":"Jason administered the children the tests.","grammatical":1,"b":"Jason administered the tests to the children."}
+{"a":"Nicole expressed Susan the concern.","grammatical":1,"b":"Nicole expressed the concern to Susan."}
+{"a":"Christopher expressed David the news.","grammatical":1,"b":"Christopher expressed the news to David."}
+{"a":"Nicole broadcasted David the concern.","grammatical":1,"b":"Nicole broadcasted the concern to David."}
+{"a":"Jessica broadcasted David the news.","grammatical":1,"b":"Jessica broadcasted the news to David."}

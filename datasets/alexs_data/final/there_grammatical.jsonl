@@ -1,0 +1,909 @@
+{"a":"There blazed in the fireplace a fire.","grammatical":1,"b":"A fire blazed in the fireplace."}
+{"a":"There blazed in the oven a fire.","grammatical":1,"b":"A fire blazed in the oven."}
+{"a":"There blazed on the stove a fire.","grammatical":1,"b":"A fire blazed on the stove."}
+{"a":"There blazed in the fireplace a coal.","grammatical":1,"b":"A coal blazed in the fireplace."}
+{"a":"There blazed in the oven a coal.","grammatical":1,"b":"A coal blazed in the oven."}
+{"a":"There blazed on the stove a coal.","grammatical":1,"b":"A coal blazed on the stove."}
+{"a":"There blazed in the fireplace a log.","grammatical":1,"b":"A log blazed in the fireplace."}
+{"a":"There blazed in the oven a log.","grammatical":1,"b":"A log blazed in the oven."}
+{"a":"There blazed on the stove a log.","grammatical":1,"b":"A log blazed on the stove."}
+{"a":"There burned in the fireplace a fire.","grammatical":1,"b":"A fire burned in the fireplace."}
+{"a":"There burned in the oven a fire.","grammatical":1,"b":"A fire burned in the oven."}
+{"a":"There burned on the stove a fire.","grammatical":1,"b":"A fire burned on the stove."}
+{"a":"There burned in the fireplace a coal.","grammatical":1,"b":"A coal burned in the fireplace."}
+{"a":"There burned in the oven a coal.","grammatical":1,"b":"A coal burned in the oven."}
+{"a":"There burned on the stove a coal.","grammatical":1,"b":"A coal burned on the stove."}
+{"a":"There burned in the fireplace a log.","grammatical":1,"b":"A log burned in the fireplace."}
+{"a":"There burned in the oven a log.","grammatical":1,"b":"A log burned in the oven."}
+{"a":"There burned on the stove a log.","grammatical":1,"b":"A log burned on the stove."}
+{"a":"There crackled in the fireplace a fire.","grammatical":1,"b":"A fire crackled in the fireplace."}
+{"a":"There crackled in the oven a fire.","grammatical":1,"b":"A fire crackled in the oven."}
+{"a":"There crackled on the stove a fire.","grammatical":1,"b":"A fire crackled on the stove."}
+{"a":"There crackled in the fireplace a coal.","grammatical":1,"b":"A coal crackled in the fireplace."}
+{"a":"There crackled in the oven a coal.","grammatical":1,"b":"A coal crackled in the oven."}
+{"a":"There crackled on the stove a coal.","grammatical":1,"b":"A coal crackled on the stove."}
+{"a":"There crackled in the fireplace a log.","grammatical":1,"b":"A log crackled in the fireplace."}
+{"a":"There crackled in the oven a log.","grammatical":1,"b":"A log crackled in the oven."}
+{"a":"There crackled on the stove a log.","grammatical":1,"b":"A log crackled on the stove."}
+{"a":"There smoldered in the fireplace a fire.","grammatical":1,"b":"A fire smoldered in the fireplace."}
+{"a":"There smoldered in the oven a fire.","grammatical":1,"b":"A fire smoldered in the oven."}
+{"a":"There smoldered on the stove a fire.","grammatical":1,"b":"A fire smoldered on the stove."}
+{"a":"There smoldered in the fireplace a coal.","grammatical":1,"b":"A coal smoldered in the fireplace."}
+{"a":"There smoldered in the oven a coal.","grammatical":1,"b":"A coal smoldered in the oven."}
+{"a":"There smoldered on the stove a coal.","grammatical":1,"b":"A coal smoldered on the stove."}
+{"a":"There smoldered in the fireplace a log.","grammatical":1,"b":"A log smoldered in the fireplace."}
+{"a":"There smoldered in the oven a log.","grammatical":1,"b":"A log smoldered in the oven."}
+{"a":"There smoldered on the stove a log.","grammatical":1,"b":"A log smoldered on the stove."}
+{"a":"There grew at the edge of the cliff an orchid.","grammatical":1,"b":"An orchid grew at the edge of the cliff."}
+{"a":"There grew on the mountain an orchid.","grammatical":1,"b":"An orchid grew on the mountain."}
+{"a":"There grew at the edge of the cliff a cactus.","grammatical":1,"b":"A cactus grew at the edge of the cliff."}
+{"a":"There grew on the mountain a cactus.","grammatical":1,"b":"A cactus grew on the mountain."}
+{"a":"There grew at the edge of the cliff a tree.","grammatical":1,"b":"A tree grew at the edge of the cliff."}
+{"a":"There grew on the mountain a tree.","grammatical":1,"b":"A tree grew on the mountain."}
+{"a":"There thrived at the edge of the cliff an orchid.","grammatical":1,"b":"An orchid thrived at the edge of the cliff."}
+{"a":"There thrived on the mountain an orchid.","grammatical":1,"b":"An orchid thrived on the mountain."}
+{"a":"There thrived at the edge of the cliff a cactus.","grammatical":1,"b":"A cactus thrived at the edge of the cliff."}
+{"a":"There thrived on the mountain a cactus.","grammatical":1,"b":"A cactus thrived on the mountain."}
+{"a":"There thrived at the edge of the cliff a tree.","grammatical":1,"b":"A tree thrived at the edge of the cliff."}
+{"a":"There thrived on the mountain a tree.","grammatical":1,"b":"A tree thrived on the mountain."}
+{"a":"There clung at the edge of the cliff an orchid.","grammatical":1,"b":"An orchid clung at the edge of the cliff."}
+{"a":"There clung on the mountain an orchid.","grammatical":1,"b":"An orchid clung on the mountain."}
+{"a":"There clung at the edge of the cliff a cactus.","grammatical":1,"b":"A cactus clung at the edge of the cliff."}
+{"a":"There clung on the mountain a cactus.","grammatical":1,"b":"A cactus clung on the mountain."}
+{"a":"There clung at the edge of the cliff a tree.","grammatical":1,"b":"A tree clung at the edge of the cliff."}
+{"a":"There clung on the mountain a tree.","grammatical":1,"b":"A tree clung on the mountain."}
+{"a":"There decayed in the gutter a dead rat.","grammatical":1,"b":"A dead rat decayed in the gutter."}
+{"a":"There decayed on the forest floor a dead rat.","grammatical":1,"b":"A dead rat decayed on the forest floor."}
+{"a":"There decayed in the shadows a dead rat.","grammatical":1,"b":"A dead rat decayed in the shadows."}
+{"a":"There decayed in the gutter a forgotten apple.","grammatical":1,"b":"A forgotten apple decayed in the gutter."}
+{"a":"There decayed on the forest floor a forgotten apple.","grammatical":1,"b":"A forgotten apple decayed on the forest floor."}
+{"a":"There decayed in the shadows a forgotten apple.","grammatical":1,"b":"A forgotten apple decayed in the shadows."}
+{"a":"There decayed in the gutter a strawberry.","grammatical":1,"b":"A strawberry decayed in the gutter."}
+{"a":"There decayed on the forest floor a strawberry.","grammatical":1,"b":"A strawberry decayed on the forest floor."}
+{"a":"There decayed in the shadows a strawberry.","grammatical":1,"b":"A strawberry decayed in the shadows."}
+{"a":"There decayed in the gutter an old log.","grammatical":1,"b":"An old log decayed in the gutter."}
+{"a":"There decayed on the forest floor an old log.","grammatical":1,"b":"An old log decayed on the forest floor."}
+{"a":"There decayed in the shadows an old log.","grammatical":1,"b":"An old log decayed in the shadows."}
+{"a":"There festered in the gutter a dead rat.","grammatical":1,"b":"A dead rat festered in the gutter."}
+{"a":"There festered on the forest floor a dead rat.","grammatical":1,"b":"A dead rat festered on the forest floor."}
+{"a":"There festered in the shadows a dead rat.","grammatical":1,"b":"A dead rat festered in the shadows."}
+{"a":"There festered in the gutter a forgotten apple.","grammatical":1,"b":"A forgotten apple festered in the gutter."}
+{"a":"There festered on the forest floor a forgotten apple.","grammatical":1,"b":"A forgotten apple festered on the forest floor."}
+{"a":"There festered in the shadows a forgotten apple.","grammatical":1,"b":"A forgotten apple festered in the shadows."}
+{"a":"There festered in the gutter a strawberry.","grammatical":1,"b":"A strawberry festered in the gutter."}
+{"a":"There festered on the forest floor a strawberry.","grammatical":1,"b":"A strawberry festered on the forest floor."}
+{"a":"There festered in the shadows a strawberry.","grammatical":1,"b":"A strawberry festered in the shadows."}
+{"a":"There festered in the gutter an old log.","grammatical":1,"b":"An old log festered in the gutter."}
+{"a":"There festered on the forest floor an old log.","grammatical":1,"b":"An old log festered on the forest floor."}
+{"a":"There festered in the shadows an old log.","grammatical":1,"b":"An old log festered in the shadows."}
+{"a":"There rotted in the gutter a dead rat.","grammatical":1,"b":"A dead rat rotted in the gutter."}
+{"a":"There rotted on the forest floor a dead rat.","grammatical":1,"b":"A dead rat rotted on the forest floor."}
+{"a":"There rotted in the shadows a dead rat.","grammatical":1,"b":"A dead rat rotted in the shadows."}
+{"a":"There rotted in the gutter a forgotten apple.","grammatical":1,"b":"A forgotten apple rotted in the gutter."}
+{"a":"There rotted on the forest floor a forgotten apple.","grammatical":1,"b":"A forgotten apple rotted on the forest floor."}
+{"a":"There rotted in the shadows a forgotten apple.","grammatical":1,"b":"A forgotten apple rotted in the shadows."}
+{"a":"There rotted in the gutter a strawberry.","grammatical":1,"b":"A strawberry rotted in the gutter."}
+{"a":"There rotted on the forest floor a strawberry.","grammatical":1,"b":"A strawberry rotted on the forest floor."}
+{"a":"There rotted in the shadows a strawberry.","grammatical":1,"b":"A strawberry rotted in the shadows."}
+{"a":"There rotted in the gutter an old log.","grammatical":1,"b":"An old log rotted in the gutter."}
+{"a":"There rotted on the forest floor an old log.","grammatical":1,"b":"An old log rotted on the forest floor."}
+{"a":"There rotted in the shadows an old log.","grammatical":1,"b":"An old log rotted in the shadows."}
+{"a":"There decomposed in the gutter a dead rat.","grammatical":1,"b":"A dead rat decomposed in the gutter."}
+{"a":"There decomposed on the forest floor a dead rat.","grammatical":1,"b":"A dead rat decomposed on the forest floor."}
+{"a":"There decomposed in the shadows a dead rat.","grammatical":1,"b":"A dead rat decomposed in the shadows."}
+{"a":"There decomposed in the gutter a forgotten apple.","grammatical":1,"b":"A forgotten apple decomposed in the gutter."}
+{"a":"There decomposed on the forest floor a forgotten apple.","grammatical":1,"b":"A forgotten apple decomposed on the forest floor."}
+{"a":"There decomposed in the shadows a forgotten apple.","grammatical":1,"b":"A forgotten apple decomposed in the shadows."}
+{"a":"There decomposed in the gutter a strawberry.","grammatical":1,"b":"A strawberry decomposed in the gutter."}
+{"a":"There decomposed on the forest floor a strawberry.","grammatical":1,"b":"A strawberry decomposed on the forest floor."}
+{"a":"There decomposed in the shadows a strawberry.","grammatical":1,"b":"A strawberry decomposed in the shadows."}
+{"a":"There decomposed in the gutter an old log.","grammatical":1,"b":"An old log decomposed in the gutter."}
+{"a":"There decomposed on the forest floor an old log.","grammatical":1,"b":"An old log decomposed on the forest floor."}
+{"a":"There decomposed in the shadows an old log.","grammatical":1,"b":"An old log decomposed in the shadows."}
+{"a":"There existed in our minds several concerns.","grammatical":1,"b":"Several concerns existed in our minds."}
+{"a":"There existed in our minds some hope.","grammatical":1,"b":"Some hope existed in our minds."}
+{"a":"There existed in our minds several issues.","grammatical":1,"b":"Several issues existed in our minds."}
+{"a":"There existed in our minds some questions.","grammatical":1,"b":"Some questions existed in our minds."}
+{"a":"There remained in our minds several concerns.","grammatical":1,"b":"Several concerns remained in our minds."}
+{"a":"There remained in our minds some hope.","grammatical":1,"b":"Some hope remained in our minds."}
+{"a":"There remained in our minds several issues.","grammatical":1,"b":"Several issues remained in our minds."}
+{"a":"There remained in our minds some questions.","grammatical":1,"b":"Some questions remained in our minds."}
+{"a":"There persisted in our minds several concerns.","grammatical":1,"b":"Several concerns persisted in our minds."}
+{"a":"There persisted in our minds some hope.","grammatical":1,"b":"Some hope persisted in our minds."}
+{"a":"There persisted in our minds several issues.","grammatical":1,"b":"Several issues persisted in our minds."}
+{"a":"There persisted in our minds some questions.","grammatical":1,"b":"Some questions persisted in our minds."}
+{"a":"There dwelled at the edge of the cliff two families.","grammatical":1,"b":"Two families dwelled at the edge of the cliff."}
+{"a":"There dwelled in the house two families.","grammatical":1,"b":"Two families dwelled in the house."}
+{"a":"There dwelled in the apartment two families.","grammatical":1,"b":"Two families dwelled in the apartment."}
+{"a":"There dwelled in the town two families.","grammatical":1,"b":"Two families dwelled in the town."}
+{"a":"There dwelled at the edge of the cliff a colony of ants.","grammatical":1,"b":"A colony of ants dwelled at the edge of the cliff."}
+{"a":"There dwelled in the house a colony of ants.","grammatical":1,"b":"A colony of ants dwelled in the house."}
+{"a":"There dwelled in the apartment a colony of ants.","grammatical":1,"b":"A colony of ants dwelled in the apartment."}
+{"a":"There dwelled in the town a colony of ants.","grammatical":1,"b":"A colony of ants dwelled in the town."}
+{"a":"There dwelled at the edge of the cliff some bats.","grammatical":1,"b":"Some bats dwelled at the edge of the cliff."}
+{"a":"There dwelled in the house some bats.","grammatical":1,"b":"Some bats dwelled in the house."}
+{"a":"There dwelled in the apartment some bats.","grammatical":1,"b":"Some bats dwelled in the apartment."}
+{"a":"There dwelled in the town some bats.","grammatical":1,"b":"Some bats dwelled in the town."}
+{"a":"There dwelled at the edge of the cliff an indigenous group.","grammatical":1,"b":"An indigenous group dwelled at the edge of the cliff."}
+{"a":"There dwelled in the house an indigenous group.","grammatical":1,"b":"An indigenous group dwelled in the house."}
+{"a":"There dwelled in the apartment an indigenous group.","grammatical":1,"b":"An indigenous group dwelled in the apartment."}
+{"a":"There dwelled in the town an indigenous group.","grammatical":1,"b":"An indigenous group dwelled in the town."}
+{"a":"There lived at the edge of the cliff two families.","grammatical":1,"b":"Two families lived at the edge of the cliff."}
+{"a":"There lived in the house two families.","grammatical":1,"b":"Two families lived in the house."}
+{"a":"There lived in the apartment two families.","grammatical":1,"b":"Two families lived in the apartment."}
+{"a":"There lived in the town two families.","grammatical":1,"b":"Two families lived in the town."}
+{"a":"There lived at the edge of the cliff a colony of ants.","grammatical":1,"b":"A colony of ants lived at the edge of the cliff."}
+{"a":"There lived in the house a colony of ants.","grammatical":1,"b":"A colony of ants lived in the house."}
+{"a":"There lived in the apartment a colony of ants.","grammatical":1,"b":"A colony of ants lived in the apartment."}
+{"a":"There lived in the town a colony of ants.","grammatical":1,"b":"A colony of ants lived in the town."}
+{"a":"There lived at the edge of the cliff some bats.","grammatical":1,"b":"Some bats lived at the edge of the cliff."}
+{"a":"There lived in the house some bats.","grammatical":1,"b":"Some bats lived in the house."}
+{"a":"There lived in the apartment some bats.","grammatical":1,"b":"Some bats lived in the apartment."}
+{"a":"There lived in the town some bats.","grammatical":1,"b":"Some bats lived in the town."}
+{"a":"There lived at the edge of the cliff an indigenous group.","grammatical":1,"b":"An indigenous group lived at the edge of the cliff."}
+{"a":"There lived in the house an indigenous group.","grammatical":1,"b":"An indigenous group lived in the house."}
+{"a":"There lived in the apartment an indigenous group.","grammatical":1,"b":"An indigenous group lived in the apartment."}
+{"a":"There lived in the town an indigenous group.","grammatical":1,"b":"An indigenous group lived in the town."}
+{"a":"There resided at the edge of the cliff two families.","grammatical":1,"b":"Two families resided at the edge of the cliff."}
+{"a":"There resided in the house two families.","grammatical":1,"b":"Two families resided in the house."}
+{"a":"There resided in the apartment two families.","grammatical":1,"b":"Two families resided in the apartment."}
+{"a":"There resided in the town two families.","grammatical":1,"b":"Two families resided in the town."}
+{"a":"There resided at the edge of the cliff a colony of ants.","grammatical":1,"b":"A colony of ants resided at the edge of the cliff."}
+{"a":"There resided in the house a colony of ants.","grammatical":1,"b":"A colony of ants resided in the house."}
+{"a":"There resided in the apartment a colony of ants.","grammatical":1,"b":"A colony of ants resided in the apartment."}
+{"a":"There resided in the town a colony of ants.","grammatical":1,"b":"A colony of ants resided in the town."}
+{"a":"There resided at the edge of the cliff some bats.","grammatical":1,"b":"Some bats resided at the edge of the cliff."}
+{"a":"There resided in the house some bats.","grammatical":1,"b":"Some bats resided in the house."}
+{"a":"There resided in the apartment some bats.","grammatical":1,"b":"Some bats resided in the apartment."}
+{"a":"There resided in the town some bats.","grammatical":1,"b":"Some bats resided in the town."}
+{"a":"There resided at the edge of the cliff an indigenous group.","grammatical":1,"b":"An indigenous group resided at the edge of the cliff."}
+{"a":"There resided in the house an indigenous group.","grammatical":1,"b":"An indigenous group resided in the house."}
+{"a":"There resided in the apartment an indigenous group.","grammatical":1,"b":"An indigenous group resided in the apartment."}
+{"a":"There resided in the town an indigenous group.","grammatical":1,"b":"An indigenous group resided in the town."}
+{"a":"There settled at the edge of the cliff two families.","grammatical":1,"b":"Two families settled at the edge of the cliff."}
+{"a":"There settled in the house two families.","grammatical":1,"b":"Two families settled in the house."}
+{"a":"There settled in the apartment two families.","grammatical":1,"b":"Two families settled in the apartment."}
+{"a":"There settled in the town two families.","grammatical":1,"b":"Two families settled in the town."}
+{"a":"There settled at the edge of the cliff a colony of ants.","grammatical":1,"b":"A colony of ants settled at the edge of the cliff."}
+{"a":"There settled in the house a colony of ants.","grammatical":1,"b":"A colony of ants settled in the house."}
+{"a":"There settled in the apartment a colony of ants.","grammatical":1,"b":"A colony of ants settled in the apartment."}
+{"a":"There settled in the town a colony of ants.","grammatical":1,"b":"A colony of ants settled in the town."}
+{"a":"There settled at the edge of the cliff some bats.","grammatical":1,"b":"Some bats settled at the edge of the cliff."}
+{"a":"There settled in the house some bats.","grammatical":1,"b":"Some bats settled in the house."}
+{"a":"There settled in the apartment some bats.","grammatical":1,"b":"Some bats settled in the apartment."}
+{"a":"There settled in the town some bats.","grammatical":1,"b":"Some bats settled in the town."}
+{"a":"There settled at the edge of the cliff an indigenous group.","grammatical":1,"b":"An indigenous group settled at the edge of the cliff."}
+{"a":"There settled in the house an indigenous group.","grammatical":1,"b":"An indigenous group settled in the house."}
+{"a":"There settled in the apartment an indigenous group.","grammatical":1,"b":"An indigenous group settled in the apartment."}
+{"a":"There settled in the town an indigenous group.","grammatical":1,"b":"An indigenous group settled in the town."}
+{"a":"There coexisted at the edge of the cliff two families.","grammatical":1,"b":"Two families coexisted at the edge of the cliff."}
+{"a":"There coexisted in the house two families.","grammatical":1,"b":"Two families coexisted in the house."}
+{"a":"There coexisted in the apartment two families.","grammatical":1,"b":"Two families coexisted in the apartment."}
+{"a":"There coexisted in the town two families.","grammatical":1,"b":"Two families coexisted in the town."}
+{"a":"There coexisted at the edge of the cliff a colony of ants.","grammatical":1,"b":"A colony of ants coexisted at the edge of the cliff."}
+{"a":"There coexisted in the house a colony of ants.","grammatical":1,"b":"A colony of ants coexisted in the house."}
+{"a":"There coexisted in the apartment a colony of ants.","grammatical":1,"b":"A colony of ants coexisted in the apartment."}
+{"a":"There coexisted in the town a colony of ants.","grammatical":1,"b":"A colony of ants coexisted in the town."}
+{"a":"There coexisted at the edge of the cliff some bats.","grammatical":1,"b":"Some bats coexisted at the edge of the cliff."}
+{"a":"There coexisted in the house some bats.","grammatical":1,"b":"Some bats coexisted in the house."}
+{"a":"There coexisted in the apartment some bats.","grammatical":1,"b":"Some bats coexisted in the apartment."}
+{"a":"There coexisted in the town some bats.","grammatical":1,"b":"Some bats coexisted in the town."}
+{"a":"There coexisted at the edge of the cliff an indigenous group.","grammatical":1,"b":"An indigenous group coexisted at the edge of the cliff."}
+{"a":"There coexisted in the house an indigenous group.","grammatical":1,"b":"An indigenous group coexisted in the house."}
+{"a":"There coexisted in the apartment an indigenous group.","grammatical":1,"b":"An indigenous group coexisted in the apartment."}
+{"a":"There coexisted in the town an indigenous group.","grammatical":1,"b":"An indigenous group coexisted in the town."}
+{"a":"There loomed over the edge of the cliff a boulder.","grammatical":1,"b":"A boulder loomed over the edge of the cliff."}
+{"a":"There loomed over the river a boulder.","grammatical":1,"b":"A boulder loomed over the river."}
+{"a":"There loomed above the walkway a boulder.","grammatical":1,"b":"A boulder loomed above the walkway."}
+{"a":"There loomed over the edge of the cliff a bridge.","grammatical":1,"b":"A bridge loomed over the edge of the cliff."}
+{"a":"There loomed over the river a bridge.","grammatical":1,"b":"A bridge loomed over the river."}
+{"a":"There loomed above the walkway a bridge.","grammatical":1,"b":"A bridge loomed above the walkway."}
+{"a":"There loomed over the edge of the cliff a branch.","grammatical":1,"b":"A branch loomed over the edge of the cliff."}
+{"a":"There loomed over the river a branch.","grammatical":1,"b":"A branch loomed over the river."}
+{"a":"There loomed above the walkway a branch.","grammatical":1,"b":"A branch loomed above the walkway."}
+{"a":"There projected over the edge of the cliff a boulder.","grammatical":1,"b":"A boulder projected over the edge of the cliff."}
+{"a":"There projected over the river a boulder.","grammatical":1,"b":"A boulder projected over the river."}
+{"a":"There projected above the walkway a boulder.","grammatical":1,"b":"A boulder projected above the walkway."}
+{"a":"There projected over the edge of the cliff a bridge.","grammatical":1,"b":"A bridge projected over the edge of the cliff."}
+{"a":"There projected over the river a bridge.","grammatical":1,"b":"A bridge projected over the river."}
+{"a":"There projected above the walkway a bridge.","grammatical":1,"b":"A bridge projected above the walkway."}
+{"a":"There projected over the edge of the cliff a branch.","grammatical":1,"b":"A branch projected over the edge of the cliff."}
+{"a":"There projected over the river a branch.","grammatical":1,"b":"A branch projected over the river."}
+{"a":"There projected above the walkway a branch.","grammatical":1,"b":"A branch projected above the walkway."}
+{"a":"There protruded over the edge of the cliff a boulder.","grammatical":1,"b":"A boulder protruded over the edge of the cliff."}
+{"a":"There protruded over the river a boulder.","grammatical":1,"b":"A boulder protruded over the river."}
+{"a":"There protruded above the walkway a boulder.","grammatical":1,"b":"A boulder protruded above the walkway."}
+{"a":"There protruded over the edge of the cliff a bridge.","grammatical":1,"b":"A bridge protruded over the edge of the cliff."}
+{"a":"There protruded over the river a bridge.","grammatical":1,"b":"A bridge protruded over the river."}
+{"a":"There protruded above the walkway a bridge.","grammatical":1,"b":"A bridge protruded above the walkway."}
+{"a":"There protruded over the edge of the cliff a branch.","grammatical":1,"b":"A branch protruded over the edge of the cliff."}
+{"a":"There protruded over the river a branch.","grammatical":1,"b":"A branch protruded over the river."}
+{"a":"There protruded above the walkway a branch.","grammatical":1,"b":"A branch protruded above the walkway."}
+{"a":"There hovered over the edge of the cliff a boulder.","grammatical":1,"b":"A boulder hovered over the edge of the cliff."}
+{"a":"There hovered over the river a boulder.","grammatical":1,"b":"A boulder hovered over the river."}
+{"a":"There hovered above the walkway a boulder.","grammatical":1,"b":"A boulder hovered above the walkway."}
+{"a":"There hovered over the edge of the cliff a bridge.","grammatical":1,"b":"A bridge hovered over the edge of the cliff."}
+{"a":"There hovered over the river a bridge.","grammatical":1,"b":"A bridge hovered over the river."}
+{"a":"There hovered above the walkway a bridge.","grammatical":1,"b":"A bridge hovered above the walkway."}
+{"a":"There hovered over the edge of the cliff a branch.","grammatical":1,"b":"A branch hovered over the edge of the cliff."}
+{"a":"There hovered over the river a branch.","grammatical":1,"b":"A branch hovered over the river."}
+{"a":"There hovered above the walkway a branch.","grammatical":1,"b":"A branch hovered above the walkway."}
+{"a":"There crouched next to the church a boy.","grammatical":1,"b":"A boy crouched next to the church."}
+{"a":"There crouched in the plaza a boy.","grammatical":1,"b":"A boy crouched in the plaza."}
+{"a":"There crouched on the stoop a boy.","grammatical":1,"b":"A boy crouched on the stoop."}
+{"a":"There crouched next to the church a statue.","grammatical":1,"b":"A statue crouched next to the church."}
+{"a":"There crouched in the plaza a statue.","grammatical":1,"b":"A statue crouched in the plaza."}
+{"a":"There crouched on the stoop a statue.","grammatical":1,"b":"A statue crouched on the stoop."}
+{"a":"There crouched next to the church a dog.","grammatical":1,"b":"A dog crouched next to the church."}
+{"a":"There crouched in the plaza a dog.","grammatical":1,"b":"A dog crouched in the plaza."}
+{"a":"There crouched on the stoop a dog.","grammatical":1,"b":"A dog crouched on the stoop."}
+{"a":"There crouched next to the church a sparrow.","grammatical":1,"b":"A sparrow crouched next to the church."}
+{"a":"There crouched in the plaza a sparrow.","grammatical":1,"b":"A sparrow crouched in the plaza."}
+{"a":"There crouched on the stoop a sparrow.","grammatical":1,"b":"A sparrow crouched on the stoop."}
+{"a":"There kneeled next to the church a boy.","grammatical":1,"b":"A boy kneeled next to the church."}
+{"a":"There kneeled in the plaza a boy.","grammatical":1,"b":"A boy kneeled in the plaza."}
+{"a":"There kneeled on the stoop a boy.","grammatical":1,"b":"A boy kneeled on the stoop."}
+{"a":"There kneeled next to the church a statue.","grammatical":1,"b":"A statue kneeled next to the church."}
+{"a":"There kneeled in the plaza a statue.","grammatical":1,"b":"A statue kneeled in the plaza."}
+{"a":"There kneeled on the stoop a statue.","grammatical":1,"b":"A statue kneeled on the stoop."}
+{"a":"There kneeled next to the church a dog.","grammatical":1,"b":"A dog kneeled next to the church."}
+{"a":"There kneeled in the plaza a dog.","grammatical":1,"b":"A dog kneeled in the plaza."}
+{"a":"There kneeled on the stoop a dog.","grammatical":1,"b":"A dog kneeled on the stoop."}
+{"a":"There kneeled next to the church a sparrow.","grammatical":1,"b":"A sparrow kneeled next to the church."}
+{"a":"There kneeled in the plaza a sparrow.","grammatical":1,"b":"A sparrow kneeled in the plaza."}
+{"a":"There kneeled on the stoop a sparrow.","grammatical":1,"b":"A sparrow kneeled on the stoop."}
+{"a":"There squatted next to the church a boy.","grammatical":1,"b":"A boy squatted next to the church."}
+{"a":"There squatted in the plaza a boy.","grammatical":1,"b":"A boy squatted in the plaza."}
+{"a":"There squatted on the stoop a boy.","grammatical":1,"b":"A boy squatted on the stoop."}
+{"a":"There squatted next to the church a statue.","grammatical":1,"b":"A statue squatted next to the church."}
+{"a":"There squatted in the plaza a statue.","grammatical":1,"b":"A statue squatted in the plaza."}
+{"a":"There squatted on the stoop a statue.","grammatical":1,"b":"A statue squatted on the stoop."}
+{"a":"There squatted next to the church a dog.","grammatical":1,"b":"A dog squatted next to the church."}
+{"a":"There squatted in the plaza a dog.","grammatical":1,"b":"A dog squatted in the plaza."}
+{"a":"There squatted on the stoop a dog.","grammatical":1,"b":"A dog squatted on the stoop."}
+{"a":"There squatted next to the church a sparrow.","grammatical":1,"b":"A sparrow squatted next to the church."}
+{"a":"There squatted in the plaza a sparrow.","grammatical":1,"b":"A sparrow squatted in the plaza."}
+{"a":"There squatted on the stoop a sparrow.","grammatical":1,"b":"A sparrow squatted on the stoop."}
+{"a":"There rested next to the church a boy.","grammatical":1,"b":"A boy rested next to the church."}
+{"a":"There rested in the plaza a boy.","grammatical":1,"b":"A boy rested in the plaza."}
+{"a":"There rested on the stoop a boy.","grammatical":1,"b":"A boy rested on the stoop."}
+{"a":"There rested next to the church a statue.","grammatical":1,"b":"A statue rested next to the church."}
+{"a":"There rested in the plaza a statue.","grammatical":1,"b":"A statue rested in the plaza."}
+{"a":"There rested on the stoop a statue.","grammatical":1,"b":"A statue rested on the stoop."}
+{"a":"There rested next to the church a dog.","grammatical":1,"b":"A dog rested next to the church."}
+{"a":"There rested in the plaza a dog.","grammatical":1,"b":"A dog rested in the plaza."}
+{"a":"There rested on the stoop a dog.","grammatical":1,"b":"A dog rested on the stoop."}
+{"a":"There rested next to the church a sparrow.","grammatical":1,"b":"A sparrow rested next to the church."}
+{"a":"There rested in the plaza a sparrow.","grammatical":1,"b":"A sparrow rested in the plaza."}
+{"a":"There rested on the stoop a sparrow.","grammatical":1,"b":"A sparrow rested on the stoop."}
+{"a":"There sat next to the church a boy.","grammatical":1,"b":"A boy sat next to the church."}
+{"a":"There sat in the plaza a boy.","grammatical":1,"b":"A boy sat in the plaza."}
+{"a":"There sat on the stoop a boy.","grammatical":1,"b":"A boy sat on the stoop."}
+{"a":"There sat next to the church a statue.","grammatical":1,"b":"A statue sat next to the church."}
+{"a":"There sat in the plaza a statue.","grammatical":1,"b":"A statue sat in the plaza."}
+{"a":"There sat on the stoop a statue.","grammatical":1,"b":"A statue sat on the stoop."}
+{"a":"There sat next to the church a dog.","grammatical":1,"b":"A dog sat next to the church."}
+{"a":"There sat in the plaza a dog.","grammatical":1,"b":"A dog sat in the plaza."}
+{"a":"There sat on the stoop a dog.","grammatical":1,"b":"A dog sat on the stoop."}
+{"a":"There sat next to the church a sparrow.","grammatical":1,"b":"A sparrow sat next to the church."}
+{"a":"There sat in the plaza a sparrow.","grammatical":1,"b":"A sparrow sat in the plaza."}
+{"a":"There sat on the stoop a sparrow.","grammatical":1,"b":"A sparrow sat on the stoop."}
+{"a":"There stood next to the church a boy.","grammatical":1,"b":"A boy stood next to the church."}
+{"a":"There stood in the plaza a boy.","grammatical":1,"b":"A boy stood in the plaza."}
+{"a":"There stood on the stoop a boy.","grammatical":1,"b":"A boy stood on the stoop."}
+{"a":"There stood next to the church a statue.","grammatical":1,"b":"A statue stood next to the church."}
+{"a":"There stood in the plaza a statue.","grammatical":1,"b":"A statue stood in the plaza."}
+{"a":"There stood on the stoop a statue.","grammatical":1,"b":"A statue stood on the stoop."}
+{"a":"There stood next to the church a dog.","grammatical":1,"b":"A dog stood next to the church."}
+{"a":"There stood in the plaza a dog.","grammatical":1,"b":"A dog stood in the plaza."}
+{"a":"There stood on the stoop a dog.","grammatical":1,"b":"A dog stood on the stoop."}
+{"a":"There stood next to the church a sparrow.","grammatical":1,"b":"A sparrow stood next to the church."}
+{"a":"There stood in the plaza a sparrow.","grammatical":1,"b":"A sparrow stood in the plaza."}
+{"a":"There stood on the stoop a sparrow.","grammatical":1,"b":"A sparrow stood on the stoop."}
+{"a":"There perched next to the church a boy.","grammatical":1,"b":"A boy perched next to the church."}
+{"a":"There perched in the plaza a boy.","grammatical":1,"b":"A boy perched in the plaza."}
+{"a":"There perched on the stoop a boy.","grammatical":1,"b":"A boy perched on the stoop."}
+{"a":"There perched next to the church a statue.","grammatical":1,"b":"A statue perched next to the church."}
+{"a":"There perched in the plaza a statue.","grammatical":1,"b":"A statue perched in the plaza."}
+{"a":"There perched on the stoop a statue.","grammatical":1,"b":"A statue perched on the stoop."}
+{"a":"There perched next to the church a dog.","grammatical":1,"b":"A dog perched next to the church."}
+{"a":"There perched in the plaza a dog.","grammatical":1,"b":"A dog perched in the plaza."}
+{"a":"There perched on the stoop a dog.","grammatical":1,"b":"A dog perched on the stoop."}
+{"a":"There perched next to the church a sparrow.","grammatical":1,"b":"A sparrow perched next to the church."}
+{"a":"There perched in the plaza a sparrow.","grammatical":1,"b":"A sparrow perched in the plaza."}
+{"a":"There perched on the stoop a sparrow.","grammatical":1,"b":"A sparrow perched on the stoop."}
+{"a":"There dangled over the yard a flag.","grammatical":1,"b":"A flag dangled over the yard."}
+{"a":"There dangled from the tree a flag.","grammatical":1,"b":"A flag dangled from the tree."}
+{"a":"There dangled over the yard a sheet.","grammatical":1,"b":"A sheet dangled over the yard."}
+{"a":"There dangled from the tree a sheet.","grammatical":1,"b":"A sheet dangled from the tree."}
+{"a":"There dangled over the yard a clothes line.","grammatical":1,"b":"A clothes line dangled over the yard."}
+{"a":"There dangled from the tree a clothes line.","grammatical":1,"b":"A clothes line dangled from the tree."}
+{"a":"There hung over the yard a flag.","grammatical":1,"b":"A flag hung over the yard."}
+{"a":"There hung from the tree a flag.","grammatical":1,"b":"A flag hung from the tree."}
+{"a":"There hung over the yard a sheet.","grammatical":1,"b":"A sheet hung over the yard."}
+{"a":"There hung from the tree a sheet.","grammatical":1,"b":"A sheet hung from the tree."}
+{"a":"There hung over the yard a clothes line.","grammatical":1,"b":"A clothes line hung over the yard."}
+{"a":"There hung from the tree a clothes line.","grammatical":1,"b":"A clothes line hung from the tree."}
+{"a":"There swung over the yard a flag.","grammatical":1,"b":"A flag swung over the yard."}
+{"a":"There swung from the tree a flag.","grammatical":1,"b":"A flag swung from the tree."}
+{"a":"There swung over the yard a sheet.","grammatical":1,"b":"A sheet swung over the yard."}
+{"a":"There swung from the tree a sheet.","grammatical":1,"b":"A sheet swung from the tree."}
+{"a":"There swung over the yard a clothes line.","grammatical":1,"b":"A clothes line swung over the yard."}
+{"a":"There swung from the tree a clothes line.","grammatical":1,"b":"A clothes line swung from the tree."}
+{"a":"There meandered through the town a path.","grammatical":1,"b":"A path meandered through the town."}
+{"a":"There meandered up the mountain a path.","grammatical":1,"b":"A path meandered up the mountain."}
+{"a":"There meandered over the prairie a path.","grammatical":1,"b":"A path meandered over the prairie."}
+{"a":"There meandered through the town a road.","grammatical":1,"b":"A road meandered through the town."}
+{"a":"There meandered up the mountain a road.","grammatical":1,"b":"A road meandered up the mountain."}
+{"a":"There meandered over the prairie a road.","grammatical":1,"b":"A road meandered over the prairie."}
+{"a":"There meandered through the town a telephone wire.","grammatical":1,"b":"A telephone wire meandered through the town."}
+{"a":"There meandered up the mountain a telephone wire.","grammatical":1,"b":"A telephone wire meandered up the mountain."}
+{"a":"There meandered over the prairie a telephone wire.","grammatical":1,"b":"A telephone wire meandered over the prairie."}
+{"a":"There twisted through the town a path.","grammatical":1,"b":"A path twisted through the town."}
+{"a":"There twisted up the mountain a path.","grammatical":1,"b":"A path twisted up the mountain."}
+{"a":"There twisted over the prairie a path.","grammatical":1,"b":"A path twisted over the prairie."}
+{"a":"There twisted through the town a road.","grammatical":1,"b":"A road twisted through the town."}
+{"a":"There twisted up the mountain a road.","grammatical":1,"b":"A road twisted up the mountain."}
+{"a":"There twisted over the prairie a road.","grammatical":1,"b":"A road twisted over the prairie."}
+{"a":"There twisted through the town a telephone wire.","grammatical":1,"b":"A telephone wire twisted through the town."}
+{"a":"There twisted up the mountain a telephone wire.","grammatical":1,"b":"A telephone wire twisted up the mountain."}
+{"a":"There twisted over the prairie a telephone wire.","grammatical":1,"b":"A telephone wire twisted over the prairie."}
+{"a":"There weaved through the town a path.","grammatical":1,"b":"A path weaved through the town."}
+{"a":"There weaved up the mountain a path.","grammatical":1,"b":"A path weaved up the mountain."}
+{"a":"There weaved over the prairie a path.","grammatical":1,"b":"A path weaved over the prairie."}
+{"a":"There weaved through the town a road.","grammatical":1,"b":"A road weaved through the town."}
+{"a":"There weaved up the mountain a road.","grammatical":1,"b":"A road weaved up the mountain."}
+{"a":"There weaved over the prairie a road.","grammatical":1,"b":"A road weaved over the prairie."}
+{"a":"There weaved through the town a telephone wire.","grammatical":1,"b":"A telephone wire weaved through the town."}
+{"a":"There weaved up the mountain a telephone wire.","grammatical":1,"b":"A telephone wire weaved up the mountain."}
+{"a":"There weaved over the prairie a telephone wire.","grammatical":1,"b":"A telephone wire weaved over the prairie."}
+{"a":"There wandered through the town a path.","grammatical":1,"b":"A path wandered through the town."}
+{"a":"There wandered up the mountain a path.","grammatical":1,"b":"A path wandered up the mountain."}
+{"a":"There wandered over the prairie a path.","grammatical":1,"b":"A path wandered over the prairie."}
+{"a":"There wandered through the town a road.","grammatical":1,"b":"A road wandered through the town."}
+{"a":"There wandered up the mountain a road.","grammatical":1,"b":"A road wandered up the mountain."}
+{"a":"There wandered over the prairie a road.","grammatical":1,"b":"A road wandered over the prairie."}
+{"a":"There wandered through the town a telephone wire.","grammatical":1,"b":"A telephone wire wandered through the town."}
+{"a":"There wandered up the mountain a telephone wire.","grammatical":1,"b":"A telephone wire wandered up the mountain."}
+{"a":"There wandered over the prairie a telephone wire.","grammatical":1,"b":"A telephone wire wandered over the prairie."}
+{"a":"There emanated from the hole a sticky fluid.","grammatical":1,"b":"A sticky fluid emanated from the hole."}
+{"a":"There emanated from the container a sticky fluid.","grammatical":1,"b":"A sticky fluid emanated from the container."}
+{"a":"There emanated from the cave a sticky fluid.","grammatical":1,"b":"A sticky fluid emanated from the cave."}
+{"a":"There emanated from the oven a sticky fluid.","grammatical":1,"b":"A sticky fluid emanated from the oven."}
+{"a":"There emanated from the hole a putrid smell.","grammatical":1,"b":"A putrid smell emanated from the hole."}
+{"a":"There emanated from the container a putrid smell.","grammatical":1,"b":"A putrid smell emanated from the container."}
+{"a":"There emanated from the cave a putrid smell.","grammatical":1,"b":"A putrid smell emanated from the cave."}
+{"a":"There emanated from the oven a putrid smell.","grammatical":1,"b":"A putrid smell emanated from the oven."}
+{"a":"There emanated from the hole a fine mist.","grammatical":1,"b":"A fine mist emanated from the hole."}
+{"a":"There emanated from the container a fine mist.","grammatical":1,"b":"A fine mist emanated from the container."}
+{"a":"There emanated from the cave a fine mist.","grammatical":1,"b":"A fine mist emanated from the cave."}
+{"a":"There emanated from the oven a fine mist.","grammatical":1,"b":"A fine mist emanated from the oven."}
+{"a":"There exuded from the hole a sticky fluid.","grammatical":1,"b":"A sticky fluid exuded from the hole."}
+{"a":"There exuded from the container a sticky fluid.","grammatical":1,"b":"A sticky fluid exuded from the container."}
+{"a":"There exuded from the cave a sticky fluid.","grammatical":1,"b":"A sticky fluid exuded from the cave."}
+{"a":"There exuded from the oven a sticky fluid.","grammatical":1,"b":"A sticky fluid exuded from the oven."}
+{"a":"There exuded from the hole a putrid smell.","grammatical":1,"b":"A putrid smell exuded from the hole."}
+{"a":"There exuded from the container a putrid smell.","grammatical":1,"b":"A putrid smell exuded from the container."}
+{"a":"There exuded from the cave a putrid smell.","grammatical":1,"b":"A putrid smell exuded from the cave."}
+{"a":"There exuded from the oven a putrid smell.","grammatical":1,"b":"A putrid smell exuded from the oven."}
+{"a":"There exuded from the hole a fine mist.","grammatical":1,"b":"A fine mist exuded from the hole."}
+{"a":"There exuded from the container a fine mist.","grammatical":1,"b":"A fine mist exuded from the container."}
+{"a":"There exuded from the cave a fine mist.","grammatical":1,"b":"A fine mist exuded from the cave."}
+{"a":"There exuded from the oven a fine mist.","grammatical":1,"b":"A fine mist exuded from the oven."}
+{"a":"There emerged from the hole a sticky fluid.","grammatical":1,"b":"A sticky fluid emerged from the hole."}
+{"a":"There emerged from the container a sticky fluid.","grammatical":1,"b":"A sticky fluid emerged from the container."}
+{"a":"There emerged from the cave a sticky fluid.","grammatical":1,"b":"A sticky fluid emerged from the cave."}
+{"a":"There emerged from the oven a sticky fluid.","grammatical":1,"b":"A sticky fluid emerged from the oven."}
+{"a":"There emerged from the hole a putrid smell.","grammatical":1,"b":"A putrid smell emerged from the hole."}
+{"a":"There emerged from the container a putrid smell.","grammatical":1,"b":"A putrid smell emerged from the container."}
+{"a":"There emerged from the cave a putrid smell.","grammatical":1,"b":"A putrid smell emerged from the cave."}
+{"a":"There emerged from the oven a putrid smell.","grammatical":1,"b":"A putrid smell emerged from the oven."}
+{"a":"There emerged from the hole a fine mist.","grammatical":1,"b":"A fine mist emerged from the hole."}
+{"a":"There emerged from the container a fine mist.","grammatical":1,"b":"A fine mist emerged from the container."}
+{"a":"There emerged from the cave a fine mist.","grammatical":1,"b":"A fine mist emerged from the cave."}
+{"a":"There emerged from the oven a fine mist.","grammatical":1,"b":"A fine mist emerged from the oven."}
+{"a":"There gushed from the hole a sticky fluid.","grammatical":1,"b":"A sticky fluid gushed from the hole."}
+{"a":"There gushed from the container a sticky fluid.","grammatical":1,"b":"A sticky fluid gushed from the container."}
+{"a":"There gushed from the cave a sticky fluid.","grammatical":1,"b":"A sticky fluid gushed from the cave."}
+{"a":"There gushed from the oven a sticky fluid.","grammatical":1,"b":"A sticky fluid gushed from the oven."}
+{"a":"There gushed from the hole a putrid smell.","grammatical":1,"b":"A putrid smell gushed from the hole."}
+{"a":"There gushed from the container a putrid smell.","grammatical":1,"b":"A putrid smell gushed from the container."}
+{"a":"There gushed from the cave a putrid smell.","grammatical":1,"b":"A putrid smell gushed from the cave."}
+{"a":"There gushed from the oven a putrid smell.","grammatical":1,"b":"A putrid smell gushed from the oven."}
+{"a":"There gushed from the hole a fine mist.","grammatical":1,"b":"A fine mist gushed from the hole."}
+{"a":"There gushed from the container a fine mist.","grammatical":1,"b":"A fine mist gushed from the container."}
+{"a":"There gushed from the cave a fine mist.","grammatical":1,"b":"A fine mist gushed from the cave."}
+{"a":"There gushed from the oven a fine mist.","grammatical":1,"b":"A fine mist gushed from the oven."}
+{"a":"There issued from the hole a sticky fluid.","grammatical":1,"b":"A sticky fluid issued from the hole."}
+{"a":"There issued from the container a sticky fluid.","grammatical":1,"b":"A sticky fluid issued from the container."}
+{"a":"There issued from the cave a sticky fluid.","grammatical":1,"b":"A sticky fluid issued from the cave."}
+{"a":"There issued from the oven a sticky fluid.","grammatical":1,"b":"A sticky fluid issued from the oven."}
+{"a":"There issued from the hole a putrid smell.","grammatical":1,"b":"A putrid smell issued from the hole."}
+{"a":"There issued from the container a putrid smell.","grammatical":1,"b":"A putrid smell issued from the container."}
+{"a":"There issued from the cave a putrid smell.","grammatical":1,"b":"A putrid smell issued from the cave."}
+{"a":"There issued from the oven a putrid smell.","grammatical":1,"b":"A putrid smell issued from the oven."}
+{"a":"There issued from the hole a fine mist.","grammatical":1,"b":"A fine mist issued from the hole."}
+{"a":"There issued from the container a fine mist.","grammatical":1,"b":"A fine mist issued from the container."}
+{"a":"There issued from the cave a fine mist.","grammatical":1,"b":"A fine mist issued from the cave."}
+{"a":"There issued from the oven a fine mist.","grammatical":1,"b":"A fine mist issued from the oven."}
+{"a":"There spilled from the hole a sticky fluid.","grammatical":1,"b":"A sticky fluid spilled from the hole."}
+{"a":"There spilled from the container a sticky fluid.","grammatical":1,"b":"A sticky fluid spilled from the container."}
+{"a":"There spilled from the cave a sticky fluid.","grammatical":1,"b":"A sticky fluid spilled from the cave."}
+{"a":"There spilled from the oven a sticky fluid.","grammatical":1,"b":"A sticky fluid spilled from the oven."}
+{"a":"There spilled from the hole a putrid smell.","grammatical":1,"b":"A putrid smell spilled from the hole."}
+{"a":"There spilled from the container a putrid smell.","grammatical":1,"b":"A putrid smell spilled from the container."}
+{"a":"There spilled from the cave a putrid smell.","grammatical":1,"b":"A putrid smell spilled from the cave."}
+{"a":"There spilled from the oven a putrid smell.","grammatical":1,"b":"A putrid smell spilled from the oven."}
+{"a":"There spilled from the hole a fine mist.","grammatical":1,"b":"A fine mist spilled from the hole."}
+{"a":"There spilled from the container a fine mist.","grammatical":1,"b":"A fine mist spilled from the container."}
+{"a":"There spilled from the cave a fine mist.","grammatical":1,"b":"A fine mist spilled from the cave."}
+{"a":"There spilled from the oven a fine mist.","grammatical":1,"b":"A fine mist spilled from the oven."}
+{"a":"There appeared from the cave a bright light.","grammatical":1,"b":"A bright light appeared from the cave."}
+{"a":"There appeared from the room a bright light.","grammatical":1,"b":"A bright light appeared from the room."}
+{"a":"There appeared from the hole a bright light.","grammatical":1,"b":"A bright light appeared from the hole."}
+{"a":"There appeared from the cave a loud noise.","grammatical":1,"b":"A loud noise appeared from the cave."}
+{"a":"There appeared from the room a loud noise.","grammatical":1,"b":"A loud noise appeared from the room."}
+{"a":"There appeared from the hole a loud noise.","grammatical":1,"b":"A loud noise appeared from the hole."}
+{"a":"There appeared from the cave a giant wave.","grammatical":1,"b":"A giant wave appeared from the cave."}
+{"a":"There appeared from the room a giant wave.","grammatical":1,"b":"A giant wave appeared from the room."}
+{"a":"There appeared from the hole a giant wave.","grammatical":1,"b":"A giant wave appeared from the hole."}
+{"a":"There burst from the cave a bright light.","grammatical":1,"b":"A bright light burst from the cave."}
+{"a":"There burst from the room a bright light.","grammatical":1,"b":"A bright light burst from the room."}
+{"a":"There burst from the hole a bright light.","grammatical":1,"b":"A bright light burst from the hole."}
+{"a":"There burst from the cave a loud noise.","grammatical":1,"b":"A loud noise burst from the cave."}
+{"a":"There burst from the room a loud noise.","grammatical":1,"b":"A loud noise burst from the room."}
+{"a":"There burst from the hole a loud noise.","grammatical":1,"b":"A loud noise burst from the hole."}
+{"a":"There burst from the cave a giant wave.","grammatical":1,"b":"A giant wave burst from the cave."}
+{"a":"There burst from the room a giant wave.","grammatical":1,"b":"A giant wave burst from the room."}
+{"a":"There burst from the hole a giant wave.","grammatical":1,"b":"A giant wave burst from the hole."}
+{"a":"There surged from the cave a bright light.","grammatical":1,"b":"A bright light surged from the cave."}
+{"a":"There surged from the room a bright light.","grammatical":1,"b":"A bright light surged from the room."}
+{"a":"There surged from the hole a bright light.","grammatical":1,"b":"A bright light surged from the hole."}
+{"a":"There surged from the cave a loud noise.","grammatical":1,"b":"A loud noise surged from the cave."}
+{"a":"There surged from the room a loud noise.","grammatical":1,"b":"A loud noise surged from the room."}
+{"a":"There surged from the hole a loud noise.","grammatical":1,"b":"A loud noise surged from the hole."}
+{"a":"There surged from the cave a giant wave.","grammatical":1,"b":"A giant wave surged from the cave."}
+{"a":"There surged from the room a giant wave.","grammatical":1,"b":"A giant wave surged from the room."}
+{"a":"There surged from the hole a giant wave.","grammatical":1,"b":"A giant wave surged from the hole."}
+{"a":"There began after the meal a series of mistakes.","grammatical":1,"b":"A series of mistakes began after the meal."}
+{"a":"There began in the next few months a series of mistakes.","grammatical":1,"b":"A series of mistakes began in the next few months."}
+{"a":"There began after the meal a long speech.","grammatical":1,"b":"A long speech began after the meal."}
+{"a":"There began in the next few months a long speech.","grammatical":1,"b":"A long speech began in the next few months."}
+{"a":"There began after the meal an investigation.","grammatical":1,"b":"An investigation began after the meal."}
+{"a":"There began in the next few months an investigation.","grammatical":1,"b":"An investigation began in the next few months."}
+{"a":"There ensued after the meal a series of mistakes.","grammatical":1,"b":"A series of mistakes ensued after the meal."}
+{"a":"There ensued in the next few months a series of mistakes.","grammatical":1,"b":"A series of mistakes ensued in the next few months."}
+{"a":"There ensued after the meal a long speech.","grammatical":1,"b":"A long speech ensued after the meal."}
+{"a":"There ensued in the next few months a long speech.","grammatical":1,"b":"A long speech ensued in the next few months."}
+{"a":"There ensued after the meal an investigation.","grammatical":1,"b":"An investigation ensued after the meal."}
+{"a":"There ensued in the next few months an investigation.","grammatical":1,"b":"An investigation ensued in the next few months."}
+{"a":"There occurred after the meal a series of mistakes.","grammatical":1,"b":"A series of mistakes occurred after the meal."}
+{"a":"There occurred in the next few months a series of mistakes.","grammatical":1,"b":"A series of mistakes occurred in the next few months."}
+{"a":"There occurred after the meal a long speech.","grammatical":1,"b":"A long speech occurred after the meal."}
+{"a":"There occurred in the next few months a long speech.","grammatical":1,"b":"A long speech occurred in the next few months."}
+{"a":"There occurred after the meal an investigation.","grammatical":1,"b":"An investigation occurred after the meal."}
+{"a":"There occurred in the next few months an investigation.","grammatical":1,"b":"An investigation occurred in the next few months."}
+{"a":"There followed after the meal a series of mistakes.","grammatical":1,"b":"A series of mistakes followed after the meal."}
+{"a":"There followed in the next few months a series of mistakes.","grammatical":1,"b":"A series of mistakes followed in the next few months."}
+{"a":"There followed after the meal a long speech.","grammatical":1,"b":"A long speech followed after the meal."}
+{"a":"There followed in the next few months a long speech.","grammatical":1,"b":"A long speech followed in the next few months."}
+{"a":"There followed after the meal an investigation.","grammatical":1,"b":"An investigation followed after the meal."}
+{"a":"There followed in the next few months an investigation.","grammatical":1,"b":"An investigation followed in the next few months."}
+{"a":"There graduated from the university a student.","grammatical":1,"b":"A student graduated from the university."}
+{"a":"There graduated from college a student.","grammatical":1,"b":"A student graduated from college."}
+{"a":"There graduated from the university a senior.","grammatical":1,"b":"A senior graduated from the university."}
+{"a":"There graduated from college a senior.","grammatical":1,"b":"A senior graduated from college."}
+{"a":"There flunked out from the university a student.","grammatical":1,"b":"A student flunked out from the university."}
+{"a":"There flunked out from college a student.","grammatical":1,"b":"A student flunked out from college."}
+{"a":"There flunked out from the university a senior.","grammatical":1,"b":"A senior flunked out from the university."}
+{"a":"There flunked out from college a senior.","grammatical":1,"b":"A senior flunked out from college."}
+{"a":"There concluded in the morning a play.","grammatical":1,"b":"A play concluded in the morning."}
+{"a":"There concluded in the auditorium a play.","grammatical":1,"b":"A play concluded in the auditorium."}
+{"a":"There concluded at the theater a play.","grammatical":1,"b":"A play concluded at the theater."}
+{"a":"There concluded in the morning a lecture.","grammatical":1,"b":"A lecture concluded in the morning."}
+{"a":"There concluded in the auditorium a lecture.","grammatical":1,"b":"A lecture concluded in the auditorium."}
+{"a":"There concluded at the theater a lecture.","grammatical":1,"b":"A lecture concluded at the theater."}
+{"a":"There concluded in the morning a movie.","grammatical":1,"b":"A movie concluded in the morning."}
+{"a":"There concluded in the auditorium a movie.","grammatical":1,"b":"A movie concluded in the auditorium."}
+{"a":"There concluded at the theater a movie.","grammatical":1,"b":"A movie concluded at the theater."}
+{"a":"There finished in the morning a play.","grammatical":1,"b":"A play finished in the morning."}
+{"a":"There finished in the auditorium a play.","grammatical":1,"b":"A play finished in the auditorium."}
+{"a":"There finished at the theater a play.","grammatical":1,"b":"A play finished at the theater."}
+{"a":"There finished in the morning a lecture.","grammatical":1,"b":"A lecture finished in the morning."}
+{"a":"There finished in the auditorium a lecture.","grammatical":1,"b":"A lecture finished in the auditorium."}
+{"a":"There finished at the theater a lecture.","grammatical":1,"b":"A lecture finished at the theater."}
+{"a":"There finished in the morning a movie.","grammatical":1,"b":"A movie finished in the morning."}
+{"a":"There finished in the auditorium a movie.","grammatical":1,"b":"A movie finished in the auditorium."}
+{"a":"There finished at the theater a movie.","grammatical":1,"b":"A movie finished at the theater."}
+{"a":"There ended in the morning a play.","grammatical":1,"b":"A play ended in the morning."}
+{"a":"There ended in the auditorium a play.","grammatical":1,"b":"A play ended in the auditorium."}
+{"a":"There ended at the theater a play.","grammatical":1,"b":"A play ended at the theater."}
+{"a":"There ended in the morning a lecture.","grammatical":1,"b":"A lecture ended in the morning."}
+{"a":"There ended in the auditorium a lecture.","grammatical":1,"b":"A lecture ended in the auditorium."}
+{"a":"There ended at the theater a lecture.","grammatical":1,"b":"A lecture ended at the theater."}
+{"a":"There ended in the morning a movie.","grammatical":1,"b":"A movie ended in the morning."}
+{"a":"There ended in the auditorium a movie.","grammatical":1,"b":"A movie ended in the auditorium."}
+{"a":"There ended at the theater a movie.","grammatical":1,"b":"A movie ended at the theater."}
+{"a":"There cracked in the yard a glass.","grammatical":1,"b":"A glass cracked in the yard."}
+{"a":"There cracked all over the ground a glass.","grammatical":1,"b":"A glass cracked all over the ground."}
+{"a":"There cracked on john 's head a glass.","grammatical":1,"b":"A glass cracked on john 's head."}
+{"a":"There cracked in the yard a bowl.","grammatical":1,"b":"A bowl cracked in the yard."}
+{"a":"There cracked all over the ground a bowl.","grammatical":1,"b":"A bowl cracked all over the ground."}
+{"a":"There cracked on john 's head a bowl.","grammatical":1,"b":"A bowl cracked on john 's head."}
+{"a":"There cracked in the yard a window.","grammatical":1,"b":"A window cracked in the yard."}
+{"a":"There cracked all over the ground a window.","grammatical":1,"b":"A window cracked all over the ground."}
+{"a":"There cracked on john 's head a window.","grammatical":1,"b":"A window cracked on john 's head."}
+{"a":"There chipped in the yard a glass.","grammatical":1,"b":"A glass chipped in the yard."}
+{"a":"There chipped all over the ground a glass.","grammatical":1,"b":"A glass chipped all over the ground."}
+{"a":"There chipped on john 's head a glass.","grammatical":1,"b":"A glass chipped on john 's head."}
+{"a":"There chipped in the yard a bowl.","grammatical":1,"b":"A bowl chipped in the yard."}
+{"a":"There chipped all over the ground a bowl.","grammatical":1,"b":"A bowl chipped all over the ground."}
+{"a":"There chipped on john 's head a bowl.","grammatical":1,"b":"A bowl chipped on john 's head."}
+{"a":"There chipped in the yard a window.","grammatical":1,"b":"A window chipped in the yard."}
+{"a":"There chipped all over the ground a window.","grammatical":1,"b":"A window chipped all over the ground."}
+{"a":"There chipped on john 's head a window.","grammatical":1,"b":"A window chipped on john 's head."}
+{"a":"There shattered in the yard a glass.","grammatical":1,"b":"A glass shattered in the yard."}
+{"a":"There shattered all over the ground a glass.","grammatical":1,"b":"A glass shattered all over the ground."}
+{"a":"There shattered on john 's head a glass.","grammatical":1,"b":"A glass shattered on john 's head."}
+{"a":"There shattered in the yard a bowl.","grammatical":1,"b":"A bowl shattered in the yard."}
+{"a":"There shattered all over the ground a bowl.","grammatical":1,"b":"A bowl shattered all over the ground."}
+{"a":"There shattered on john 's head a bowl.","grammatical":1,"b":"A bowl shattered on john 's head."}
+{"a":"There shattered in the yard a window.","grammatical":1,"b":"A window shattered in the yard."}
+{"a":"There shattered all over the ground a window.","grammatical":1,"b":"A window shattered all over the ground."}
+{"a":"There shattered on john 's head a window.","grammatical":1,"b":"A window shattered on john 's head."}
+{"a":"There closed on the second floor a door.","grammatical":1,"b":"A door closed on the second floor."}
+{"a":"There closed down the street a door.","grammatical":1,"b":"A door closed down the street."}
+{"a":"There closed in the next room a door.","grammatical":1,"b":"A door closed in the next room."}
+{"a":"There closed on the second floor a window.","grammatical":1,"b":"A window closed on the second floor."}
+{"a":"There closed down the street a window.","grammatical":1,"b":"A window closed down the street."}
+{"a":"There closed in the next room a window.","grammatical":1,"b":"A window closed in the next room."}
+{"a":"There shut on the second floor a door.","grammatical":1,"b":"A door shut on the second floor."}
+{"a":"There shut down the street a door.","grammatical":1,"b":"A door shut down the street."}
+{"a":"There shut in the next room a door.","grammatical":1,"b":"A door shut in the next room."}
+{"a":"There shut on the second floor a window.","grammatical":1,"b":"A window shut on the second floor."}
+{"a":"There shut down the street a window.","grammatical":1,"b":"A window shut down the street."}
+{"a":"There shut in the next room a window.","grammatical":1,"b":"A window shut in the next room."}
+{"a":"There opened on the second floor a door.","grammatical":1,"b":"A door opened on the second floor."}
+{"a":"There opened down the street a door.","grammatical":1,"b":"A door opened down the street."}
+{"a":"There opened in the next room a door.","grammatical":1,"b":"A door opened in the next room."}
+{"a":"There opened on the second floor a window.","grammatical":1,"b":"A window opened on the second floor."}
+{"a":"There opened down the street a window.","grammatical":1,"b":"A window opened down the street."}
+{"a":"There opened in the next room a window.","grammatical":1,"b":"A window opened in the next room."}
+{"a":"There crashed into the wall a car.","grammatical":1,"b":"A car crashed into the wall."}
+{"a":"There crashed into the pole a car.","grammatical":1,"b":"A car crashed into the pole."}
+{"a":"There crashed into the window a car.","grammatical":1,"b":"A car crashed into the window."}
+{"a":"There crashed into the wall a bicycle.","grammatical":1,"b":"A bicycle crashed into the wall."}
+{"a":"There crashed into the pole a bicycle.","grammatical":1,"b":"A bicycle crashed into the pole."}
+{"a":"There crashed into the window a bicycle.","grammatical":1,"b":"A bicycle crashed into the window."}
+{"a":"There crashed into the wall a bird.","grammatical":1,"b":"A bird crashed into the wall."}
+{"a":"There crashed into the pole a bird.","grammatical":1,"b":"A bird crashed into the pole."}
+{"a":"There crashed into the window a bird.","grammatical":1,"b":"A bird crashed into the window."}
+{"a":"There slammed into the wall a car.","grammatical":1,"b":"A car slammed into the wall."}
+{"a":"There slammed into the pole a car.","grammatical":1,"b":"A car slammed into the pole."}
+{"a":"There slammed into the window a car.","grammatical":1,"b":"A car slammed into the window."}
+{"a":"There slammed into the wall a bicycle.","grammatical":1,"b":"A bicycle slammed into the wall."}
+{"a":"There slammed into the pole a bicycle.","grammatical":1,"b":"A bicycle slammed into the pole."}
+{"a":"There slammed into the window a bicycle.","grammatical":1,"b":"A bicycle slammed into the window."}
+{"a":"There slammed into the wall a bird.","grammatical":1,"b":"A bird slammed into the wall."}
+{"a":"There slammed into the pole a bird.","grammatical":1,"b":"A bird slammed into the pole."}
+{"a":"There slammed into the window a bird.","grammatical":1,"b":"A bird slammed into the window."}
+{"a":"There collided into the wall a car.","grammatical":1,"b":"A car collided into the wall."}
+{"a":"There collided into the pole a car.","grammatical":1,"b":"A car collided into the pole."}
+{"a":"There collided into the window a car.","grammatical":1,"b":"A car collided into the window."}
+{"a":"There collided into the wall a bicycle.","grammatical":1,"b":"A bicycle collided into the wall."}
+{"a":"There collided into the pole a bicycle.","grammatical":1,"b":"A bicycle collided into the pole."}
+{"a":"There collided into the window a bicycle.","grammatical":1,"b":"A bicycle collided into the window."}
+{"a":"There collided into the wall a bird.","grammatical":1,"b":"A bird collided into the wall."}
+{"a":"There collided into the pole a bird.","grammatical":1,"b":"A bird collided into the pole."}
+{"a":"There collided into the window a bird.","grammatical":1,"b":"A bird collided into the window."}
+{"a":"There bumped into the wall a car.","grammatical":1,"b":"A car bumped into the wall."}
+{"a":"There bumped into the pole a car.","grammatical":1,"b":"A car bumped into the pole."}
+{"a":"There bumped into the window a car.","grammatical":1,"b":"A car bumped into the window."}
+{"a":"There bumped into the wall a bicycle.","grammatical":1,"b":"A bicycle bumped into the wall."}
+{"a":"There bumped into the pole a bicycle.","grammatical":1,"b":"A bicycle bumped into the pole."}
+{"a":"There bumped into the window a bicycle.","grammatical":1,"b":"A bicycle bumped into the window."}
+{"a":"There bumped into the wall a bird.","grammatical":1,"b":"A bird bumped into the wall."}
+{"a":"There bumped into the pole a bird.","grammatical":1,"b":"A bird bumped into the pole."}
+{"a":"There bumped into the window a bird.","grammatical":1,"b":"A bird bumped into the window."}
+{"a":"There melted on the floor a glass of water.","grammatical":1,"b":"A glass of water melted on the floor."}
+{"a":"There melted on the table a glass of water.","grammatical":1,"b":"A glass of water melted on the table."}
+{"a":"There melted on the streets a glass of water.","grammatical":1,"b":"A glass of water melted on the streets."}
+{"a":"There melted on the floor a puddle.","grammatical":1,"b":"A puddle melted on the floor."}
+{"a":"There melted on the table a puddle.","grammatical":1,"b":"A puddle melted on the table."}
+{"a":"There melted on the streets a puddle.","grammatical":1,"b":"A puddle melted on the streets."}
+{"a":"There melted on the floor a pile of snow.","grammatical":1,"b":"A pile of snow melted on the floor."}
+{"a":"There melted on the table a pile of snow.","grammatical":1,"b":"A pile of snow melted on the table."}
+{"a":"There melted on the streets a pile of snow.","grammatical":1,"b":"A pile of snow melted on the streets."}
+{"a":"There froze on the floor a glass of water.","grammatical":1,"b":"A glass of water froze on the floor."}
+{"a":"There froze on the table a glass of water.","grammatical":1,"b":"A glass of water froze on the table."}
+{"a":"There froze on the streets a glass of water.","grammatical":1,"b":"A glass of water froze on the streets."}
+{"a":"There froze on the floor a puddle.","grammatical":1,"b":"A puddle froze on the floor."}
+{"a":"There froze on the table a puddle.","grammatical":1,"b":"A puddle froze on the table."}
+{"a":"There froze on the streets a puddle.","grammatical":1,"b":"A puddle froze on the streets."}
+{"a":"There froze on the floor a pile of snow.","grammatical":1,"b":"A pile of snow froze on the floor."}
+{"a":"There froze on the table a pile of snow.","grammatical":1,"b":"A pile of snow froze on the table."}
+{"a":"There froze on the streets a pile of snow.","grammatical":1,"b":"A pile of snow froze on the streets."}
+{"a":"There solidified on the floor a glass of water.","grammatical":1,"b":"A glass of water solidified on the floor."}
+{"a":"There solidified on the table a glass of water.","grammatical":1,"b":"A glass of water solidified on the table."}
+{"a":"There solidified on the streets a glass of water.","grammatical":1,"b":"A glass of water solidified on the streets."}
+{"a":"There solidified on the floor a puddle.","grammatical":1,"b":"A puddle solidified on the floor."}
+{"a":"There solidified on the table a puddle.","grammatical":1,"b":"A puddle solidified on the table."}
+{"a":"There solidified on the streets a puddle.","grammatical":1,"b":"A puddle solidified on the streets."}
+{"a":"There solidified on the floor a pile of snow.","grammatical":1,"b":"A pile of snow solidified on the floor."}
+{"a":"There solidified on the table a pile of snow.","grammatical":1,"b":"A pile of snow solidified on the table."}
+{"a":"There solidified on the streets a pile of snow.","grammatical":1,"b":"A pile of snow solidified on the streets."}
+{"a":"There halted at the intersection a car.","grammatical":1,"b":"A car halted at the intersection."}
+{"a":"There halted in front of the school a car.","grammatical":1,"b":"A car halted in front of the school."}
+{"a":"There halted near the pedestrians a car.","grammatical":1,"b":"A car halted near the pedestrians."}
+{"a":"There halted at the intersection a bicycle.","grammatical":1,"b":"A bicycle halted at the intersection."}
+{"a":"There halted in front of the school a bicycle.","grammatical":1,"b":"A bicycle halted in front of the school."}
+{"a":"There halted near the pedestrians a bicycle.","grammatical":1,"b":"A bicycle halted near the pedestrians."}
+{"a":"There halted at the intersection a bus.","grammatical":1,"b":"A bus halted at the intersection."}
+{"a":"There halted in front of the school a bus.","grammatical":1,"b":"A bus halted in front of the school."}
+{"a":"There halted near the pedestrians a bus.","grammatical":1,"b":"A bus halted near the pedestrians."}
+{"a":"There slowed at the intersection a car.","grammatical":1,"b":"A car slowed at the intersection."}
+{"a":"There slowed in front of the school a car.","grammatical":1,"b":"A car slowed in front of the school."}
+{"a":"There slowed near the pedestrians a car.","grammatical":1,"b":"A car slowed near the pedestrians."}
+{"a":"There slowed at the intersection a bicycle.","grammatical":1,"b":"A bicycle slowed at the intersection."}
+{"a":"There slowed in front of the school a bicycle.","grammatical":1,"b":"A bicycle slowed in front of the school."}
+{"a":"There slowed near the pedestrians a bicycle.","grammatical":1,"b":"A bicycle slowed near the pedestrians."}
+{"a":"There slowed at the intersection a bus.","grammatical":1,"b":"A bus slowed at the intersection."}
+{"a":"There slowed in front of the school a bus.","grammatical":1,"b":"A bus slowed in front of the school."}
+{"a":"There slowed near the pedestrians a bus.","grammatical":1,"b":"A bus slowed near the pedestrians."}
+{"a":"There accelerated at the intersection a car.","grammatical":1,"b":"A car accelerated at the intersection."}
+{"a":"There accelerated in front of the school a car.","grammatical":1,"b":"A car accelerated in front of the school."}
+{"a":"There accelerated near the pedestrians a car.","grammatical":1,"b":"A car accelerated near the pedestrians."}
+{"a":"There accelerated at the intersection a bicycle.","grammatical":1,"b":"A bicycle accelerated at the intersection."}
+{"a":"There accelerated in front of the school a bicycle.","grammatical":1,"b":"A bicycle accelerated in front of the school."}
+{"a":"There accelerated near the pedestrians a bicycle.","grammatical":1,"b":"A bicycle accelerated near the pedestrians."}
+{"a":"There accelerated at the intersection a bus.","grammatical":1,"b":"A bus accelerated at the intersection."}
+{"a":"There accelerated in front of the school a bus.","grammatical":1,"b":"A bus accelerated in front of the school."}
+{"a":"There accelerated near the pedestrians a bus.","grammatical":1,"b":"A bus accelerated near the pedestrians."}
+{"a":"There heated in the oven a glass of water.","grammatical":1,"b":"A glass of water heated in the oven."}
+{"a":"There heated in the microwave a glass of water.","grammatical":1,"b":"A glass of water heated in the microwave."}
+{"a":"There heated on the table a glass of water.","grammatical":1,"b":"A glass of water heated on the table."}
+{"a":"There heated in the oven a plate of food.","grammatical":1,"b":"A plate of food heated in the oven."}
+{"a":"There heated in the microwave a plate of food.","grammatical":1,"b":"A plate of food heated in the microwave."}
+{"a":"There heated on the table a plate of food.","grammatical":1,"b":"A plate of food heated on the table."}
+{"a":"There heated in the oven a casserole.","grammatical":1,"b":"A casserole heated in the oven."}
+{"a":"There heated in the microwave a casserole.","grammatical":1,"b":"A casserole heated in the microwave."}
+{"a":"There heated on the table a casserole.","grammatical":1,"b":"A casserole heated on the table."}
+{"a":"There heated in the oven a meal.","grammatical":1,"b":"A meal heated in the oven."}
+{"a":"There heated in the microwave a meal.","grammatical":1,"b":"A meal heated in the microwave."}
+{"a":"There heated on the table a meal.","grammatical":1,"b":"A meal heated on the table."}
+{"a":"There cooled in the oven a glass of water.","grammatical":1,"b":"A glass of water cooled in the oven."}
+{"a":"There cooled in the microwave a glass of water.","grammatical":1,"b":"A glass of water cooled in the microwave."}
+{"a":"There cooled on the table a glass of water.","grammatical":1,"b":"A glass of water cooled on the table."}
+{"a":"There cooled in the oven a plate of food.","grammatical":1,"b":"A plate of food cooled in the oven."}
+{"a":"There cooled in the microwave a plate of food.","grammatical":1,"b":"A plate of food cooled in the microwave."}
+{"a":"There cooled on the table a plate of food.","grammatical":1,"b":"A plate of food cooled on the table."}
+{"a":"There cooled in the oven a casserole.","grammatical":1,"b":"A casserole cooled in the oven."}
+{"a":"There cooled in the microwave a casserole.","grammatical":1,"b":"A casserole cooled in the microwave."}
+{"a":"There cooled on the table a casserole.","grammatical":1,"b":"A casserole cooled on the table."}
+{"a":"There cooled in the oven a meal.","grammatical":1,"b":"A meal cooled in the oven."}
+{"a":"There cooled in the microwave a meal.","grammatical":1,"b":"A meal cooled in the microwave."}
+{"a":"There cooled on the table a meal.","grammatical":1,"b":"A meal cooled on the table."}
+{"a":"There warmed in the oven a glass of water.","grammatical":1,"b":"A glass of water warmed in the oven."}
+{"a":"There warmed in the microwave a glass of water.","grammatical":1,"b":"A glass of water warmed in the microwave."}
+{"a":"There warmed on the table a glass of water.","grammatical":1,"b":"A glass of water warmed on the table."}
+{"a":"There warmed in the oven a plate of food.","grammatical":1,"b":"A plate of food warmed in the oven."}
+{"a":"There warmed in the microwave a plate of food.","grammatical":1,"b":"A plate of food warmed in the microwave."}
+{"a":"There warmed on the table a plate of food.","grammatical":1,"b":"A plate of food warmed on the table."}
+{"a":"There warmed in the oven a casserole.","grammatical":1,"b":"A casserole warmed in the oven."}
+{"a":"There warmed in the microwave a casserole.","grammatical":1,"b":"A casserole warmed in the microwave."}
+{"a":"There warmed on the table a casserole.","grammatical":1,"b":"A casserole warmed on the table."}
+{"a":"There warmed in the oven a meal.","grammatical":1,"b":"A meal warmed in the oven."}
+{"a":"There warmed in the microwave a meal.","grammatical":1,"b":"A meal warmed in the microwave."}
+{"a":"There warmed on the table a meal.","grammatical":1,"b":"A meal warmed on the table."}
+{"a":"There defrosted in the oven a glass of water.","grammatical":1,"b":"A glass of water defrosted in the oven."}
+{"a":"There defrosted in the microwave a glass of water.","grammatical":1,"b":"A glass of water defrosted in the microwave."}
+{"a":"There defrosted on the table a glass of water.","grammatical":1,"b":"A glass of water defrosted on the table."}
+{"a":"There defrosted in the oven a plate of food.","grammatical":1,"b":"A plate of food defrosted in the oven."}
+{"a":"There defrosted in the microwave a plate of food.","grammatical":1,"b":"A plate of food defrosted in the microwave."}
+{"a":"There defrosted on the table a plate of food.","grammatical":1,"b":"A plate of food defrosted on the table."}
+{"a":"There defrosted in the oven a casserole.","grammatical":1,"b":"A casserole defrosted in the oven."}
+{"a":"There defrosted in the microwave a casserole.","grammatical":1,"b":"A casserole defrosted in the microwave."}
+{"a":"There defrosted on the table a casserole.","grammatical":1,"b":"A casserole defrosted on the table."}
+{"a":"There defrosted in the oven a meal.","grammatical":1,"b":"A meal defrosted in the oven."}
+{"a":"There defrosted in the microwave a meal.","grammatical":1,"b":"A meal defrosted in the microwave."}
+{"a":"There defrosted on the table a meal.","grammatical":1,"b":"A meal defrosted on the table."}
+{"a":"There stomped on a bug a boy.","grammatical":1,"b":"A boy stomped on a bug."}
+{"a":"There stomped on a button a boy.","grammatical":1,"b":"A boy stomped on a button."}
+{"a":"There stomped on a frog a boy.","grammatical":1,"b":"A boy stomped on a frog."}
+{"a":"There stomped on a bug an elephant.","grammatical":1,"b":"An elephant stomped on a bug."}
+{"a":"There stomped on a button an elephant.","grammatical":1,"b":"An elephant stomped on a button."}
+{"a":"There stomped on a frog an elephant.","grammatical":1,"b":"An elephant stomped on a frog."}
+{"a":"There stomped on a bug an exterminator.","grammatical":1,"b":"An exterminator stomped on a bug."}
+{"a":"There stomped on a button an exterminator.","grammatical":1,"b":"An exterminator stomped on a button."}
+{"a":"There stomped on a frog an exterminator.","grammatical":1,"b":"An exterminator stomped on a frog."}
+{"a":"There stepped on a bug a boy.","grammatical":1,"b":"A boy stepped on a bug."}
+{"a":"There stepped on a button a boy.","grammatical":1,"b":"A boy stepped on a button."}
+{"a":"There stepped on a frog a boy.","grammatical":1,"b":"A boy stepped on a frog."}
+{"a":"There stepped on a bug an elephant.","grammatical":1,"b":"An elephant stepped on a bug."}
+{"a":"There stepped on a button an elephant.","grammatical":1,"b":"An elephant stepped on a button."}
+{"a":"There stepped on a frog an elephant.","grammatical":1,"b":"An elephant stepped on a frog."}
+{"a":"There stepped on a bug an exterminator.","grammatical":1,"b":"An exterminator stepped on a bug."}
+{"a":"There stepped on a button an exterminator.","grammatical":1,"b":"An exterminator stepped on a button."}
+{"a":"There stepped on a frog an exterminator.","grammatical":1,"b":"An exterminator stepped on a frog."}
+{"a":"There jumped on a bug a boy.","grammatical":1,"b":"A boy jumped on a bug."}
+{"a":"There jumped on a button a boy.","grammatical":1,"b":"A boy jumped on a button."}
+{"a":"There jumped on a frog a boy.","grammatical":1,"b":"A boy jumped on a frog."}
+{"a":"There jumped on a bug an elephant.","grammatical":1,"b":"An elephant jumped on a bug."}
+{"a":"There jumped on a button an elephant.","grammatical":1,"b":"An elephant jumped on a button."}
+{"a":"There jumped on a frog an elephant.","grammatical":1,"b":"An elephant jumped on a frog."}
+{"a":"There jumped on a bug an exterminator.","grammatical":1,"b":"An exterminator jumped on a bug."}
+{"a":"There jumped on a button an exterminator.","grammatical":1,"b":"An exterminator jumped on a button."}
+{"a":"There jumped on a frog an exterminator.","grammatical":1,"b":"An exterminator jumped on a frog."}
+{"a":"There believed in god a cult.","grammatical":1,"b":"A cult believed in god."}
+{"a":"There believed in aliens a cult.","grammatical":1,"b":"A cult believed in aliens."}
+{"a":"There believed in the goodness of people a cult.","grammatical":1,"b":"A cult believed in the goodness of people."}
+{"a":"There believed in god a preacher.","grammatical":1,"b":"A preacher believed in god."}
+{"a":"There believed in aliens a preacher.","grammatical":1,"b":"A preacher believed in aliens."}
+{"a":"There believed in the goodness of people a preacher.","grammatical":1,"b":"A preacher believed in the goodness of people."}
+{"a":"There believed in god a nice old lady.","grammatical":1,"b":"A nice old lady believed in god."}
+{"a":"There believed in aliens a nice old lady.","grammatical":1,"b":"A nice old lady believed in aliens."}
+{"a":"There believed in the goodness of people a nice old lady.","grammatical":1,"b":"A nice old lady believed in the goodness of people."}
+{"a":"There had faith in god a cult.","grammatical":1,"b":"A cult had faith in god."}
+{"a":"There had faith in aliens a cult.","grammatical":1,"b":"A cult had faith in aliens."}
+{"a":"There had faith in the goodness of people a cult.","grammatical":1,"b":"A cult had faith in the goodness of people."}
+{"a":"There had faith in god a preacher.","grammatical":1,"b":"A preacher had faith in god."}
+{"a":"There had faith in aliens a preacher.","grammatical":1,"b":"A preacher had faith in aliens."}
+{"a":"There had faith in the goodness of people a preacher.","grammatical":1,"b":"A preacher had faith in the goodness of people."}
+{"a":"There had faith in god a nice old lady.","grammatical":1,"b":"A nice old lady had faith in god."}
+{"a":"There had faith in aliens a nice old lady.","grammatical":1,"b":"A nice old lady had faith in aliens."}
+{"a":"There had faith in the goodness of people a nice old lady.","grammatical":1,"b":"A nice old lady had faith in the goodness of people."}
+{"a":"There trusted in god a cult.","grammatical":1,"b":"A cult trusted in god."}
+{"a":"There trusted in aliens a cult.","grammatical":1,"b":"A cult trusted in aliens."}
+{"a":"There trusted in the goodness of people a cult.","grammatical":1,"b":"A cult trusted in the goodness of people."}
+{"a":"There trusted in god a preacher.","grammatical":1,"b":"A preacher trusted in god."}
+{"a":"There trusted in aliens a preacher.","grammatical":1,"b":"A preacher trusted in aliens."}
+{"a":"There trusted in the goodness of people a preacher.","grammatical":1,"b":"A preacher trusted in the goodness of people."}
+{"a":"There trusted in god a nice old lady.","grammatical":1,"b":"A nice old lady trusted in god."}
+{"a":"There trusted in aliens a nice old lady.","grammatical":1,"b":"A nice old lady trusted in aliens."}
+{"a":"There trusted in the goodness of people a nice old lady.","grammatical":1,"b":"A nice old lady trusted in the goodness of people."}
+{"a":"There yelled at the children a teacher.","grammatical":1,"b":"A teacher yelled at the children."}
+{"a":"There yelled at the crowd a teacher.","grammatical":1,"b":"A teacher yelled at the crowd."}
+{"a":"There yelled at the pedestrians a teacher.","grammatical":1,"b":"A teacher yelled at the pedestrians."}
+{"a":"There yelled at the children a parent.","grammatical":1,"b":"A parent yelled at the children."}
+{"a":"There yelled at the crowd a parent.","grammatical":1,"b":"A parent yelled at the crowd."}
+{"a":"There yelled at the pedestrians a parent.","grammatical":1,"b":"A parent yelled at the pedestrians."}
+{"a":"There yelled at the children an old man.","grammatical":1,"b":"An old man yelled at the children."}
+{"a":"There yelled at the crowd an old man.","grammatical":1,"b":"An old man yelled at the crowd."}
+{"a":"There yelled at the pedestrians an old man.","grammatical":1,"b":"An old man yelled at the pedestrians."}
+{"a":"There screamed at the children a teacher.","grammatical":1,"b":"A teacher screamed at the children."}
+{"a":"There screamed at the crowd a teacher.","grammatical":1,"b":"A teacher screamed at the crowd."}
+{"a":"There screamed at the pedestrians a teacher.","grammatical":1,"b":"A teacher screamed at the pedestrians."}
+{"a":"There screamed at the children a parent.","grammatical":1,"b":"A parent screamed at the children."}
+{"a":"There screamed at the crowd a parent.","grammatical":1,"b":"A parent screamed at the crowd."}
+{"a":"There screamed at the pedestrians a parent.","grammatical":1,"b":"A parent screamed at the pedestrians."}
+{"a":"There screamed at the children an old man.","grammatical":1,"b":"An old man screamed at the children."}
+{"a":"There screamed at the crowd an old man.","grammatical":1,"b":"An old man screamed at the crowd."}
+{"a":"There screamed at the pedestrians an old man.","grammatical":1,"b":"An old man screamed at the pedestrians."}
+{"a":"There hollered at the children a teacher.","grammatical":1,"b":"A teacher hollered at the children."}
+{"a":"There hollered at the crowd a teacher.","grammatical":1,"b":"A teacher hollered at the crowd."}
+{"a":"There hollered at the pedestrians a teacher.","grammatical":1,"b":"A teacher hollered at the pedestrians."}
+{"a":"There hollered at the children a parent.","grammatical":1,"b":"A parent hollered at the children."}
+{"a":"There hollered at the crowd a parent.","grammatical":1,"b":"A parent hollered at the crowd."}
+{"a":"There hollered at the pedestrians a parent.","grammatical":1,"b":"A parent hollered at the pedestrians."}
+{"a":"There hollered at the children an old man.","grammatical":1,"b":"An old man hollered at the children."}
+{"a":"There hollered at the crowd an old man.","grammatical":1,"b":"An old man hollered at the crowd."}
+{"a":"There hollered at the pedestrians an old man.","grammatical":1,"b":"An old man hollered at the pedestrians."}
+{"a":"There talked to the children a teacher.","grammatical":1,"b":"A teacher talked to the children."}
+{"a":"There talked to the crowd a teacher.","grammatical":1,"b":"A teacher talked to the crowd."}
+{"a":"There talked to the pedestrians a teacher.","grammatical":1,"b":"A teacher talked to the pedestrians."}
+{"a":"There talked to the children a parent.","grammatical":1,"b":"A parent talked to the children."}
+{"a":"There talked to the crowd a parent.","grammatical":1,"b":"A parent talked to the crowd."}
+{"a":"There talked to the pedestrians a parent.","grammatical":1,"b":"A parent talked to the pedestrians."}
+{"a":"There talked to the children an old man.","grammatical":1,"b":"An old man talked to the children."}
+{"a":"There talked to the crowd an old man.","grammatical":1,"b":"An old man talked to the crowd."}
+{"a":"There talked to the pedestrians an old man.","grammatical":1,"b":"An old man talked to the pedestrians."}
+{"a":"There lectured to the children a teacher.","grammatical":1,"b":"A teacher lectured to the children."}
+{"a":"There lectured to the crowd a teacher.","grammatical":1,"b":"A teacher lectured to the crowd."}
+{"a":"There lectured to the pedestrians a teacher.","grammatical":1,"b":"A teacher lectured to the pedestrians."}
+{"a":"There lectured to the children a parent.","grammatical":1,"b":"A parent lectured to the children."}
+{"a":"There lectured to the crowd a parent.","grammatical":1,"b":"A parent lectured to the crowd."}
+{"a":"There lectured to the pedestrians a parent.","grammatical":1,"b":"A parent lectured to the pedestrians."}
+{"a":"There lectured to the children an old man.","grammatical":1,"b":"An old man lectured to the children."}
+{"a":"There lectured to the crowd an old man.","grammatical":1,"b":"An old man lectured to the crowd."}
+{"a":"There lectured to the pedestrians an old man.","grammatical":1,"b":"An old man lectured to the pedestrians."}
+{"a":"There spoke to the children a teacher.","grammatical":1,"b":"A teacher spoke to the children."}
+{"a":"There spoke to the crowd a teacher.","grammatical":1,"b":"A teacher spoke to the crowd."}
+{"a":"There spoke to the pedestrians a teacher.","grammatical":1,"b":"A teacher spoke to the pedestrians."}
+{"a":"There spoke to the children a parent.","grammatical":1,"b":"A parent spoke to the children."}
+{"a":"There spoke to the crowd a parent.","grammatical":1,"b":"A parent spoke to the crowd."}
+{"a":"There spoke to the pedestrians a parent.","grammatical":1,"b":"A parent spoke to the pedestrians."}
+{"a":"There spoke to the children an old man.","grammatical":1,"b":"An old man spoke to the children."}
+{"a":"There spoke to the crowd an old man.","grammatical":1,"b":"An old man spoke to the crowd."}
+{"a":"There spoke to the pedestrians an old man.","grammatical":1,"b":"An old man spoke to the pedestrians."}
+{"a":"There played at the children a teacher.","grammatical":1,"b":"A teacher played at the children."}
+{"a":"There played at the crowd a teacher.","grammatical":1,"b":"A teacher played at the crowd."}
+{"a":"There played at the pedestrians a teacher.","grammatical":1,"b":"A teacher played at the pedestrians."}
+{"a":"There played at the children a parent.","grammatical":1,"b":"A parent played at the children."}
+{"a":"There played at the crowd a parent.","grammatical":1,"b":"A parent played at the crowd."}
+{"a":"There played at the pedestrians a parent.","grammatical":1,"b":"A parent played at the pedestrians."}
+{"a":"There played at the children an old man.","grammatical":1,"b":"An old man played at the children."}
+{"a":"There played at the crowd an old man.","grammatical":1,"b":"An old man played at the crowd."}
+{"a":"There played at the pedestrians an old man.","grammatical":1,"b":"An old man played at the pedestrians."}
+{"a":"There juggled at the children a teacher.","grammatical":1,"b":"A teacher juggled at the children."}
+{"a":"There juggled at the crowd a teacher.","grammatical":1,"b":"A teacher juggled at the crowd."}
+{"a":"There juggled at the pedestrians a teacher.","grammatical":1,"b":"A teacher juggled at the pedestrians."}
+{"a":"There juggled at the children a parent.","grammatical":1,"b":"A parent juggled at the children."}
+{"a":"There juggled at the crowd a parent.","grammatical":1,"b":"A parent juggled at the crowd."}
+{"a":"There juggled at the pedestrians a parent.","grammatical":1,"b":"A parent juggled at the pedestrians."}
+{"a":"There juggled at the children an old man.","grammatical":1,"b":"An old man juggled at the children."}
+{"a":"There juggled at the crowd an old man.","grammatical":1,"b":"An old man juggled at the crowd."}
+{"a":"There juggled at the pedestrians an old man.","grammatical":1,"b":"An old man juggled at the pedestrians."}
+{"a":"There hollered at the children a teacher.","grammatical":1,"b":"A teacher hollered at the children."}
+{"a":"There hollered at the crowd a teacher.","grammatical":1,"b":"A teacher hollered at the crowd."}
+{"a":"There hollered at the pedestrians a teacher.","grammatical":1,"b":"A teacher hollered at the pedestrians."}
+{"a":"There hollered at the children a parent.","grammatical":1,"b":"A parent hollered at the children."}
+{"a":"There hollered at the crowd a parent.","grammatical":1,"b":"A parent hollered at the crowd."}
+{"a":"There hollered at the pedestrians a parent.","grammatical":1,"b":"A parent hollered at the pedestrians."}
+{"a":"There hollered at the children an old man.","grammatical":1,"b":"An old man hollered at the children."}
+{"a":"There hollered at the crowd an old man.","grammatical":1,"b":"An old man hollered at the crowd."}
+{"a":"There hollered at the pedestrians an old man.","grammatical":1,"b":"An old man hollered at the pedestrians."}
+{"a":"There agreed with the politician a student.","grammatical":1,"b":"A student agreed with the politician."}
+{"a":"There agreed with the police officer a student.","grammatical":1,"b":"A student agreed with the police officer."}
+{"a":"There agreed with the complaint a student.","grammatical":1,"b":"A student agreed with the complaint."}
+{"a":"There agreed with the politician a protester.","grammatical":1,"b":"A protester agreed with the politician."}
+{"a":"There agreed with the police officer a protester.","grammatical":1,"b":"A protester agreed with the police officer."}
+{"a":"There agreed with the complaint a protester.","grammatical":1,"b":"A protester agreed with the complaint."}
+{"a":"There agreed with the politician a committee.","grammatical":1,"b":"A committee agreed with the politician."}
+{"a":"There agreed with the police officer a committee.","grammatical":1,"b":"A committee agreed with the police officer."}
+{"a":"There agreed with the complaint a committee.","grammatical":1,"b":"A committee agreed with the complaint."}
+{"a":"There dealt with the politician a student.","grammatical":1,"b":"A student dealt with the politician."}
+{"a":"There dealt with the police officer a student.","grammatical":1,"b":"A student dealt with the police officer."}
+{"a":"There dealt with the complaint a student.","grammatical":1,"b":"A student dealt with the complaint."}
+{"a":"There dealt with the politician a protester.","grammatical":1,"b":"A protester dealt with the politician."}
+{"a":"There dealt with the police officer a protester.","grammatical":1,"b":"A protester dealt with the police officer."}
+{"a":"There dealt with the complaint a protester.","grammatical":1,"b":"A protester dealt with the complaint."}
+{"a":"There dealt with the politician a committee.","grammatical":1,"b":"A committee dealt with the politician."}
+{"a":"There dealt with the police officer a committee.","grammatical":1,"b":"A committee dealt with the police officer."}
+{"a":"There dealt with the complaint a committee.","grammatical":1,"b":"A committee dealt with the complaint."}
+{"a":"There disagreed with the politician a student.","grammatical":1,"b":"A student disagreed with the politician."}
+{"a":"There disagreed with the police officer a student.","grammatical":1,"b":"A student disagreed with the police officer."}
+{"a":"There disagreed with the complaint a student.","grammatical":1,"b":"A student disagreed with the complaint."}
+{"a":"There disagreed with the politician a protester.","grammatical":1,"b":"A protester disagreed with the politician."}
+{"a":"There disagreed with the police officer a protester.","grammatical":1,"b":"A protester disagreed with the police officer."}
+{"a":"There disagreed with the complaint a protester.","grammatical":1,"b":"A protester disagreed with the complaint."}
+{"a":"There disagreed with the politician a committee.","grammatical":1,"b":"A committee disagreed with the politician."}
+{"a":"There disagreed with the police officer a committee.","grammatical":1,"b":"A committee disagreed with the police officer."}
+{"a":"There disagreed with the complaint a committee.","grammatical":1,"b":"A committee disagreed with the complaint."}
+{"a":"There looked for evidence a little boy.","grammatical":1,"b":"A little boy looked for evidence."}
+{"a":"There looked for treasure a little boy.","grammatical":1,"b":"A little boy looked for treasure."}
+{"a":"There looked for the hidden children a little boy.","grammatical":1,"b":"A little boy looked for the hidden children."}
+{"a":"There looked for evidence an investigator.","grammatical":1,"b":"An investigator looked for evidence."}
+{"a":"There looked for treasure an investigator.","grammatical":1,"b":"An investigator looked for treasure."}
+{"a":"There looked for the hidden children an investigator.","grammatical":1,"b":"An investigator looked for the hidden children."}
+{"a":"There looked for evidence a scientist.","grammatical":1,"b":"A scientist looked for evidence."}
+{"a":"There looked for treasure a scientist.","grammatical":1,"b":"A scientist looked for treasure."}
+{"a":"There looked for the hidden children a scientist.","grammatical":1,"b":"A scientist looked for the hidden children."}
+{"a":"There searched for evidence a little boy.","grammatical":1,"b":"A little boy searched for evidence."}
+{"a":"There searched for treasure a little boy.","grammatical":1,"b":"A little boy searched for treasure."}
+{"a":"There searched for the hidden children a little boy.","grammatical":1,"b":"A little boy searched for the hidden children."}
+{"a":"There searched for evidence an investigator.","grammatical":1,"b":"An investigator searched for evidence."}
+{"a":"There searched for treasure an investigator.","grammatical":1,"b":"An investigator searched for treasure."}
+{"a":"There searched for the hidden children an investigator.","grammatical":1,"b":"An investigator searched for the hidden children."}
+{"a":"There searched for evidence a scientist.","grammatical":1,"b":"A scientist searched for evidence."}
+{"a":"There searched for treasure a scientist.","grammatical":1,"b":"A scientist searched for treasure."}
+{"a":"There searched for the hidden children a scientist.","grammatical":1,"b":"A scientist searched for the hidden children."}
+{"a":"There focused on the book a student.","grammatical":1,"b":"A student focused on the book."}
+{"a":"There focused on the computer a student.","grammatical":1,"b":"A student focused on the computer."}
+{"a":"There focused on the puzzle a student.","grammatical":1,"b":"A student focused on the puzzle."}
+{"a":"There focused on the book an editor.","grammatical":1,"b":"An editor focused on the book."}
+{"a":"There focused on the computer an editor.","grammatical":1,"b":"An editor focused on the computer."}
+{"a":"There focused on the puzzle an editor.","grammatical":1,"b":"An editor focused on the puzzle."}
+{"a":"There concentrated on the book a student.","grammatical":1,"b":"A student concentrated on the book."}
+{"a":"There concentrated on the computer a student.","grammatical":1,"b":"A student concentrated on the computer."}
+{"a":"There concentrated on the puzzle a student.","grammatical":1,"b":"A student concentrated on the puzzle."}
+{"a":"There concentrated on the book an editor.","grammatical":1,"b":"An editor concentrated on the book."}
+{"a":"There concentrated on the computer an editor.","grammatical":1,"b":"An editor concentrated on the computer."}
+{"a":"There concentrated on the puzzle an editor.","grammatical":1,"b":"An editor concentrated on the puzzle."}
+{"a":"There stuck to the glue a piece of paper.","grammatical":1,"b":"A piece of paper stuck to the glue."}
+{"a":"There stuck to the wall a piece of paper.","grammatical":1,"b":"A piece of paper stuck to the wall."}
+{"a":"There stuck to the glue a fly.","grammatical":1,"b":"A fly stuck to the glue."}
+{"a":"There stuck to the wall a fly.","grammatical":1,"b":"A fly stuck to the wall."}
+{"a":"There adhered to the glue a piece of paper.","grammatical":1,"b":"A piece of paper adhered to the glue."}
+{"a":"There adhered to the wall a piece of paper.","grammatical":1,"b":"A piece of paper adhered to the wall."}
+{"a":"There adhered to the glue a fly.","grammatical":1,"b":"A fly adhered to the glue."}
+{"a":"There adhered to the wall a fly.","grammatical":1,"b":"A fly adhered to the wall."}
